@@ -4,92 +4,110 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sulo: <https://w3id.org/sulo/> .
 @base <https://w3id.org/sulo/> .
 
 <https://w3id.org/sulo> rdf:type owl:Ontology ;
-                         rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
-                         rdfs:comment "version 0.1.0"@en ;
+                         rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ,
+                                      "version 0.1.0"@en ;
                          rdfs:label "Simplified Upper Level Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+### http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  https://w3id.org/sulo/describes
-:describes rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :refersTo ;
-           rdfs:comment "describes is a relation between an information object and the thing it provides a description for."@en ;
-           rdfs:label "describes"@en .
+sulo:describes rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sulo:refersTo ;
+               rdfs:comment "describes is a relation between an information object and the thing it provides a description for."@en ;
+               rdfs:label "describes"@en .
 
 
 ###  https://w3id.org/sulo/encodes
-:encodes rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :refersTo ;
-         rdfs:comment "A relation between an information containing object, in which the first object contains information that is used to produce the second object."@en ;
-         rdfs:label "encodes"@en .
+sulo:encodes rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf sulo:refersTo ;
+             rdfs:comment "A relation between an information containing object, in which the first object contains information that is used to produce the second object."@en ;
+             rdfs:label "encodes"@en .
 
 
 ###  https://w3id.org/sulo/hasAttribute
-:hasAttribute rdf:type owl:ObjectProperty ;
-              rdfs:domain owl:Thing ;
-              rdfs:range [ rdf:type owl:Class ;
-                           owl:unionOf ( :Attribute
-                                         :InformationObject
-                                       )
-                         ] ;
-              rdfs:label "has attribute"@en .
+sulo:hasAttribute rdf:type owl:ObjectProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( sulo:Attribute
+                                             sulo:InformationObject
+                                           )
+                             ] ;
+                  rdfs:label "has attribute"@en .
 
 
 ###  https://w3id.org/sulo/hasDirectPart
-:hasDirectPart rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :hasPart ;
-               rdfs:comment "has direct part is a parthood relation that can be used to specify cardinality constraints" ;
-               rdfs:label "has direct part" .
+sulo:hasDirectPart rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf sulo:hasPart ;
+                   rdfs:comment "has direct part is a parthood relation that can be used to specify cardinality constraints" ;
+                   rdfs:label "has direct part" .
 
 
 ###  https://w3id.org/sulo/hasPart
-:hasPart rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :isLocationOf ;
-         owl:propertyDisjointWith :hasParticipant ;
-         rdfs:label "has part"@en .
+sulo:hasPart rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf sulo:isLocationOf ;
+             owl:propertyDisjointWith sulo:hasParticipant ;
+             rdfs:label "has part"@en .
 
 
 ###  https://w3id.org/sulo/hasParticipant
-:hasParticipant rdf:type owl:ObjectProperty ;
-                rdfs:domain :Process ;
-                rdfs:range [ rdf:type owl:Class ;
-                             owl:unionOf ( :Attribute
-                                           :InformationObject
-                                           :SpatialObject
-                                         )
-                           ] ;
-                rdfs:label "has participant"@en .
+sulo:hasParticipant rdf:type owl:ObjectProperty ;
+                    rdfs:domain sulo:Process ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( sulo:Attribute
+                                               sulo:InformationObject
+                                               sulo:SpatialObject
+                                             )
+                               ] ;
+                    rdfs:label "has participant"@en .
 
 
 ###  https://w3id.org/sulo/isLocationOf
-:isLocationOf rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
-              rdfs:label "is location of"@en .
+sulo:isLocationOf rdf:type owl:ObjectProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:label "is location of"@en .
 
 
 ###  https://w3id.org/sulo/occursIn
-:occursIn rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain owl:Thing ;
-          rdfs:range :Time ;
-          rdfs:label "occurs in"@en .
+sulo:occursIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range sulo:Time ;
+              rdfs:label "occurs in"@en .
+
+
+###  https://w3id.org/sulo/precedes
+sulo:precedes rdf:type owl:ObjectProperty ;
+              rdfs:domain sulo:Process ;
+              rdfs:range sulo:Process ;
+              rdfs:comment "A relation in which one process occurs prior to another process."@en ;
+              rdfs:label "precedes" .
 
 
 ###  https://w3id.org/sulo/refersTo
-:refersTo rdf:type owl:ObjectProperty ;
-          rdfs:label "refers to"@en .
+sulo:refersTo rdf:type owl:ObjectProperty ;
+              rdfs:label "refers to"@en .
 
 
 ###  https://w3id.org/sulo/represents
-:represents rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :refersTo ;
-            rdfs:comment "a represents b when a serves as a sign, symbol or model of b."@en ;
-            rdfs:label "represents"@en .
+sulo:represents rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf sulo:refersTo ;
+                rdfs:comment "a represents b when a serves as a sign, symbol or model of b."@en ;
+                rdfs:label "represents"@en .
 
 
 #################################################################
@@ -97,10 +115,10 @@
 #################################################################
 
 ###  https://w3id.org/sulo/hasValue
-:hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:domain :InformationObject ;
-          rdfs:comment "has value is the (only) data type attribute to store the values of information objects."@en ;
-          rdfs:label "has value"@en .
+sulo:hasValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain sulo:InformationObject ;
+              rdfs:comment "has value is the (only) data type attribute to store the values of information objects."@en ;
+              rdfs:label "has value"@en .
 
 
 #################################################################
@@ -108,156 +126,158 @@
 #################################################################
 
 ###  https://w3id.org/sulo/ActionSpecification
-:ActionSpecification rdf:type owl:Class ;
-                     rdfs:subClassOf :InformationObject ;
-                     rdfs:comment "An action specification is an information object composed of a sequence of instructions to achieve some objective"@en ;
-                     rdfs:label "action specification"@en .
+sulo:ActionSpecification rdf:type owl:Class ;
+                         rdfs:subClassOf sulo:InformationObject ;
+                         rdfs:comment "An action specification is an information object composed of a sequence of instructions to achieve some objective"@en ;
+                         rdfs:label "action specification"@en .
 
 
 ###  https://w3id.org/sulo/Attribute
-:Attribute rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty [ owl:inverseOf :hasAttribute
-                                            ] ;
-                             owl:someValuesFrom [ rdf:type owl:Class ;
-                                                  owl:unionOf ( :Object
-                                                                :Process
-                                                              )
-                                                ]
-                           ] ;
-           owl:disjointUnionOf ( :Capability
-                                 :Quality
-                                 :Role
-                               ) ;
-           rdfs:comment "An attribute is a property of an object or process that stems from their intrisinc structure and/or contextual interactions."@en ;
-           rdfs:label "attribute"@en .
+sulo:Attribute rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty [ owl:inverseOf sulo:hasAttribute
+                                                ] ;
+                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( sulo:Object
+                                                                    sulo:Process
+                                                                  )
+                                                    ]
+                               ] ;
+               owl:disjointUnionOf ( sulo:Capability
+                                     sulo:Quality
+                                     sulo:Role
+                                   ) ;
+               rdfs:comment "An attribute is a property of an object or process that stems from their intrisinc structure and/or contextual interactions."@en ;
+               rdfs:label "attribute"@en .
 
 
 ###  https://w3id.org/sulo/Capability
-:Capability rdf:type owl:Class ;
-            rdfs:subClassOf :Attribute ;
-            rdfs:comment "A capability is an attribute that describes what an entity is able to do, under some set of circumstances."@en ,
-                         "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en ;
-            rdfs:label "capability" .
+sulo:Capability rdf:type owl:Class ;
+                rdfs:subClassOf sulo:Attribute ;
+                rdfs:comment "A capability is an attribute that describes what an entity is able to do, under some set of circumstances."@en ,
+                             "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en ;
+                rdfs:label "capability" .
 
 
 ###  https://w3id.org/sulo/Duration
-:Duration rdf:type owl:Class ;
-          rdfs:subClassOf :TimeInterval .
+sulo:Duration rdf:type owl:Class ;
+              rdfs:subClassOf sulo:TimeInterval ;
+              rdfs:label "duration"@en .
 
 
 ###  https://w3id.org/sulo/EndTime
-:EndTime rdf:type owl:Class ;
-         rdfs:subClassOf :TimeInstant ;
-         rdfs:label "end time"@en .
+sulo:EndTime rdf:type owl:Class ;
+             rdfs:subClassOf sulo:TimeInstant ;
+             rdfs:label "end time"@en .
 
 
 ###  https://w3id.org/sulo/InformationObject
-:InformationObject rdf:type owl:Class ;
-                   rdfs:subClassOf :Object ;
-                   owl:disjointWith :SpatialObject ;
-                   rdfs:comment "an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
-                   rdfs:label "information object"@en .
+sulo:InformationObject rdf:type owl:Class ;
+                       rdfs:subClassOf sulo:Object ;
+                       owl:disjointWith sulo:SpatialObject ;
+                       rdfs:comment "an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
+                       rdfs:label "information object"@en .
 
 
 ###  https://w3id.org/sulo/Object
-:Object rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Class ;
-                          owl:complementOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty :hasPart ;
-                                             owl:someValuesFrom :Process
-                                           ]
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasPart ;
-                          owl:allValuesFrom :Object
-                        ] ;
-        owl:disjointWith :Process ;
-        rdfs:comment "An object is an entity that maintains its identity through time, and does not have temporal parts." ;
-        rdfs:label "object"@en .
+sulo:Object rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Class ;
+                              owl:complementOf [ rdf:type owl:Restriction ;
+                                                 owl:onProperty sulo:hasPart ;
+                                                 owl:someValuesFrom sulo:Process
+                                               ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty sulo:hasPart ;
+                              owl:allValuesFrom sulo:Object
+                            ] ;
+            owl:disjointWith sulo:Process ;
+            rdfs:comment "An object is an entity that maintains its identity through time, and does not have temporal parts." ;
+            rdfs:label "object"@en .
 
 
 ###  https://w3id.org/sulo/Process
-:Process rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasPart ;
-                           owl:allValuesFrom :Process
-                         ] ;
-         rdfs:comment "a process is a entity that unfolds in time and has temporal parts."@en ;
-         rdfs:label "process"@en .
+sulo:Process rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty sulo:hasPart ;
+                               owl:allValuesFrom sulo:Process
+                             ] ;
+             rdfs:comment "a process is a entity that unfolds in time and has temporal parts."@en ;
+             rdfs:label "process"@en .
 
 
 ###  https://w3id.org/sulo/Quality
-:Quality rdf:type owl:Class ;
-         rdfs:subClassOf :Attribute ;
-         owl:disjointWith :Role ;
-         rdfs:comment "A quality is an attribute that is intrinsically associated with its bearer (or its parts)."@en ,
-                      "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en ;
-         rdfs:label "quality"@en .
+sulo:Quality rdf:type owl:Class ;
+             rdfs:subClassOf sulo:Attribute ;
+             owl:disjointWith sulo:Role ;
+             rdfs:comment "A quality is an attribute that is intrinsically associated with its bearer (or its parts)."@en ,
+                          "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en ;
+             rdfs:label "quality"@en .
 
 
 ###  https://w3id.org/sulo/Quantity
-:Quantity rdf:type owl:Class ;
-          rdfs:subClassOf :InformationObject ;
-          rdfs:comment "A quantity is an informational object that contains the magnitude (and unit) of an attribute."@en ;
-          rdfs:label "quantity"@en .
+sulo:Quantity rdf:type owl:Class ;
+              rdfs:subClassOf sulo:InformationObject ;
+              rdfs:comment "A quantity is an informational object that contains the magnitude (and unit) of an attribute."@en ;
+              rdfs:label "quantity"@en .
 
 
 ###  https://w3id.org/sulo/Role
-:Role rdf:type owl:Class ;
-      rdfs:subClassOf :Attribute ;
-      rdfs:comment "A role is an attribute that describes a context-dependent behaviour."@en ,
-                   "a teacher, a student, a catalyst, a substrate, a product"@en ;
-      rdfs:label "role"@en .
+sulo:Role rdf:type owl:Class ;
+          rdfs:subClassOf sulo:Attribute ;
+          rdfs:comment "A role is an attribute that describes a context-dependent behaviour."@en ,
+                       "a teacher, a student, a catalyst, a substrate, a product"@en ;
+          rdfs:label "role"@en .
+
+
+###  https://w3id.org/sulo/Set
+sulo:Set rdf:type owl:Class ;
+         rdfs:subClassOf sulo:InformationObject ;
+         rdfs:comment "A set is a collection of things, for which there may be zero members."@en ;
+         rdfs:label "set"@en .
 
 
 ###  https://w3id.org/sulo/SpatialObject
-:SpatialObject rdf:type owl:Class ;
-               rdfs:subClassOf :Object ;
-               rdfs:comment "A spatial object is an object that occupies space"@en ,
-                            "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en ;
-               rdfs:label "spatial object"@en .
+sulo:SpatialObject rdf:type owl:Class ;
+                   rdfs:subClassOf sulo:Object ;
+                   rdfs:comment "A spatial object is an object that occupies space"@en ;
+                   rdfs:label "spatial object"@en ;
+                   skos:example "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en .
 
 
 ###  https://w3id.org/sulo/StartTime
-:StartTime rdf:type owl:Class ;
-           rdfs:subClassOf :TimeInstant ;
-           rdfs:label "start time"@en .
+sulo:StartTime rdf:type owl:Class ;
+               rdfs:subClassOf sulo:TimeInstant ;
+               rdfs:label "start time"@en .
 
 
 ###  https://w3id.org/sulo/Time
-:Time rdf:type owl:Class ;
-      rdfs:subClassOf :Quantity ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasPart ;
-                        owl:someValuesFrom :Unit
-                      ] ;
-      rdfs:comment "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en ;
-      rdfs:label "time"@en .
+sulo:Time rdf:type owl:Class ;
+          rdfs:subClassOf sulo:Quantity ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty sulo:hasPart ;
+                            owl:someValuesFrom sulo:Unit
+                          ] ;
+          rdfs:comment "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en ;
+          rdfs:label "time"@en .
 
 
 ###  https://w3id.org/sulo/TimeInstant
-:TimeInstant rdf:type owl:Class ;
-             rdfs:subClassOf :Time ;
-             rdfs:label "time instant"@en .
+sulo:TimeInstant rdf:type owl:Class ;
+                 rdfs:subClassOf sulo:Time ;
+                 rdfs:label "time instant"@en .
 
 
 ###  https://w3id.org/sulo/TimeInterval
-:TimeInterval rdf:type owl:Class ;
-              rdfs:subClassOf :Time ;
-              rdfs:label "time interval" .
+sulo:TimeInterval rdf:type owl:Class ;
+                  rdfs:subClassOf sulo:Time ;
+                  rdfs:label "time interval" .
 
 
 ###  https://w3id.org/sulo/Unit
-:Unit rdf:type owl:Class ;
-      rdfs:subClassOf :Quantity .
-
-
-###  https://w3id.org/sulo/set
-:set rdf:type owl:Class ;
-     rdfs:subClassOf :InformationObject ;
-     rdfs:comment "A set is a collection of things, for which there may be zero members."@en ;
-     rdfs:label "set"@en .
+sulo:Unit rdf:type owl:Class ;
+          rdfs:subClassOf sulo:Quantity ;
+          rdfs:label "unit" .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
