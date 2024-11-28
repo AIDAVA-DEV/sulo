@@ -4,7 +4,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sulo: <https://w3id.org/sulo/> .
 @base <https://w3id.org/sulo/> .
 
@@ -17,17 +16,27 @@
 #    Annotation properties
 #################################################################
 
-### http://www.w3.org/2004/02/skos/core#example
-skos:example rdf:type owl:AnnotationProperty .
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/sulo/causes
+sulo:causes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf sulo:precedes ;
+            rdfs:domain sulo:Process ;
+            rdfs:range sulo:Process ;
+            rdfs:comment "a relation between two processes a,b, where a precedes b, and a is a necessary condition for b to occur."@en ;
+            rdfs:label "causes"@en .
+
+
 ###  https://w3id.org/sulo/describes
 sulo:describes rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sulo:refersTo ;
+               rdfs:domain sulo:InformationObject ;
                rdfs:comment "describes is a relation between an information object and the thing it provides a description for."@en ;
                rdfs:label "describes"@en .
 
@@ -47,20 +56,30 @@ sulo:hasAttribute rdf:type owl:ObjectProperty ;
                                              sulo:InformationObject
                                            )
                              ] ;
+                  rdfs:comment "has attribute is a relation between a thing and an internal, contextual, or externally attributed characteristic."@en ;
                   rdfs:label "has attribute"@en .
 
 
 ###  https://w3id.org/sulo/hasDirectPart
 sulo:hasDirectPart rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf sulo:hasPart ;
-                   rdfs:comment "has direct part is a parthood relation that can be used to specify cardinality constraints" ;
+                   rdfs:comment "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints."@en ;
                    rdfs:label "has direct part" .
+
+
+###  https://w3id.org/sulo/hasMember
+sulo:hasMember rdf:type owl:ObjectProperty ;
+               rdfs:domain sulo:Set ;
+               rdfs:comment "has item is a relation between a set and items in that set."@en ;
+               rdfs:label "has item"@en .
 
 
 ###  https://w3id.org/sulo/hasPart
 sulo:hasPart rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf sulo:isLocationOf ;
-             owl:propertyDisjointWith sulo:hasParticipant ;
+             rdf:type owl:TransitiveProperty ,
+                      owl:ReflexiveProperty ;
+             rdfs:comment "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part." ;
              rdfs:label "has part"@en .
 
 
@@ -69,16 +88,21 @@ sulo:hasParticipant rdf:type owl:ObjectProperty ;
                     rdfs:domain sulo:Process ;
                     rdfs:range [ rdf:type owl:Class ;
                                  owl:unionOf ( sulo:Attribute
-                                               sulo:InformationObject
-                                               sulo:SpatialObject
+                                               sulo:Object
                                              )
+                               ] ,
+                               [ rdf:type owl:Class ;
+                                 owl:complementOf sulo:Process
                                ] ;
+                    rdfs:comment "has participant is a relation that describes the participation of a (non-process) thing in a process."@en ;
                     rdfs:label "has participant"@en .
 
 
 ###  https://w3id.org/sulo/isLocationOf
 sulo:isLocationOf rdf:type owl:ObjectProperty ,
-                           owl:TransitiveProperty ;
+                           owl:TransitiveProperty ,
+                           owl:ReflexiveProperty ;
+                  rdfs:comment "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B."@en ;
                   rdfs:label "is location of"@en .
 
 
@@ -87,6 +111,7 @@ sulo:occursIn rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range sulo:Time ;
+              rdfs:comment "a relation between any thing and the time in which it occurs in."@en ;
               rdfs:label "occurs in"@en .
 
 
@@ -173,7 +198,11 @@ sulo:EndTime rdf:type owl:Class ;
 
 ###  https://w3id.org/sulo/InformationObject
 sulo:InformationObject rdf:type owl:Class ;
-                       rdfs:subClassOf sulo:Object ;
+                       rdfs:subClassOf sulo:Object ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty sulo:hasPart ;
+                                         owl:allValuesFrom sulo:InformationObject
+                                       ] ;
                        owl:disjointWith sulo:SpatialObject ;
                        rdfs:comment "an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
                        rdfs:label "information object"@en .
@@ -239,10 +268,14 @@ sulo:Set rdf:type owl:Class ;
 
 ###  https://w3id.org/sulo/SpatialObject
 sulo:SpatialObject rdf:type owl:Class ;
-                   rdfs:subClassOf sulo:Object ;
+                   rdfs:subClassOf sulo:Object ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty sulo:hasPart ;
+                                     owl:allValuesFrom sulo:SpatialObject
+                                   ] ;
                    rdfs:comment "A spatial object is an object that occupies space"@en ;
                    rdfs:label "spatial object"@en ;
-                   skos:example "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en .
+                   <http://www.w3.org/2004/02/skos/core#example> "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en .
 
 
 ###  https://w3id.org/sulo/StartTime
