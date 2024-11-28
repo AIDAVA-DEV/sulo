@@ -152,7 +152,81 @@
 
 
 /*pygments css*/
-
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
+.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #9C6500 } /* Comment.Preproc */
+.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.highlight .gr { color: #E40000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #008400 } /* Generic.Inserted */
+.highlight .go { color: #717171 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #687822 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #767600 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
 
 /*overloading this class from pygments*/
 .highlight {
@@ -179,8 +253,6 @@
 
 
     
-
-    
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
@@ -199,7 +271,7 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html"><code style="font-size: 115%;">https://w3id.org/sulo</code></a></li>
+        <li ><a href="index.html"><code style="font-size: 115%;">https://w3id.org/sulo</code></a></li>
 
         <li  ><a href="entities-az.html">Entities A-Z</a></li>
         
@@ -223,8 +295,6 @@
 
   </div>
 </nav>
-
-    
 
 
 
@@ -322,7 +392,7 @@
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-suloprecedes.html">sulo:precedes</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-sulorefersto.html">sulo:refersTo</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a class="active"  href="prop-sulorefersto.html">sulo:refersTo</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-sulorepresents.html">sulo:represents</a></li>
           
@@ -361,412 +431,262 @@
 	
 
 
-    
+
+
         
 
 
-<ol class="breadcrumb">
-  <li class="active">
-    Home
-  </li>
-</ol>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-        <div class="page-header">
-
-            <h3>Home
-
-            </h3>
-
-        </div>
-
-
-
-
-      <div class="row">
-
         
-        <div class="col-md-6">
-
-           
-
-           
-
-           <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Ontology Metadata</h3>
-            </div>
-            <div class="panel-body">
-              
-              <dl>
-                <dt>URI</dt>
-                <dd><code>https://w3id.org/sulo</code></dd>
-              </dl>
-                
-                    <dl>
-                      
-                          
-                                <dt>rdf:type</dt>
-                              
-                          
-                    <dd><p>http://www.w3.org/2002/07/owl#Ontology</p></dd>
-                    
-                          
-                                <dt>rdfs:comment</dt>
-                              
-                          
-                    <dd><p>The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph.</p></dd>
-                    
-                          
-                                <dt>rdfs:comment</dt>
-                              
-                          
-                    <dd><p>version 0.1.0</p></dd>
-                    
-                          
-                                <dt>rdfs:label</dt>
-                              
-                          
-                    <dd><p>Simplified Upper Level Ontology</p></dd>
-                    
-                    </dl>
-                
-
-
-            </div>
-          </div>
-           </div></div>
-           
-        
-
-
-           <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Metrics</h3>
-            </div>
-            <div class="panel-body">
-                <dl>
-
-                 
-
-                  
-
-                      <dt>Ontologies</dt>
-                      <dd>1</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Triples</dt>
-                      <dd>172</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Classes</dt>
-                      <dd>18</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Properties</dt>
-                      <dd>13</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Annotation Properties</dt>
-                      <dd>1</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Object Properties</dt>
-                      <dd>11</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Datatype Properties</dt>
-                      <dd>1</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Skos Concepts</dt>
-                      <dd>0</dd>
-
-                  
-
-                    
-
-                  
-
-                      <dt>Data Shapes</dt>
-                      <dd>0</dd>
-
-                  
-
-                    
-
-                  
-
-                    
-
-                </dl>
-            </div>
-          </div>
-           </div></div>
-
-
-
-
-        </div>
-         
-
-
-        
-        <div class="col-md-6">
-
-
-          
-            <div class="row">
-              <div class="col-md-12">
-                <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Namespaces</h3>
-              </div>
-              <div class="panel-body" style="overflow: auto;">
-                 <dl class="-dl-horizontal" style="--margin-left: -100px;">
-
-                 
-                     <dt><span class="label label-info">brick</span></dt>
-                     <dd><a href="https://brickschema.org/schema/Brick#" target="_blank">https://brickschema.org/schema/Brick#</a></dd>
-
-                 
-                     <dt><span class="label label-info">csvw</span></dt>
-                     <dd><a href="http://www.w3.org/ns/csvw#" target="_blank">http://www.w3.org/ns/csvw#</a></dd>
-
-                 
-                     <dt><span class="label label-info">dc</span></dt>
-                     <dd><a href="http://purl.org/dc/elements/1.1/" target="_blank">http://purl.org/dc/elements/1.1/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dcam</span></dt>
-                     <dd><a href="http://purl.org/dc/dcam/" target="_blank">http://purl.org/dc/dcam/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dcat</span></dt>
-                     <dd><a href="http://www.w3.org/ns/dcat#" target="_blank">http://www.w3.org/ns/dcat#</a></dd>
-
-                 
-                     <dt><span class="label label-info">dcmitype</span></dt>
-                     <dd><a href="http://purl.org/dc/dcmitype/" target="_blank">http://purl.org/dc/dcmitype/</a></dd>
-
-                 
-                     <dt><span class="label label-info">dcterms</span></dt>
-                     <dd><a href="http://purl.org/dc/terms/" target="_blank">http://purl.org/dc/terms/</a></dd>
-
-                 
-                     <dt><span class="label label-info">doap</span></dt>
-                     <dd><a href="http://usefulinc.com/ns/doap#" target="_blank">http://usefulinc.com/ns/doap#</a></dd>
-
-                 
-                     <dt><span class="label label-info">foaf</span></dt>
-                     <dd><a href="http://xmlns.com/foaf/0.1/" target="_blank">http://xmlns.com/foaf/0.1/</a></dd>
-
-                 
-                     <dt><span class="label label-info">geo</span></dt>
-                     <dd><a href="http://www.opengis.net/ont/geosparql#" target="_blank">http://www.opengis.net/ont/geosparql#</a></dd>
-
-                 
-                     <dt><span class="label label-info">odrl</span></dt>
-                     <dd><a href="http://www.w3.org/ns/odrl/2/" target="_blank">http://www.w3.org/ns/odrl/2/</a></dd>
-
-                 
-                     <dt><span class="label label-info">org</span></dt>
-                     <dd><a href="http://www.w3.org/ns/org#" target="_blank">http://www.w3.org/ns/org#</a></dd>
-
-                 
-                     <dt><span class="label label-info">owl</span></dt>
-                     <dd><a href="http://www.w3.org/2002/07/owl#" target="_blank">http://www.w3.org/2002/07/owl#</a></dd>
-
-                 
-                     <dt><span class="label label-info">prof</span></dt>
-                     <dd><a href="http://www.w3.org/ns/dx/prof/" target="_blank">http://www.w3.org/ns/dx/prof/</a></dd>
-
-                 
-                     <dt><span class="label label-info">prov</span></dt>
-                     <dd><a href="http://www.w3.org/ns/prov#" target="_blank">http://www.w3.org/ns/prov#</a></dd>
-
-                 
-                     <dt><span class="label label-info">qb</span></dt>
-                     <dd><a href="http://purl.org/linked-data/cube#" target="_blank">http://purl.org/linked-data/cube#</a></dd>
-
-                 
-                     <dt><span class="label label-info">rdf</span></dt>
-                     <dd><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" target="_blank">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a></dd>
-
-                 
-                     <dt><span class="label label-info">rdfs</span></dt>
-                     <dd><a href="http://www.w3.org/2000/01/rdf-schema#" target="_blank">http://www.w3.org/2000/01/rdf-schema#</a></dd>
-
-                 
-                     <dt><span class="label label-info">schema</span></dt>
-                     <dd><a href="https://schema.org/" target="_blank">https://schema.org/</a></dd>
-
-                 
-                     <dt><span class="label label-info">sh</span></dt>
-                     <dd><a href="http://www.w3.org/ns/shacl#" target="_blank">http://www.w3.org/ns/shacl#</a></dd>
-
-                 
-                     <dt><span class="label label-info">skos</span></dt>
-                     <dd><a href="http://www.w3.org/2004/02/skos/core#" target="_blank">http://www.w3.org/2004/02/skos/core#</a></dd>
-
-                 
-                     <dt><span class="label label-info">sosa</span></dt>
-                     <dd><a href="http://www.w3.org/ns/sosa/" target="_blank">http://www.w3.org/ns/sosa/</a></dd>
-
-                 
-                     <dt><span class="label label-info">ssn</span></dt>
-                     <dd><a href="http://www.w3.org/ns/ssn/" target="_blank">http://www.w3.org/ns/ssn/</a></dd>
-
-                 
-                     <dt><span class="label label-info">sulo</span></dt>
-                     <dd><a href="https://w3id.org/sulo/" target="_blank">https://w3id.org/sulo/</a></dd>
-
-                 
-                     <dt><span class="label label-info">time</span></dt>
-                     <dd><a href="http://www.w3.org/2006/time#" target="_blank">http://www.w3.org/2006/time#</a></dd>
-
-                 
-                     <dt><span class="label label-info">vann</span></dt>
-                     <dd><a href="http://purl.org/vocab/vann/" target="_blank">http://purl.org/vocab/vann/</a></dd>
-
-                 
-                     <dt><span class="label label-info">void</span></dt>
-                     <dd><a href="http://rdfs.org/ns/void#" target="_blank">http://rdfs.org/ns/void#</a></dd>
-
-                 
-                     <dt><span class="label label-info">wgs</span></dt>
-                     <dd><a href="https://www.w3.org/2003/01/geo/wgs84_pos#" target="_blank">https://www.w3.org/2003/01/geo/wgs84_pos#</a></dd>
-
-                 
-                     <dt><span class="label label-info">xml</span></dt>
-                     <dd><a href="http://www.w3.org/XML/1998/namespace" target="_blank">http://www.w3.org/XML/1998/namespace</a></dd>
-
-                 
-                     <dt><span class="label label-info">xsd</span></dt>
-                     <dd><a href="http://www.w3.org/2001/XMLSchema#" target="_blank">http://www.w3.org/2001/XMLSchema#</a></dd>
-
-                 
-
-                </dl>
-              </div>
-            </div>
-              </div>
-            </div>
             
-        </div>
-         
-
-      </div>
 
 
 
 
-    <div class="container margin50">
 
 
-    </div> <!-- /container -->
 
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+          <a href="entities-az.html">Entities</a>
+    </li>
+    <li>
+          <a href="entities-tree-properties.html">Properties</a>
+    </li>
+      <li class="active">
+            sulo:refersTo
+        </li>
+  </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+            <h1>
+
+                sulo:refersTo
+                
+
+            </h1>
+
+            <hr>
+
+
+
+            <div class="tree-container">
+            <div class="tree">
+                <ul>
+                    
+
+                        <li><a href="entities-tree-properties.html">rdf:Property</a>
+
+                          <ul>
+                            <li><a style="font-weight: bold;" title="'refers to'">sulo:refersTo</a>
+
+                            
+                                <ul>
+                                  <li><a href="prop-sulodescribes.html" title="'describes' - describes is a relation between an information object and the thing it provides a description for.">sulo:describes</a></li><li><a href="prop-suloencodes.html" title="'encodes' - A relation between an information containing object, in which the first object contains information that is used to produce the..">sulo:encodes</a></li><li><a href="prop-sulorepresents.html" title="'represents' - a represents b when a serves as a sign, symbol or model of b.">sulo:represents</a></li>
+                                </ul>
+                            
+                              </li>
+
+                          </ul>
+
+                        </li>
+                    
+
+                </ul>
+            </div>
+            </div>
+
+
+
+
+            <div class="row"><div class="col-md-12">
+               <div class="panel panel-default">
+             <div class="panel-heading">
+               <h3 class="panel-title">URI</h3>
+             </div>
+             <div class="panel-body">
+
+                 <code>https://w3id.org/sulo/refersTo</code>
+             </div>
+           </div>
+            </div></div>
+
+
+
+            
+             <div class="row"><div class="col-md-12">
+               <div class="panel panel-default">
+             <div class="panel-heading">
+               <h3 class="panel-title">Label</h3>
+             </div>
+             <div class="panel-body">
+
+                 refers to
+             </div>
+           </div>
+            </div></div>
+            
+
+
+            
+
+
+
+            
+
+
+
+            
+
+                  <div class="row"><div class="col-md-12">
+                    <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Sub Property</h3>
+                  </div>
+                  <div class="panel-body">
+
+                      <li><a href="prop-sulodescribes.html" title="https://w3id.org/sulo/describes">sulo:describes</a></li><li><a href="prop-suloencodes.html" title="https://w3id.org/sulo/encodes">sulo:encodes</a></li><li><a href="prop-sulorepresents.html" title="https://w3id.org/sulo/represents">sulo:represents</a></li>
+
+
+                  </div>
+                </div>
+                 </div></div>
+
+            
+
+
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+
+            <table class="table table-bordered" style="overflow: auto;">
+
+               <tr class="table-classproperties">
+                   <th>DOMAIN</th><th>PROPERTY</th><th>RANGE</th>
+               </tr>
+               <tr>
+                   <td>
+                     
+                         <a>owl:Thing</a> (inferred)
+                     
+                   </td>
+
+                    <td>
+                      sulo:refersTo
+                    </td>
+
+                    <td>
+                      
+                          <a>owl:Thing</a> (inferred)
+                      
+                    </td>
+            </table>
+
+          </div>
+           </div></div>
+
+
+
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Implementation</h3>
+            </div>
+            <div class="panel-body implementation-panel">
+
+                
+
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nn">sulo</span><span class="p">:</span><span class="nt">refersTo</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;refers to&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+</pre></div>
+
+
+                
+            </div>
+          </div>
+           </div></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
 
 
 	</div><!-- /#page-content-wrapper -->
@@ -834,6 +754,22 @@ $('#search-input-sidebar').keyup(function() {
 </script>
 
 
+
+
+  <!-- Scroll Sidebar Script -->
+
+  
+  
+
+  <script type="text/javascript">
+
+    $(document).ready(function (){
+      $('#sidebar-wrapper').animate({
+          scrollTop: $("#sd_31").offset().top - 100
+      }, 100);
+    });
+
+  </script>
 
 
 
