@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  reasoning:
+  consistency_check:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Check out the repository
@@ -30,7 +30,8 @@ jobs:
         run: |
           for file in *.ttl; do
             if [[ -f "$file" ]]; then
-              ./robot reason --reasoner hermit --input "$file" -D inconsistent.owl || exit 1
+              output="${file%.ttl}-inconsistent.owl"
+              ./robot reason --reasoner hermit --input "$file" -D "$output" || exit 1
               echo "Reasoning completed for: $file"
             fi
           done
