@@ -1,0 +1,34 @@
+# .github/workflows/reasoning.yml
+name: Ontology Reasoning
+
+on:
+  push:
+    paths:
+      - '*.ttl'
+      - '*.rdf'
+      - '*.owl'
+
+jobs:
+  reasoning:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Download ROBOT jar and script
+      - name: Download ROBOT
+        run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar
+          curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
+          sudo chmod u+x robot
+
+      # Step 3: Run ROBOT reasoning
+      - name: Run Reasoner
+        run: |
+          for file in *.ttl; do
+            if [[ -f "$file" ]]; then
+              ./robot reason --reasoner hermit --input "$file" -D inconsistent.owl || exit 1
+              echo "Reasoning completed for: $file"
+            fi
+          done
