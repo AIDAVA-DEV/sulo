@@ -35,7 +35,7 @@ jobs:
           mkdir -p docs
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
-              ontospy gendocs -o docs/"${file%.*}" "$file"
+              ontospy gendocs --type 1 -o docs/"${file%.*}" "$file"
               echo "Documentation generated for: $file"
             fi
           done
