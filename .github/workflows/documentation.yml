@@ -32,9 +32,10 @@ jobs:
       # Step 4: Generate Documentation
       - name: Generate Ontology Documentation
         run: |
-          mkdir -p docs
+          
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
+              mkdir -p docs/"${file%.*}"
               ontospy gendocs --type 1 -o docs/"${file%.*}" "$file"
               echo "Documentation generated for: $file"
             fi
