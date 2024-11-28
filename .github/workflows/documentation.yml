@@ -1,0 +1,48 @@
+name: Ontology Documentation
+
+on:
+  push:
+    paths:
+      - '*.owl'
+      - '*.ttl'
+      - '*.rdf'
+  workflow_dispatch:
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+
+      # Step 3: Install Ontospy
+      - name: Install Ontospy
+        run: |
+          python -m pip install --upgrade pip
+          pip install ontospy
+
+      # Step 4: Generate Documentation
+      - name: Generate Ontology Documentation
+        run: |
+          mkdir -p docs
+          for file in *.ttl *.owl *.rdf; do
+            if [[ -f "$file" ]]; then
+              ontospy gendocs -o docs/"${file%.*}" "$file"
+              echo "Documentation generated for: $file"
+            fi
+          done
+
+      # Step 5: Deploy Documentation to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
