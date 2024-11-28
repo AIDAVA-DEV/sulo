@@ -1,0 +1,29 @@
+# .github/workflows/validate.yml
+name: Ontology Validation
+
+on:
+  push:
+    paths:
+      - '*.ttl'
+      - '*.rdf'
+      - '*.owl'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y raptor-utils
+
+      - name: Validate ontology files
+        run: |
+          for file in *.ttl *.rdf *.owl; do
+            if [[ -f "$file" ]]; then
+              rapper -i turtle "$file" -o turtle > /dev/null
+            fi
+          done
