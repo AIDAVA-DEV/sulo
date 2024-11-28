@@ -1,0 +1,2542 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Ontospy > https://w3id.org/sulo</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+  <style type="text/css" media="screen">
+
+
+  body {
+	  margin-left: 6em;
+	  margin-right: 12em;
+	  text-align: justify;
+    padding: 2em 1em 2em 70px;
+    margin: 0;
+    font-family: sans-serif;
+    color: black;
+    background: white;
+    background-position: top left;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  :link { color: #00C; background: transparent }
+  :visited { color: #00C; background: transparent }
+  a:active { color: #C00; background: transparent }
+
+  a:link img, a:visited img { border-style: none } /* no border on img links */
+
+  a:hover {color: white; background: #00C; }
+  a.backlink:hover {color: white; background: grey; }
+  a.greylink:hover {color: white; background: grey; }
+
+  .margintop {
+  	 margin-top: 40px;
+  }
+
+
+  dt, dd { margin-top: 10px; margin-bottom: 0 } /* opera 3.50 */
+  dt { font-weight: bold }
+
+
+  h1, h2, h3, h4, h5, h6 { text-align: left }
+  /* background should be transparent, but WebTV has a bug */
+  h1, h2, h3, h4, h5 { color: #005A9C; background: white }
+  h1.title { font: 200% sans-serif }
+  h1 { font: 170% sans-serif }
+  h2 { font: 140% sans-serif }
+  h3 { font: 120% sans-serif }
+  h4 { font: bold 100% sans-serif }
+  h5 { font: italic 100% sans-serif }
+  h6 { font: small-caps 100% sans-serif }
+
+  .hide { display: none }
+
+
+  pre { margin-left: 2em }
+
+  pre, code { font-family: monospace } /* navigator 4 requires this */
+
+
+  .implementation {
+  	background: aliceblue;
+	padding: 10px;
+	margin-top: 5px;
+  }
+
+  fieldset {
+	  margin-top: 20px;
+	  padding: 13px;
+      text-align: left;
+  }
+
+  legend {
+	  text-transform: uppercase;
+  }
+
+  .entity-div {
+	  margin: 55px 10px 30px 10px;
+  }
+
+  .entity-section {
+	  margin-bottom: 0px;
+  }
+
+
+  a.backlink {
+	  font-size: 80%;
+	  color: grey;
+  }
+
+  a.greylink {
+	  color: grey;
+  }
+
+
+   .implementation_title {
+
+       font-weight: bold;
+       font-size: 100%;
+   }
+
+.section-desc {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+
+        .tree-container {
+            width: 3000em;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+		.tree {margin: 10px 0px 30px -20px; padding: 0; display: inline-block;}
+
+		.tree ul {
+			padding-top: 20px; position: relative;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		.tree li {
+			float: left; text-align: center;
+			list-style-type: none;
+			position: relative;
+			padding: 20px 5px 0 5px;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		/*We will use ::before and ::after to draw the connectors*/
+
+		.tree li::before, .tree li::after{
+			content: '';
+			position: absolute; top: 0; right: 50%;
+			border-top: 1px solid #ccc;
+			width: 50%; height: 20px;
+		}
+		.tree li::after{
+			right: auto; left: 50%;
+			border-left: 1px solid #ccc;
+		}
+
+		/*We need to remove left-right connectors from elements without
+		any siblings*/
+		.tree li:only-child::after, .tree li:only-child::before {
+			display: none;
+		}
+
+		/*Remove space from the top of single children*/
+		.tree li:only-child{ padding-top: 0;}
+
+		/*Remove left connector from first child and
+		right connector from last child*/
+		.tree li:first-child::before, .tree li:last-child::after{
+			border: 0 none;
+		}
+		/*Adding back the vertical connector to the last nodes*/
+		.tree li:last-child::before{
+			border-right: 1px solid #ccc;
+			border-radius: 0 5px 0 0;
+			-webkit-border-radius: 0 5px 0 0;
+			-moz-border-radius: 0 5px 0 0;
+		}
+		.tree li:first-child::after{
+			border-radius: 5px 0 0 0;
+			-webkit-border-radius: 5px 0 0 0;
+			-moz-border-radius: 5px 0 0 0;
+		}
+
+		/*Time to add downward connectors from parents*/
+		.tree ul ul::before{
+			content: '';
+			position: absolute; top: 0; left: 50%;
+			border-left: 1px solid #ccc;
+			width: 0; height: 20px;
+		}
+
+		.tree li a{
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: #666;
+			font-family: arial, verdana, tahoma;
+			font-size: 11px;
+			display: inline-block;
+
+			border-radius: 5px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+		}
+
+		/*Time for some hover effects*/
+		/*We will apply the hover effect the the lineage of the element also*/
+		.tree li a:hover, .tree li a:hover+ul li a {
+			background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+		}
+		/*Connector styles on hover*/
+		.tree li a:hover+ul li::after,
+		.tree li a:hover+ul li::before,
+		.tree li a:hover+ul::before,
+		.tree li a:hover+ul ul::before{
+			border-color:  #94a0b4;
+		}
+
+		/*Thats all. I hope you enjoyed it.
+		Thanks :)*/
+
+
+  </style>
+
+
+</head>
+
+
+<body>
+
+	
+	
+		
+			<h1 class="title"><a href="" target="_blank">https://w3id.org/sulo</a></h1>
+			<h3><p>version 0.1.0 - The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph.</p></h3>
+		
+
+	
+		
+		
+
+
+	<p><small>Ontology documentation automatically generated by <a class="greylink" href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> on Thu, 28 Nov 2024 14:36:24</small></p>
+
+
+
+	
+
+
+	<hr class="margintop">
+
+	<h1><a name="toc">&nbsp;</a>Table of Content</h1>
+
+	<ul>
+		<li><a href="#ontologies">Ontologies</a></li>
+		<li><a href="#a-z">A-Z of Terms</a></li>
+		<li><a href="#classes">Classes</a></li>
+		<li><a href="#objproperties">Object Properties</a></li>
+		<li><a href="#dataproperties">Datatype properties</a></li>
+		
+		
+		
+	</ul>
+
+
+
+	
+
+	
+
+	<hr class="margintop">
+
+	<h1><a name="ontologies"></a>Ontologies</h1>
+
+		
+
+
+			<fieldset> <legend><h3><a href="https://w3id.org/sulo" target="_blank">https://w3id.org/sulo</a></h3></legend>
+
+			<h4 style="margin-top: -20px;"><p>version 0.1.0 - The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph.</p></h4>
+
+			
+			
+				
+					<dt>rdf:type</dt>
+				  
+			
+			<dd><p>http://www.w3.org/2002/07/owl#Ontology</p></dd>
+			
+			
+				</dl>
+					<dt>rdfs:comment</dt>
+				  
+			
+			<dd><p>The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph.</p></dd>
+			
+			
+				</dl>
+					<dt>rdfs:comment</dt>
+				  
+			
+			<dd><p>version 0.1.0</p></dd>
+			
+			
+				</dl>
+					<dt>rdfs:label</dt>
+				  
+			
+			<dd><p>Simplified Upper Level Ontology</p></dd>
+			
+
+			</fieldset>
+
+		
+
+	
+
+
+
+	
+
+	<hr class="margintop">
+	<h1><a  name="a-z">&nbsp;</a>A-Z of terms</h1>
+
+	<div id="azterms">
+
+	This is a complete alphabetical A-Z index of all terms, by main logical type.
+
+	
+		<fieldset> <legend>Classes (18)</legend>
+			<span><a href="#:ActionSpecification">:ActionSpecification</a></span>
+			|
+			<span><a href="#:Attribute">:Attribute</a></span>
+			|
+			<span><a href="#:Capability">:Capability</a></span>
+			|
+			<span><a href="#:Duration">:Duration</a></span>
+			|
+			<span><a href="#:EndTime">:EndTime</a></span>
+			|
+			<span><a href="#:InformationObject">:InformationObject</a></span>
+			|
+			<span><a href="#:Object">:Object</a></span>
+			|
+			<span><a href="#:Process">:Process</a></span>
+			|
+			<span><a href="#:Quality">:Quality</a></span>
+			|
+			<span><a href="#:Quantity">:Quantity</a></span>
+			|
+			<span><a href="#:Role">:Role</a></span>
+			|
+			<span><a href="#:SpatialObject">:SpatialObject</a></span>
+			|
+			<span><a href="#:StartTime">:StartTime</a></span>
+			|
+			<span><a href="#:Time">:Time</a></span>
+			|
+			<span><a href="#:TimeInstant">:TimeInstant</a></span>
+			|
+			<span><a href="#:TimeInterval">:TimeInterval</a></span>
+			|
+			<span><a href="#:Unit">:Unit</a></span>
+			|
+			<span><a href="#:set">:set</a></span>
+			
+			
+		</fieldset>
+	
+
+	
+
+	<fieldset> <legend>Object Properties (10)</legend>
+		&nbsp;<a href="#:describes">:describes</a>
+		|  <a href="#:encodes">:encodes</a>
+		|  <a href="#:hasAttribute">:hasAttribute</a>
+		|  <a href="#:hasDirectPart">:hasDirectPart</a>
+		|  <a href="#:hasPart">:hasPart</a>
+		|  <a href="#:hasParticipant">:hasParticipant</a>
+		|  <a href="#:isLocationOf">:isLocationOf</a>
+		|  <a href="#:occursIn">:occursIn</a>
+		|  <a href="#:refersTo">:refersTo</a>
+		|  <a href="#:represents">:represents</a>
+		  
+	</fieldset>
+
+	
+
+	
+	<fieldset> <legend>Datatype Properties (1)</legend>
+		&nbsp;<a href="#:hasValue">:hasValue</a>
+		  
+	</fieldset>
+	
+
+	
+
+	
+
+	
+
+	</div>
+
+
+
+	
+
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop" ><a name="classes">&nbsp;</a>Classes</h1>
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":ActionSpecification" href="#:ActionSpecification">:ActionSpecification</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:InformationObject">:InformationObject</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:ActionSpecification</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :ActionSpecification is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>An action specification is an information object composed of a sequence of instructions to achieve some objective</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:ActionSpecification a owl:Class ;<br>
+    rdfs:label &#34;action specification&#34;@en ;<br>
+    rdfs:comment &#34;An action specification is an information object composed of a sequence of instructions to achieve some objective&#34;@en ;<br>
+    rdfs:subClassOf :InformationObject .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Attribute" href="#:Attribute">:Attribute</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">:Attribute</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:Capability">:Capability</a></li><li><a href="#:Quality">:Quality</a></li><li><a href="#:Role">:Role</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>An attribute is a property of an object or process that stems from their intrisinc structure and/or contextual interactions.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Attribute a owl:Class ;<br>
+    rdfs:label &#34;attribute&#34;@en ;<br>
+    rdfs:comment &#34;An attribute is a property of an object or process that stems from their intrisinc structure and/or contextual interactions.&#34;@en ;<br>
+    rdfs:subClassOf [ a owl:Restriction ;<br>
+            owl:onProperty [ owl:inverseOf :hasAttribute ] ;<br>
+            owl:someValuesFrom [ a owl:Class ;<br>
+                    owl:unionOf ( :Object :Process ) ] ] ;<br>
+    owl:disjointUnionOf ( :Capability :Quality :Role ) .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Capability" href="#:Capability">:Capability</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Attribute">:Attribute</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Capability</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Capability is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason - A capability is an attribute that describes what an entity is able to do, under some set of circumstances.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:Attribute">:Attribute</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Capability a owl:Class ;<br>
+    rdfs:label &#34;capability&#34; ;<br>
+    rdfs:comment &#34;A capability is an attribute that describes what an entity is able to do, under some set of circumstances.&#34;@en,<br>
+        &#34;the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason&#34;@en ;<br>
+    rdfs:subClassOf :Attribute .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Duration" href="#:Duration">:Duration</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:TimeInterval">:TimeInterval</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Duration</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Duration is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(5)</small>:</b>
+                        <br />
+                        <a href="#:TimeInterval">:TimeInterval</a> | <a href="#:Time">:Time</a> | <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Duration a owl:Class ;<br>
+    rdfs:subClassOf :TimeInterval .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":EndTime" href="#:EndTime">:EndTime</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:TimeInstant">:TimeInstant</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:EndTime</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :EndTime is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(5)</small>:</b>
+                        <br />
+                        <a href="#:TimeInstant">:TimeInstant</a> | <a href="#:Time">:Time</a> | <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:EndTime a owl:Class ;<br>
+    rdfs:label &#34;end time&#34;@en ;<br>
+    rdfs:subClassOf :TimeInstant .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":InformationObject" href="#:InformationObject">:InformationObject</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Object">:Object</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:InformationObject</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:ActionSpecification">:ActionSpecification</a></li><li><a href="#:Quantity">:Quantity</a></li><li><a href="#:set">:set</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#:hasValue">:hasValue</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:InformationObject a owl:Class ;<br>
+    rdfs:label &#34;information object&#34;@en ;<br>
+    rdfs:comment &#34;an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making.&#34;@en ;<br>
+    rdfs:subClassOf :Object ;<br>
+    owl:disjointWith :SpatialObject .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Object" href="#:Object">:Object</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">:Object</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:InformationObject">:InformationObject</a></li><li><a href="#:SpatialObject">:SpatialObject</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>An object is an entity that maintains its identity through time, and does not have temporal parts.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Object a owl:Class ;<br>
+    rdfs:label &#34;object&#34;@en ;<br>
+    rdfs:comment &#34;An object is an entity that maintains its identity through time, and does not have temporal parts.&#34; ;<br>
+    rdfs:subClassOf [ a owl:Class ;<br>
+            owl:complementOf [ a owl:Restriction ;<br>
+                    owl:onProperty :hasPart ;<br>
+                    owl:someValuesFrom :Process ] ],<br>
+        [ a owl:Restriction ;<br>
+            owl:allValuesFrom :Object ;<br>
+            owl:onProperty :hasPart ] ;<br>
+    owl:disjointWith :Process .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Process" href="#:Process">:Process</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+
+                            <li href="#"><a>owl:Thing</a>
+
+                            <ul>
+                              <li><a style="font-weight: bold;">:Process</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Process is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>a process is a entity that unfolds in time and has temporal parts.</p>
+                </p>
+
+                
+                    <p class="section-desc"><b>Inherits from:</b> <br />owl:Thing</p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Property Domain of:</b>
+                        <br>
+                        <a href="#:hasParticipant">:hasParticipant</a>  
+                    </p>
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Process a owl:Class ;<br>
+    rdfs:label &#34;process&#34;@en ;<br>
+    rdfs:comment &#34;a process is a entity that unfolds in time and has temporal parts.&#34;@en ;<br>
+    rdfs:subClassOf [ a owl:Restriction ;<br>
+            owl:allValuesFrom :Process ;<br>
+            owl:onProperty :hasPart ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Quality" href="#:Quality">:Quality</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Attribute">:Attribute</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Quality</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Quality is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>A quality is an attribute that is intrinsically associated with its bearer (or its parts). - the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:Attribute">:Attribute</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Quality a owl:Class ;<br>
+    rdfs:label &#34;quality&#34;@en ;<br>
+    rdfs:comment &#34;A quality is an attribute that is intrinsically associated with its bearer (or its parts).&#34;@en,<br>
+        &#34;the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event&#34;@en ;<br>
+    rdfs:subClassOf :Attribute ;<br>
+    owl:disjointWith :Role .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Quantity" href="#:Quantity">:Quantity</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:InformationObject">:InformationObject</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Quantity</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:Time">:Time</a></li><li><a href="#:Unit">:Unit</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>A quantity is an informational object that contains the magnitude (and unit) of an attribute.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Quantity a owl:Class ;<br>
+    rdfs:label &#34;quantity&#34;@en ;<br>
+    rdfs:comment &#34;A quantity is an informational object that contains the magnitude (and unit) of an attribute.&#34;@en ;<br>
+    rdfs:subClassOf :InformationObject .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Role" href="#:Role">:Role</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Attribute">:Attribute</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Role</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Role is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>a teacher, a student, a catalyst, a substrate, a product - A role is an attribute that describes a context-dependent behaviour.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:Attribute">:Attribute</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Role a owl:Class ;<br>
+    rdfs:label &#34;role&#34;@en ;<br>
+    rdfs:comment &#34;A role is an attribute that describes a context-dependent behaviour.&#34;@en,<br>
+        &#34;a teacher, a student, a catalyst, a substrate, a product&#34;@en ;<br>
+    rdfs:subClassOf :Attribute .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":SpatialObject" href="#:SpatialObject">:SpatialObject</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Object">:Object</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:SpatialObject</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :SpatialObject is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>A spatial object is an object that occupies space - a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:SpatialObject a owl:Class ;<br>
+    rdfs:label &#34;spatial object&#34;@en ;<br>
+    rdfs:comment &#34;A spatial object is an object that occupies space&#34;@en,<br>
+        &#34;a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth&#34;@en ;<br>
+    rdfs:subClassOf :Object .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":StartTime" href="#:StartTime">:StartTime</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:TimeInstant">:TimeInstant</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:StartTime</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :StartTime is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(5)</small>:</b>
+                        <br />
+                        <a href="#:TimeInstant">:TimeInstant</a> | <a href="#:Time">:Time</a> | <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:StartTime a owl:Class ;<br>
+    rdfs:label &#34;start time&#34;@en ;<br>
+    rdfs:subClassOf :TimeInstant .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Time" href="#:Time">:Time</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Quantity">:Quantity</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Time</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:TimeInstant">:TimeInstant</a></li><li><a href="#:TimeInterval">:TimeInterval</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(3)</small>:</b>
+                        <br />
+                        <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+					<p class="section-desc"><b>Property Range of:</b>
+                        <br>
+                        <a href="#:occursIn">:occursIn</a>  
+                    </p>
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Time a owl:Class ;<br>
+    rdfs:label &#34;time&#34;@en ;<br>
+    rdfs:comment &#34;time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).&#34;@en ;<br>
+    rdfs:subClassOf [ a owl:Restriction ;<br>
+            owl:onProperty :hasPart ;<br>
+            owl:someValuesFrom :Unit ],<br>
+        :Quantity .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":TimeInstant" href="#:TimeInstant">:TimeInstant</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Time">:Time</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:TimeInstant</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:EndTime">:EndTime</a></li><li><a href="#:StartTime">:StartTime</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(4)</small>:</b>
+                        <br />
+                        <a href="#:Time">:Time</a> | <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:TimeInstant a owl:Class ;<br>
+    rdfs:label &#34;time instant&#34;@en ;<br>
+    rdfs:subClassOf :Time .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":TimeInterval" href="#:TimeInterval">:TimeInterval</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Time">:Time</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:TimeInterval</a>
+
+                              
+                                  <ul>
+                                    <li><a href="#:Duration">:Duration</a></li>
+                                  </ul>
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(4)</small>:</b>
+                        <br />
+                        <a href="#:Time">:Time</a> | <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:TimeInterval a owl:Class ;<br>
+    rdfs:label &#34;time interval&#34; ;<br>
+    rdfs:subClassOf :Time .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":Unit" href="#:Unit">:Unit</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:Quantity">:Quantity</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:Unit</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :Unit is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(3)</small>:</b>
+                        <br />
+                        <a href="#:Quantity">:Quantity</a> | <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:Unit a owl:Class ;<br>
+    rdfs:subClassOf :Quantity .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+			<div class="entity-div">
+
+
+
+				<h3 class="entity-section">Class: <a name=":set" href="#:set">:set</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+
+                <div class="tree-container">
+                <div class="tree">
+                    <ul>
+                        
+                            <li> <a href="#:InformationObject">:InformationObject</a>
+
+                            <ul>
+
+                              <li><a style="font-weight: bold;">:set</a>
+
+                              
+                                </li>
+
+                            </ul>
+
+                            </li>
+                            
+
+                        
+
+                    </ul>
+                </div>
+                </div>
+
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :set is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>A set is a collection of things, for which there may be zero members.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#:InformationObject">:InformationObject</a> | <a href="#:Object">:Object</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+
+				
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:set a owl:Class ;<br>
+    rdfs:label &#34;set&#34;@en ;<br>
+    rdfs:comment &#34;A set is a collection of things, for which there may be zero members.&#34;@en ;<br>
+    rdfs:subClassOf :InformationObject .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+
+			
+
+	
+
+
+
+	
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop"><a name="objproperties">&nbsp;</a>Object Properties</h1>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":describes" href="#:describes">:describes</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :describes is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>describes is a relation between an information object and the thing it provides a description for.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:refersTo">:refersTo</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:describes a owl:ObjectProperty ;<br>
+    rdfs:label &#34;describes&#34;@en ;<br>
+    rdfs:comment &#34;describes is a relation between an information object and the thing it provides a description for.&#34;@en ;<br>
+    rdfs:subPropertyOf :refersTo .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":encodes" href="#:encodes">:encodes</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :encodes is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>A relation between an information containing object, in which the first object contains information that is used to produce the second object.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:refersTo">:refersTo</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:encodes a owl:ObjectProperty ;<br>
+    rdfs:label &#34;encodes&#34;@en ;<br>
+    rdfs:comment &#34;A relation between an information containing object, in which the first object contains information that is used to produce the second object.&#34;@en ;<br>
+    rdfs:subPropertyOf :refersTo .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":hasAttribute" href="#:hasAttribute">:hasAttribute</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :hasAttribute is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#owl:Thing">owl:Thing</a> | <a href="#n846d63ac57e743f587958014d67b45d4b1">n846d63ac57e743f587958014d67b45d4b1</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:hasAttribute a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has attribute&#34;@en ;<br>
+    rdfs:domain owl:Thing ;<br>
+    rdfs:range [ a owl:Class ;<br>
+            owl:unionOf ( :Attribute :InformationObject ) ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":hasDirectPart" href="#:hasDirectPart">:hasDirectPart</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :hasDirectPart is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>has direct part is a parthood relation that can be used to specify cardinality constraints</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(2)</small>:</b>
+                        <br />
+                        <a href="#:hasPart">:hasPart</a> | <a href="#:isLocationOf">:isLocationOf</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:hasDirectPart a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has direct part&#34; ;<br>
+    rdfs:comment &#34;has direct part is a parthood relation that can be used to specify cardinality constraints&#34; ;<br>
+    rdfs:subPropertyOf :hasPart .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":hasPart" href="#:hasPart">:hasPart</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:isLocationOf">:isLocationOf</a>  
+                    </p>
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#:hasDirectPart">:hasDirectPart</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:hasPart a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has part&#34;@en ;<br>
+    rdfs:subPropertyOf :isLocationOf ;<br>
+    owl:propertyDisjointWith :hasParticipant .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":hasParticipant" href="#:hasParticipant">:hasParticipant</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :hasParticipant is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#:Process">:Process</a> | <a href="#n846d63ac57e743f587958014d67b45d4b4">n846d63ac57e743f587958014d67b45d4b4</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:hasParticipant a owl:ObjectProperty ;<br>
+    rdfs:label &#34;has participant&#34;@en ;<br>
+    rdfs:domain :Process ;<br>
+    rdfs:range [ a owl:Class ;<br>
+            owl:unionOf ( :Attribute :InformationObject :SpatialObject ) ] .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":isLocationOf" href="#:isLocationOf">:isLocationOf</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#:hasPart">:hasPart</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:isLocationOf a owl:ObjectProperty,<br>
+        owl:TransitiveProperty ;<br>
+    rdfs:label &#34;is location of&#34;@en .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":occursIn" href="#:occursIn">:occursIn</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :occursIn is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#owl:Thing">owl:Thing</a>  </p>
+				
+
+				
+					<p class="section-desc"><b>Class Range for:</b>
+                        <br>
+                        <a href="#:Time">:Time</a>  </p>
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:occursIn a owl:ObjectProperty ;<br>
+    rdfs:label &#34;occurs in&#34;@en ;<br>
+    rdfs:domain owl:Thing ;<br>
+    rdfs:range :Time ;<br>
+    rdfs:subPropertyOf owl:topObjectProperty .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":refersTo" href="#:refersTo">:refersTo</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    
+                </p>
+
+                
+
+				
+
+
+
+				
+					<p class="section-desc"><b>Has sub-property <small>(direct)</small>:</b>
+                        <br />
+                        <a href="#:describes">:describes</a> | <a href="#:encodes">:encodes</a> | <a href="#:represents">:represents</a>  
+                    </p>
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:refersTo a owl:ObjectProperty ;<br>
+    rdfs:label &#34;refers to&#34;@en .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Object Property: <a name=":represents" href="#:represents">:represents</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :represents is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>a represents b when a serves as a sign, symbol or model of b.</p>
+                </p>
+
+                
+					<p class="section-desc"><b>Inherits from <small>(1)</small>:</b>
+                        <br />
+                        <a href="#:refersTo">:refersTo</a>  
+                    </p>
+				
+
+
+
+				
+
+				
+
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:represents a owl:ObjectProperty ;<br>
+    rdfs:label &#34;represents&#34;@en ;<br>
+    rdfs:comment &#34;a represents b when a serves as a sign, symbol or model of b.&#34;@en ;<br>
+    rdfs:subPropertyOf :refersTo .</p>
+
+<p></p></code>
+				</div>
+
+			</div>
+
+			
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+		<hr class="margintop">
+		<h1 class="margintop"><a name="dataproperties">&nbsp;</a>Datatype Properties</h1>
+
+			
+
+			<div class="entity-div">
+
+				<h3 class="entity-section">Datatype Property: <a name=":hasValue" href="#:hasValue">:hasValue</a>
+					<small>&nbsp;&nbsp;<a href="#a-z" class="backlink">back to top</a></small>
+				</h3>
+				<hr>
+
+                
+                <p class="section-desc">
+                    <small>NOTE</small> :hasValue is a leaf node.</p>
+                
+
+				<p class="section-desc"><b>Description</b>
+                    <br>
+                    <p>has value is the (only) data type attribute to store the values of information objects.</p>
+                </p>
+
+                
+
+				
+
+
+
+				
+
+				
+
+				
+					<p class="section-desc"><b>Class Domain for:</b>
+                        <br>
+                        <a href="#:InformationObject">:InformationObject</a>  </p>
+				
+
+				
+
+
+                <small class="implementation_title">Implementation:</small>
+				<div class="implementation">
+					<code><p>@prefix : &lt;https://w3id.org/sulo/&gt; .<br>
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+
+<p>:hasValue a owl:DatatypeProperty ;<br>
+    rdfs:label &#34;has value&#34;@en ;<br>
+    rdfs:comment &#34;has value is the (only) data type attribute to store the values of information objects.&#34;@en ;<br>
+    rdfs:domain :InformationObject .</p>
+
+<p></p></code>
+				</div>
+
+
+			</div>
+			
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+
+
+
+	
+
+
+	
+
+
+
+
+
+	<hr>
+	<small>Ontology documentation automatically generated by <a class="greylink"  href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> v2.1.1 on Thu, 28 Nov 2024 14:36:24</small>
+
+
+</body>
+</html>
