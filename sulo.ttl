@@ -8,6 +8,7 @@
 
 <https://w3id.org/sulo> rdf:type owl:Ontology ;
                          rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
+                         rdfs:comment "version 0.1.0"@en ;
                          rdfs:label "Simplified Upper Level Ontology"@en .
 
 #################################################################
