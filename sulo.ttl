@@ -42,7 +42,7 @@
 ###  https://w3id.org/sulo/hasDirectPart
 :hasDirectPart rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :hasPart ;
-               rdfs:comment "a parthood relation that can be used to specify cardinality constraints" ;
+               rdfs:comment "has direct part is a parthood relation that can be used to specify cardinality constraints" ;
                rdfs:label "has direct part" .
 
 
