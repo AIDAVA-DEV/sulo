@@ -32,7 +32,7 @@ jobs:
       # Step 4: Generate Documentation
       - name: Generate Ontology Documentation
         run: |
-          
+
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
               mkdir -p docs/"${file%.*}"
@@ -47,3 +47,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
