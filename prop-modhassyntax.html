@@ -388,13 +388,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-modhasrepresentationlanguage.html">mod:hasRepresentationLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_31"><a   href="prop-modhassyntax.html">mod:hasSyntax</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a class="active"  href="prop-modhassyntax.html">mod:hasSyntax</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_32"><a   href="prop-modpreflabelproperty.html">mod:prefLabelProperty</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_28"><a   href="prop-schemafunding.html">schema:funding</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_25"><a class="active"  href="prop-skosexample.html">skos:example</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_25"><a   href="prop-skosexample.html">skos:example</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_34"><a   href="prop-sulocauses.html">sulo:causes</a></li>
           
@@ -527,7 +527,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            skos:example
+            mod:hasSyntax
         </li>
   </ol>
 
@@ -551,7 +551,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                skos:example
+                mod:hasSyntax
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -570,7 +570,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'example'">skos:example</a>
+                            <li><a style="font-weight: bold;" title="'hasSyntax'">mod:hasSyntax</a>
 
                             
                               </li>
@@ -594,7 +594,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://www.w3.org/2004/02/skos/core#example</code>
+                 <code>https://w3id.org/mod#hasSyntax</code>
              </div>
            </div>
             </div></div>
@@ -609,7 +609,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 example
+                 hasSyntax
              </div>
            </div>
             </div></div>
@@ -646,7 +646,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      skos:example
+                      mod:hasSyntax
                     </td>
 
                     <td>
@@ -670,10 +670,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
                 
 
-                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">mod:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/mod#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">skos</span><span class="p">:</span><span class="nt">example</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
+<span class="nn">mod</span><span class="p">:</span><span class="nt">hasSyntax</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -773,7 +773,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_25").offset().top - 100
+          scrollTop: $("#sd_31").offset().top - 100
       }, 100);
     });
 
