@@ -91,15 +91,6 @@ mod:prefLabelProperty rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/sulo/causes
-sulo:causes rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf sulo:precedes ;
-            rdfs:domain sulo:Process ;
-            rdfs:range sulo:Process ;
-            rdfs:comment "a relation between two processes a,b, where a precedes b, and a is a necessary condition for b to occur."@en ;
-            rdfs:label "causes"@en .
-
-
 ###  https://w3id.org/sulo/describes
 sulo:describes rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf sulo:refersTo ;
@@ -126,7 +117,7 @@ sulo:hasDirectPart rdf:type owl:ObjectProperty ;
 sulo:hasFeature rdf:type owl:ObjectProperty ;
                 rdfs:domain owl:Thing ;
                 rdfs:range [ rdf:type owl:Class ;
-                             owl:unionOf ( sulo:Attribute
+                             owl:unionOf ( sulo:Feature
                                            sulo:InformationObject
                                          )
                            ] ;
@@ -154,7 +145,7 @@ sulo:hasPart rdf:type owl:ObjectProperty ;
 sulo:hasParticipant rdf:type owl:ObjectProperty ;
                     rdfs:domain sulo:Process ;
                     rdfs:range [ rdf:type owl:Class ;
-                                 owl:unionOf ( sulo:Attribute
+                                 owl:unionOf ( sulo:Feature
                                                sulo:Object
                                              )
                                ] ,
@@ -202,6 +193,15 @@ sulo:represents rdf:type owl:ObjectProperty ;
                 rdfs:label "represents"@en .
 
 
+###  https://w3id.org/sulo/resultsIn
+sulo:resultsIn rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf sulo:precedes ;
+               rdfs:domain sulo:Process ;
+               rdfs:range sulo:Process ;
+               rdfs:comment "a relation between two processes a,b, where a precedes b, and a is a necessary condition for b to occur."@en ;
+               rdfs:label "results in"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -224,28 +224,9 @@ sulo:ActionSpecification rdf:type owl:Class ;
                          rdfs:label "action specification"@en .
 
 
-###  https://w3id.org/sulo/Attribute
-sulo:Attribute rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty [ owl:inverseOf sulo:hasFeature
-                                                ] ;
-                                 owl:someValuesFrom [ rdf:type owl:Class ;
-                                                      owl:unionOf ( sulo:Object
-                                                                    sulo:Process
-                                                                  )
-                                                    ]
-                               ] ;
-               owl:disjointUnionOf ( sulo:Capability
-                                     sulo:Quality
-                                     sulo:Role
-                                   ) ;
-               rdfs:comment "A feature any characteristic that stems from their intrisinc structure and/or contextual interactions."@en ;
-               rdfs:label "feature"@en .
-
-
 ###  https://w3id.org/sulo/Capability
 sulo:Capability rdf:type owl:Class ;
-                rdfs:subClassOf sulo:Attribute ;
+                rdfs:subClassOf sulo:Feature ;
                 rdfs:comment "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en ;
                 rdfs:label "capability" ;
                 <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en .
@@ -261,6 +242,25 @@ sulo:Duration rdf:type owl:Class ;
 sulo:EndTime rdf:type owl:Class ;
              rdfs:subClassOf sulo:TimeInstant ;
              rdfs:label "end time"@en .
+
+
+###  https://w3id.org/sulo/Feature
+sulo:Feature rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty [ owl:inverseOf sulo:hasFeature
+                                              ] ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( sulo:Object
+                                                                  sulo:Process
+                                                                )
+                                                  ]
+                             ] ;
+             owl:disjointUnionOf ( sulo:Capability
+                                   sulo:Quality
+                                   sulo:Role
+                                 ) ;
+             rdfs:comment "A feature any characteristic that stems from their intrisinc structure and/or contextual interactions."@en ;
+             rdfs:label "feature"@en .
 
 
 ###  https://w3id.org/sulo/InformationObject
@@ -304,7 +304,7 @@ sulo:Process rdf:type owl:Class ;
 
 ###  https://w3id.org/sulo/Quality
 sulo:Quality rdf:type owl:Class ;
-             rdfs:subClassOf sulo:Attribute ;
+             rdfs:subClassOf sulo:Feature ;
              owl:disjointWith sulo:Role ;
              rdfs:comment "A quality is a feature that is intrinsically associated with its bearer (or its parts)."@en ,
                           "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en ;
@@ -320,7 +320,7 @@ sulo:Quantity rdf:type owl:Class ;
 
 ###  https://w3id.org/sulo/Role
 sulo:Role rdf:type owl:Class ;
-          rdfs:subClassOf sulo:Attribute ;
+          rdfs:subClassOf sulo:Feature ;
           rdfs:comment "A role is a feature that describes a context-dependent behaviour."@en ;
           rdfs:label "role"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "a teacher, a student, a catalyst, a substrate, a product, a patient"@en .
