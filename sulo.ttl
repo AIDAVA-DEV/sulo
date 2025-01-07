@@ -152,6 +152,10 @@ sulo:hasParticipant rdf:type owl:ObjectProperty ;
                                [ rdf:type owl:Class ;
                                  owl:complementOf sulo:Process
                                ] ;
+                    owl:propertyChainAxiom ( sulo:hasParticipant
+                                             [ owl:inverseOf sulo:hasFeature
+                                             ]
+                                           ) ;
                     rdfs:comment "has participant is a relation that describes the participation of a (non-process) thing in a process."@en ;
                     rdfs:label "has participant"@en .
 
