@@ -23,24 +23,36 @@ jobs:
         with:
           python-version: '3.8'
 
+      # Step 3: get ontospy    
+      - name: Checkout Forked Ontospy
+        uses: actions/checkout@v3
+        with:
+          repository: micheldumontier/Ontospy
+          path: './ontospy'
+
       # Step 3: Install Ontospy
       - name: Install Ontospy
+        # run: |
+        #   python -m pip install --upgrade pip
+        #   pip install ontospy
         run: |
-          python -m pip install --upgrade pip
-          pip install ontospy
-
+         python -m pip install --upgrade pip
+         cd ./ontospy 
+         pip install -r requirements.txt
+         pip install -e .
+         cd ..
+        
       # Step 4: Generate Documentation
       - name: Generate Ontology Documentation
         run: |
-
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
               mkdir -p docs/"${file%.*}"
-              # ontospy gendocs --type 2 -o docs/"${file%.*}" "$file"
-              ontospy gendocs --type 2 -o docs/ "$file"
+              python -m ontospy.cli gendocs --type 2 -o docs/ "$file"
               echo "Documentation generated for: $file"
             fi
           done
+      # ontospy gendocs --type 2 -o docs/ "$file"
 
       # Step 5: Deploy Documentation to GitHub Pages
       - name: Deploy to GitHub Pages
