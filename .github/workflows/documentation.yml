@@ -42,17 +42,28 @@ jobs:
          pip install -e .
          cd ..
         
-      # Step 4: Generate Documentation
+      # Step 4: Generate Ontospy Documentation
       - name: Generate Ontology Documentation
         run: |
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
               mkdir -p docs/"${file%.*}"
               python -m ontospy.cli gendocs --type 2 -o docs/ "$file"
-              echo "Documentation generated for: $file"
+              echo "Ontospy documentation generated for: $file"
             fi
           done
-      # ontospy gendocs --type 2 -o docs/ "$file"
+      
+      # Step 5: generate pylode documentation
+      - name: Generate Pylode Documentation
+        run: |
+          pip install pylode
+          mkdir -p docs/pylode/"
+          for file in *.ttl *.owl *.rdf; do
+            if [[ -f "$file" ]]; then
+              pylode -i "$file" -o "docs/pylode/$file"
+              echo "Pylode documentation generated for: $file"
+            fi
+          done
 
       # Step 5: Deploy Documentation to GitHub Pages
       - name: Deploy to GitHub Pages
