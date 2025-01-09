@@ -57,7 +57,7 @@ jobs:
       - name: Generate Pylode Documentation
         run: |
           pip install pylode
-          mkdir -p docs/pylode/"
+          mkdir -p docs/pylode/
           for file in *.ttl *.owl *.rdf; do
             if [[ -f "$file" ]]; then
               pylode -i "$file" -o "docs/pylode/$file"
