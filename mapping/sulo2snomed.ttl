@@ -1,0 +1,187 @@
+PREFIX snomed: <http://snomed.info/id/>
+PREFIX sulo: <https://w3id.org/sulo/>
+### Class mappings
+snomed:123037004 rdfs:subClassOf sulo:SpatialObject . # body structure
+snomed:118956008 rdfs:subClassOf sulo:Feature . # Body structure, altered
+snomed:404684003 rdfs:subClassOf sulo:Process . # |Clinical finding (finding)|
+snomed:272379006 rdfs:subClassOf sulo:Process . #|Event (event)|
+snomed:308916002 rdfs:subClassOf sulo:SpatialObject . # |Environment or geographical location (environment / location)|
+snomed:363787002 rdfs:subClassOf sulo:InformationObject . # |Observable entity (observable entity)|
+snomed:410607006 rdfs:subClassOf sulo:SpatialObject . # |Organism (organism)|
+snomed:373873005 rdfs:subClassOf sulo:SpatialObject . # |Pharmaceutical / biologic product (product)|
+snomed:78621006 rdfs:subClassOf sulo:Feature . # |Physical force (physical force)|
+snomed:260787004 rdfs:subClassOf sulo:SpatialObject . # |Physical object (physical object)|
+snomed:71388002 rdfs:subClassOf sulo:Process . # |Procedure (procedure)|
+snomed:362981000 rdfs:subClassOf sulo:Feature . # |Qualifier value (qualifier value)|
+snomed:129264002 rdfs:subClassOf sulo:Process . # |Action (qualifier value)|
+snomed:394658006 rdfs:subClassOf sulo:InformationObject . # |Clinical specialty (qualifier value)|
+snomed:410669006 rdfs:subClassOf sulo:Time . #  |Time (property) (qualifier value)|
+snomed:767524001 rdfs:subClassOf sulo:Unit . # |Unit of measure (qualifier value)|
+snomed:419891008 rdfs:subClassOf sulo:InformationObject . # |Record artifact (record artifact)|
+snomed:243796009 rdfs:subClassOf sulo:InformationObject . # |Situation with explicit context (situation)|
+snomed:900000000000441003 rdfs:subClassOf sulo:InformationObject . #|SNOMED CT Model Component (metadata)|
+snomed:106237007 rdfs:subClassOf sulo:InformationObject . # |Linkage concept (linkage concept)|
+snomed:48176007 rdfs:subClassOf sulo:InformationObject . # |Social context (social concept)|
+snomed:123038009 rdfs:subClassOf sulo:SpatialObject . # |Specimen (specimen)|
+snomed:254291000 rdfs:subClassOf sulo:InformationObject . #|Staging and scales (staging scale)|
+snomed:105590001 rdfs:subClassOf sulo:SpatialObject .  # |Substance (substance)|
+
+### Predicate mappings
+snomed:116680003 rdfs:subPropertyOf rdfs:subClassOf . # |Is a (attribute)|
+snomed:363698007 rdfs:subPropertyOf sulo:hasLocation . # |Finding site (attribute)|
+# snomed:116676008 rdfs:subPropertyOf sulo:hasFeature . # Associated morphology (attribute) ### inverseof
+
+snomed:260686004 rdfs:subPropertyOf sulo:hasPart . # |Method (attribute)|
+snomed:363714003 rdfs:subPropertyOf sulo:represents . # Interprets (attribute)
+snomed:405813007 rdfs:subPropertyOf sulo:hasLocation . # Procedure site - Direct (attribute)
+snomed:370135005 rdfs:subPropertyOf sulo:hasPart . # Pathological process (attribute)
+snomed:272741003 rdfs:subPropertyOf sulo:hasFeature . # Laterality (attribute)
+#snomed:246454002 rdfs:subPropertyOf sulo:hasPart. # Occurrence (attribute)  ## inverseOf
+snomed:127489000 rdfs:subPropertyOf sulo:hasPart . # Has active ingredient (attribute)
+snomed:42752001 rdfs:subPropertyOf sulo:hasFeature . # Due to (attribute)
+#snomed:363713009 rdfs:subPropertyOf sulo:represents . # Has interpretation (attribute) ### inverseof
+snomed:246075003 rdfs:subPropertyOf sulo:hasParticipant . # Causative agent (attribute)
+snomed:411116001 rdfs:subPropertyOf sulo:hasFeature . # Has manufactured dose form (attribute)
+snomed:732943007 rdfs:subPropertyOf sulo:hasValue . # Has basis of strength substance (attribute) ### should have roles
+snomed:762949000 rdfs:subPropertyOf sulo:hasPart . # Has precise active ingredient (attribute)
+snomed:363700003 rdfs:subPropertyOf sulo:hasParticipant . # Direct morphology (attribute) ### sulo:hasParticipant o sulo:hasAttribute
+snomed:726542003 rdfs:subPropertyOf sulo:hasFeature . # Has disposition (attribute)
+snomed:405814001 rdfs:subPropertyOf sulo:hasLocation . # Procedure site - Indirect (attribute)
+snomed:246093002 rdfs:subPropertyOf sulo:Feature . # Component (attribute)
+snomed:424226004 rdfs:subPropertyOf sulo:hasParticipant . # Using device (attribute)
+snomed:732945000 rdfs:subPropertyOf sulo:hasUnit . # Has presentation strength numerator unit (attribute)
+snomed:732947008 rdfs:subPropertyOf sulo:hasUnit . # Has presentation strength denominator unit (attribute)
+snomed:263502005 rdfs:subPropertyOf sulo:Feature . # Clinical course (attribute)
+snomed:763032000 rdfs:subPropertyOf sulo:Unit . # Has unit of presentation (attribute)
+snomed:363699004 rdfs:subPropertyOf sulo:hasParticipant . # Direct device (attribute)
+snomed:408732007 rdfs:subPropertyOf sulo:represents . # Subject relationship context (attribute)
+snomed:408731000 rdfs:subPropertyOf sulo:occursIn . # Temporal context (attribute)
+snomed:363702006 rdfs:subPropertyOf sulo:hasParticipant . # Has focus (attribute)
+snomed:363701004 rdfs:subPropertyOf sulo:hasParticipant . # Direct substance (attribute)
+snomed:424361007 rdfs:subPropertyOf sulo:hasParticipant . # Using substance (attribute)
+# snomed:255234002 rdfs:subPropertyOf sulo:precedes . # After (attribute)   ## inverseOf?
+snomed:733725009 rdfs:subPropertyOf sulo:hasUnit . # Has concentration strength numerator unit (attribute)
+snomed:733722007 rdfs:subPropertyOf sulo:hasUnit . # Has concentration strength denominator unit (attribute)
+snomed:363703001 rdfs:subPropertyOf sulo:hasFeature . # Has intent (attribute)
+snomed:363704007 rdfs:subPropertyOf sulo:hasLocation . # Procedure site (attribute)
+snomed:116686009 rdfs:subPropertyOf sulo:hasParticipant . # Has specimen (attribute)
+snomed:408729009 rdfs:subPropertyOf sulo:hasPart . # Finding context (attribute)
+snomed:363589002 rdfs:subPropertyOf sulo:represents . # Associated procedure (attribute)
+snomed:246090004 rdfs:subPropertyOf sulo:represents . # Associated finding (attribute)
+#snomed:738774007 rdfs:subPropertyOf sulo:hasParticipant . # Is modification of (attribute) ### inv(sulo:hasParticipant) some (Modification and some sulo:hasParticipant some *)  
+snomed:408730004 rdfs:subPropertyOf sulo:hasPart . # Procedure context (attribute)
+# snomed:418775008 rdfs:subPropertyOf sulo:represents . # Finding method (attribute) ### inv(sulo:represents) some ((sulo:hasAttribute some Output) and inv(hasParticipant some *)
+snomed:370130000 rdfs:subPropertyOf sulo:hasParticipant . # Property (attribute)
+snomed:260507000 rdfs:subPropertyOf sulo:hasFeature . # Access (attribute)
+snomed:719722006 rdfs:subPropertyOf sulo:hasParticipant . # Has realization (attribute)
+snomed:704321009 rdfs:subPropertyOf sulo:hasParticipant . # Characterizes (attribute)
+# snomed:47429007 rdfs:subPropertyOf sulo:XXX . # Associated with (attribute)
+# snomed:704319004 rdfs:subPropertyOf sulo:hasFeature . #Inheres in (attribute) ### inv(sulo:hasParticipant) some Measurement and (sulo:hasParticipant some (sulo:hasAttribute some Target))
+snomed:118169006 rdfs:subPropertyOf sulo:Location . # Specimen source topography (attribute)
+# snomed:370132008 rdfs:subPropertyOf sulo:hasFeature . # Scale type (attribute) ### ??
+snomed:246513007 rdfs:subPropertyOf sulo:hasFeature . # Revision status (attribute)
+snomed:425391005 rdfs:subPropertyOf sulo:hasParticipant . # Using access device (attribute)
+snomed:424876005 rdfs:subPropertyOf sulo:hasFeature . # Surgical approach (attribute)
+snomed:370134009 rdfs:subPropertyOf sulo:occursIn . # Time aspect (attribute)
+snomed:370133003 rdfs:subPropertyOf sulo:hasPart . # Specimen substance (attribute)
+# snomed:118171006 rdfs:subPropertyOf sulo:hasParticipant . # Specimen procedure (attribute) ### (sulo:hasAttribute some Output) some inv(sulo:hasParticipant)
+
+snomed:836358009 rdfs:subPropertyOf sulo:hasLocation . # Has device intended site (attribute)
+snomed:718497002 rdfs:subPropertyOf sulo:hasLocation . # Inherent location (attribute)
+
+snomed:246501002 rdfs:subPropertyOf sulo:hasPart . # Technique (attribute)
+# snomed:363709002 rdfs:subPropertyOf sulo:hasParticipant . # Indirect morphology (attribute) ### role chain?
+snomed:704327008 rdfs:subPropertyOf sulo:hasLocation . # Direct site (attribute)
+snomed:1003735000 rdfs:subPropertyOf sulo:hasParticipant . # Process acts on (attribute)
+# snomed:736474004 rdfs:subPropertyOf sulo:hasParticipant . # Has dose form intended site (attribute)
+snomed:371881003 rdfs:subPropertyOf sulo:occursIn . # During (attribute)
+# Has dose form release characteristic (attribute)
+# Has dose form administration method (attribute)
+
+snomed:766939001 rdfs:subPropertyOf sulo:hasFeature . # Plays role (attribute)
+
+# Has basic dose form (attribute)
+# Has dose form transformation (attribute)
+# Has compositional material (attribute)
+
+snomed:704323007 rdfs:subPropertyOf sulo:occursIn . # Process duration (attribute)
+
+
+# Priority (attribute)
+# Route of administration (attribute)
+
+snomed:1148965004 rdfs:subPropertyOf sulo:hasFeature . # Is sterile (attribute)
+snomed:405815000 rdfs:subPropertyOf sulo:hasParticipant . #  Procedure device (attribute)
+
+
+# Procedure morphology (attribute)
+
+
+# Relative to (attribute)
+
+
+# Specimen source morphology (attribute)
+
+
+# Has absorbability (attribute)
+
+
+# Process extends to (attribute)
+
+
+# Recipient category (attribute)
+
+
+# Finding informer (attribute)
+
+
+# Indirect device (attribute)
+
+
+# Temporally related to (attribute)
+
+
+# Has state of matter (attribute)
+
+
+# Precondition (attribute)
+
+
+# Specimen source identity (attribute)
+
+
+# Has coating material (attribute)
+
+
+# Units (attribute)
+
+
+# Process output (attribute)
+
+
+# Has target population (attribute)
+
+
+# Measurement method (attribute)
+
+
+# Severity (attribute)
+
+
+# Has filling (attribute)
+
+
+# Has ingredient qualitative strength (attribute)
+
+
+# Has surface texture (attribute)
+
+
+# Relative to part of (attribute)
+
+
+# Before (attribute)
+
+
+# Towards (attribute)
+
