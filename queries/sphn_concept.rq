@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sphn: <https://biomedit.ch/rdf/sphn-schema/sphn#>
+#select (count(distinct ?s) AS ?c)
+SELECT *
+{
+    graph <https://biomedit.ch/rdf/sphn-schema/sphn> {
+    ?s rdfs:subClassOf sphn:SPHNConcept .
+    ?s rdfs:label ?label .
+    }
+} 

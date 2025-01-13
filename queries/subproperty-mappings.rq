@@ -1,0 +1,12 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT *
+#FROM <http://w3id.org/snomed>
+#FROM <http://mappings>
+{
+    GRAPH <http://mappings>
+    {
+        ?s rdfs:subPropertyOf ?o
+    }
+    OPTIONAL {   ?s skos:prefLabel ?label .}
+}

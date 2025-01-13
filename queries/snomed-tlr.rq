@@ -1,0 +1,11 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX snomed: <http://snomed.info/id/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?id ?label
+{
+    ?s rdfs:subPropertyOf ?o .
+    FILTER(?o = <http://snomed.info/id/762705008>)
+     ?s skos:prefLabel ?label .
+    BIND( STRAFTER(str(?s), "id/") AS ?id)
+} ORDER BY ASC(?label)
+limit 1000

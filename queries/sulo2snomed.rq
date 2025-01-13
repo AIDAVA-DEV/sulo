@@ -1,0 +1,8 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sulo: <https://w3id.org/sulo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * 
+{ 
+	?s rdfs:subClassOf sulo:InformationObject .
+    ?s skos:prefLabel ?label .
+}

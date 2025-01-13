@@ -1,0 +1,13 @@
+PREFIX sulo: <https://w3id.org/sulo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# get the SPHN concepts that are mapped to SULO
+select * 
+{
+    ?sulo_concept a owl:Class .
+    FILTER( STRBEFORE( STR(?sulo_concept), "sulo"))
+    ?sphn_concept a owl:Class . 
+    ?sphn_concept rdfs:subClassOf ?sulo_concept .
+    FILTER( STRBEFORE( STR(?sphn_concept), "sphn"))
+    FILTER (?sulo_concept != sulo:Object)
+} limit 1000
