@@ -7,7 +7,7 @@
 @base <https://w3id.org/sulo/sulo-dev/> .
 
 <https://w3id.org/sulo/sulo-dev> rdf:type owl:Ontology ;
-                                  owl:imports <https://w3id.org/sulo> ;
+                                  owl:imports <https://w3id.org/sulo/sulo.ttl> ;
                                   rdfs:comment "development version of SULO"@en .
 
 #################################################################
