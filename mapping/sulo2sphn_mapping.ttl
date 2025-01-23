@@ -1,0 +1,120 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sulo: <https://w3id.org/sulo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+
+<https://w3id.org/sulo/mapping/sulo2sphn_mapping.ttl> rdf:type owl:Ontology ;
+                                  rdfs:comment "automatically derived mappings between SULO and SPHN via SNOMED"@en .
+
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TNMClassification> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#DiagnosticRadiologicExamination> rdfs:subClassOf
+    sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHDiagnosis> rdfs:subClassOf sulo:InformationObject,
+    sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHProcedure> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ICDODiagnosis> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CircumferenceMeasure> rdfs:subClassOf
+    sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TumorStage> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#SimpleScore> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Measurement> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#AdverseEvent> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BloodPressure> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyHeight> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyPosition> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodySurfaceArea> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyTemperature> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyWeight> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CardiacOutput> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#DeathDate> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Diagnosis> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ElectrocardiographicProcedure> rdfs:subClassOf
+    sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#GestationalAgeAtBirth> rdfs:subClassOf
+    sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#HealthcareEncounter> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#HeartRate> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#InhaledOxygenConcentration> rdfs:subClassOf
+    sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#NursingDiagnosis> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#OxygenSaturation> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ProblemCondition> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Procedure> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#RadiotherapyProcedure> rdfs:subClassOf
+    sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Sample> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Product> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Substance> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Drug> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodySite> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CareHandling> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Chromosome> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Gene> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Intent> rdfs:subClassOf sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#LabAnalyzer> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#MedicalDevice> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Organism> rdfs:subClassOf sulo:SpatialObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#PharmaceuticalDoseForm> rdfs:subClassOf
+    sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#PhysiologicState> rdfs:subClassOf sulo:Process .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TimePattern> rdfs:subClassOf sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Unit> rdfs:subClassOf sulo:InformationObject,
+    sulo:Feature, sulo:Quantity, sulo:Unit .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Age> rdfs:subClassOf sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TherapeuticArea> rdfs:subClassOf sulo:InformationObject,
+    sulo:Feature .
+
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/OncologyDiagnosis> rdfs:subClassOf sulo:InformationObject .
+
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Procedure> rdfs:subClassOf sulo:Process .

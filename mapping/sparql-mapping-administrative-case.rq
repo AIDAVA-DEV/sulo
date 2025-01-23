@@ -1,0 +1,75 @@
+### example SPARQL construct queries to convert from SPHN to SULO-compliant SPHN data
+
+CONSTRUCT {
+   ?x a sphn:AdministrativeCase;
+      sulo:occursIn [ 
+            rdf:type sulo:StartTime;
+            sulo:hasValue ?admission_datetime_value;
+      ]
+}
+{
+    ?x a sphn:AdministrativeCase ;
+    sphn:hasAdmissionDateTime ?admission_datetime_value .
+}
+
+CONSTRUCT {
+   ?x a sphn:AdministrativeCase;
+      sulo:occursIn [ 
+            rdf:type sulo:EndTime;
+            sulo:hasValue ?discharge_datetime_value;  
+      ]
+}
+{
+    ?x a sphn:AdministrativeCase ;
+    sphn:hasDischargeDateTime ?discharge_datetime_value .
+}
+
+
+CONSTRUCT {
+   ?x a sphn:AdministrativeCase;
+      sulo:isLocatedIn ?discharge_location
+}
+{
+    ?x a sphn:AdministrativeCase ;
+    sphn:hasDischargeLocation ?discharge_location .
+}
+
+CONSTRUCT {
+   ?x a sphn:AdministrativeCase;
+      sulo:hasPart ?care_handling .
+}
+{
+    ?x a sphn:AdministrativeCase ;
+    sphn:hasCareHandling ?care_handling .
+}
+
+
+CONSTRUCT {
+   ?x a sphn:AdministrativeCase;
+      sulo:hasParticipant [
+        a sulo:Role, aidava:PatientRole;
+        sulo:isFeatureOf ?patient
+      ] .
+}
+{
+    ?x a sphn:AdministrativeCase ;
+    aidava:hasPatient ?patient .
+}
+
+CONSTRUCT {
+   ?data_provisioning_process a sulo:Process;
+     sulo:hasParticipant [
+        a sulo:Role, aidava:DataProvisionerRole;
+        sulo:isFeatureOf ?data_provider_institute
+      ];
+      sulo:hasParticipant [
+        a sulo:Role, :DataObjectRole;
+        sulo:isFeatureOf ?administrative_case_record
+    ] .
+    ?administrative_case_record a sulo:InformationObject; # record 
+       sulo:refersTo ?administrative_case
+}
+{
+    ?admistrative_case a sphn:AdministrativeCase ;
+    aidava:hasdDataProviderInstitute ?data_provider_institute .
+}

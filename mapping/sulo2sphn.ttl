@@ -1,0 +1,247 @@
+@prefix : <https://w3id.org/sulo/mapping/sulo-sphn.tll/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/sulo/mapping/sulo-sphn.tll/> .
+
+<https://w3id.org/sulo/mapping/sulo-sphn.tll> rdf:type owl:Ontology ;
+                                               owl:imports <file:////wsl.localhost/Ubuntu/home/micheldumontier/code/sulo/mapping/sulo2sphn.ttl> ,
+                                                           <https://biomedit.ch/rdf/sphn-ontology/sphn-ontology-old-1> ,
+                                                           <https://w3id.org/sulo/sulo.ttl> ;
+                                               rdfs:label "sulo-sphn mapping ontology"@en .
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#hasAdmissionDateTime
+<https://biomedit.ch/rdf/sphn-ontology/sphn#hasAdmissionDateTime> rdfs:subPropertyOf <https://w3id.org/sulo/hasValue> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://biomedit.ch/rdf/sphn-ontology/AIDAVA/OncologyDiagnosis
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/OncologyDiagnosis> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Procedure
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Procedure> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Product
+<https://biomedit.ch/rdf/sphn-ontology/AIDAVA/Product> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#AdministrativeCase
+<https://biomedit.ch/rdf/sphn-ontology/sphn#AdministrativeCase> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <https://w3id.org/sulo/occursIn> ;
+                                                                                  owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/sulo/AdmissionDateTime>
+                                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty <https://w3id.org/sulo/hasValue> ;
+                                                                                                                              owl:someValuesFrom xsd:dateTime
+                                                                                                                            ]
+                                                                                                                          ) ;
+                                                                                                       rdf:type owl:Class
+                                                                                                     ]
+                                                                                ] .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#AdverseEvent
+<https://biomedit.ch/rdf/sphn-ontology/sphn#AdverseEvent> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Age
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Age> rdfs:subClassOf <https://w3id.org/sulo/Feature> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BloodPressure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BloodPressure> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodyHeight
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyHeight> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodyPosition
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyPosition> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodySite
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodySite> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodySurfaceArea
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodySurfaceArea> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodyTemperature
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyTemperature> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#BodyWeight
+<https://biomedit.ch/rdf/sphn-ontology/sphn#BodyWeight> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#CardiacOutput
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CardiacOutput> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#CareHandling
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CareHandling> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Chromosome
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Chromosome> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#CircumferenceMeasure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#CircumferenceMeasure> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#DeathDate
+<https://biomedit.ch/rdf/sphn-ontology/sphn#DeathDate> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Diagnosis
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Diagnosis> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#DiagnosticRadiologicExamination
+<https://biomedit.ch/rdf/sphn-ontology/sphn#DiagnosticRadiologicExamination> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Drug
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Drug> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#ElectrocardiographicProcedure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ElectrocardiographicProcedure> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHDiagnosis
+<https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHDiagnosis> rdfs:subClassOf <https://w3id.org/sulo/Feature> ,
+                                                                           <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHProcedure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#FOPHProcedure> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Gene
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Gene> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#GestationalAgeAtBirth
+<https://biomedit.ch/rdf/sphn-ontology/sphn#GestationalAgeAtBirth> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#HealthcareEncounter
+<https://biomedit.ch/rdf/sphn-ontology/sphn#HealthcareEncounter> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#HeartRate
+<https://biomedit.ch/rdf/sphn-ontology/sphn#HeartRate> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#ICDODiagnosis
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ICDODiagnosis> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#InhaledOxygenConcentration
+<https://biomedit.ch/rdf/sphn-ontology/sphn#InhaledOxygenConcentration> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Intent
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Intent> rdfs:subClassOf <https://w3id.org/sulo/Feature> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#LabAnalyzer
+<https://biomedit.ch/rdf/sphn-ontology/sphn#LabAnalyzer> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Measurement
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Measurement> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#MedicalDevice
+<https://biomedit.ch/rdf/sphn-ontology/sphn#MedicalDevice> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#NursingDiagnosis
+<https://biomedit.ch/rdf/sphn-ontology/sphn#NursingDiagnosis> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Organism
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Organism> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#OxygenSaturation
+<https://biomedit.ch/rdf/sphn-ontology/sphn#OxygenSaturation> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#PharmaceuticalDoseForm
+<https://biomedit.ch/rdf/sphn-ontology/sphn#PharmaceuticalDoseForm> rdfs:subClassOf <https://w3id.org/sulo/Feature> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#PhysiologicState
+<https://biomedit.ch/rdf/sphn-ontology/sphn#PhysiologicState> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#ProblemCondition
+<https://biomedit.ch/rdf/sphn-ontology/sphn#ProblemCondition> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Procedure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Procedure> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#RadiotherapyProcedure
+<https://biomedit.ch/rdf/sphn-ontology/sphn#RadiotherapyProcedure> rdfs:subClassOf <https://w3id.org/sulo/Process> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Sample
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Sample> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#SimpleScore
+<https://biomedit.ch/rdf/sphn-ontology/sphn#SimpleScore> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Substance
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Substance> rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#TNMClassification
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TNMClassification> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#TherapeuticArea
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TherapeuticArea> rdfs:subClassOf <https://w3id.org/sulo/Feature> ,
+                                                                             <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#TimePattern
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TimePattern> rdfs:subClassOf <https://w3id.org/sulo/Feature> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#TumorStage
+<https://biomedit.ch/rdf/sphn-ontology/sphn#TumorStage> rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://biomedit.ch/rdf/sphn-ontology/sphn#Unit
+<https://biomedit.ch/rdf/sphn-ontology/sphn#Unit> rdfs:subClassOf <https://w3id.org/sulo/Feature> ,
+                                                                  <https://w3id.org/sulo/InformationObject> ,
+                                                                  <https://w3id.org/sulo/Quantity> ,
+                                                                  <https://w3id.org/sulo/Unit> .
+
+
+###  https://w3id.org/sulo/AdmissionDateTime
+<https://w3id.org/sulo/AdmissionDateTime> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/sulo/StartTime> .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
