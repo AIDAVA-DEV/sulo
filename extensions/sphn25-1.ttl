@@ -1,0 +1,129 @@
+@prefix : <https://w3id.org/sulo/extension/sphn-25-1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/sulo/extension/sphn-25-1/> .
+
+<https://w3id.org/sulo/extension/sphn-25-1> rdf:type owl:Ontology ;
+                                             owl:imports <https://w3id.org/sulo/sulo.ttl> ;
+                                             rdfs:comment "sulo axioms for sphn version 2025-01" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://biomedit.ch/rdf/sphn-schema/sphn#AdministrativeCase
+<https://biomedit.ch/rdf/sphn-schema/sphn#AdministrativeCase> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://w3id.org/sulo/Process> ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/sulo/hasFeature> ;
+                                                                                owl:someValuesFrom <https://w3id.org/sulo/Identifier>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/sulo/hasPart> ;
+                                                                                owl:someValuesFrom <https://biomedit.ch/rdf/sphn-schema/sphn#Admission>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <https://w3id.org/sulo/hasParticipant> ;
+                                                                                owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/sulo/PatientRole>
+                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                            owl:onProperty <https://w3id.org/sulo/isFeatureOf> ;
+                                                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/sulo/Person>
+                                                                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                                                                        owl:onProperty <https://w3id.org/sulo/hasFeature> ;
+                                                                                                                                                                        owl:someValuesFrom <https://biomedit.ch/rdf/sphn-schema/sphn#SubjectPseudoIdentifier>
+                                                                                                                                                                      ]
+                                                                                                                                                                    ) ;
+                                                                                                                                                 rdf:type owl:Class
+                                                                                                                                               ]
+                                                                                                                          ]
+                                                                                                                        ) ;
+                                                                                                     rdf:type owl:Class
+                                                                                                   ]
+                                                                              ] .
+
+
+###  https://biomedit.ch/rdf/sphn-schema/sphn#Admission
+<https://biomedit.ch/rdf/sphn-schema/sphn#Admission> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/sulo/Process> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://w3id.org/sulo/isLocatedIn> ;
+                                                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/sulo/hasFeature> ;
+                                                                                            owl:someValuesFrom <https://w3id.org/sulo/Address>
+                                                                                          ]
+                                                                     ] .
+
+
+###  https://biomedit.ch/rdf/sphn-schema/sphn#Discharge
+<https://biomedit.ch/rdf/sphn-schema/sphn#Discharge> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/sulo/Process> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://w3id.org/sulo/isLocatedIn> ;
+                                                                       owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://w3id.org/sulo/hasFeature> ;
+                                                                                            owl:someValuesFrom <https://w3id.org/sulo/Address>
+                                                                                          ]
+                                                                     ] .
+
+
+###  https://biomedit.ch/rdf/sphn-schema/sphn#SubjectPseudoIdentifier
+<https://biomedit.ch/rdf/sphn-schema/sphn#SubjectPseudoIdentifier> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://w3id.org/sulo/Identifier> ,
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty <https://w3id.org/sulo/isFeatureOf> ;
+                                                                                     owl:someValuesFrom <https://w3id.org/sulo/Person>
+                                                                                   ] .
+
+
+###  https://w3id.org/sulo/Address
+<https://w3id.org/sulo/Address> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://w3id.org/sulo/AdministrativeCaseIdentifier
+<https://w3id.org/sulo/AdministrativeCaseIdentifier> rdf:type owl:Class ;
+                                                     owl:equivalentClass [ owl:intersectionOf ( <https://w3id.org/sulo/Identifier>
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <https://w3id.org/sulo/isFeatureOf> ;
+                                                                                                  owl:someValuesFrom <https://biomedit.ch/rdf/sphn-schema/sphn#AdministrativeCase>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] .
+
+
+###  https://w3id.org/sulo/Identifier
+<https://w3id.org/sulo/Identifier> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://w3id.org/sulo/InformationObject> .
+
+
+###  https://w3id.org/sulo/Patient
+<https://w3id.org/sulo/Patient> rdf:type owl:Class ;
+                                rdfs:subClassOf <https://w3id.org/sulo/Person> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <https://w3id.org/sulo/hasFeature> ;
+                                                  owl:someValuesFrom [ owl:intersectionOf ( <https://w3id.org/sulo/PatientRole>
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://w3id.org/sulo/isParticipantIn> ;
+                                                                                              owl:someValuesFrom <https://w3id.org/sulo/Process>
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ]
+                                                ] .
+
+
+###  https://w3id.org/sulo/PatientRole
+<https://w3id.org/sulo/PatientRole> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/sulo/Role> .
+
+
+###  https://w3id.org/sulo/Person
+<https://w3id.org/sulo/Person> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/sulo/SpatialObject> .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
