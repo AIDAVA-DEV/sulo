@@ -1,3 +1,8 @@
+[![Syntax checking](https://github.com/AIDAVA-DEV/sulo/actions/workflows/syntax_check.yml/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/syntax_check.yml)
+[![Ontology Reasoning](https://github.com/AIDAVA-DEV/sulo/actions/workflows/reasoning.yml/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/reasoning.yml)
+[![Ontology Documentation](https://github.com/AIDAVA-DEV/sulo/actions/workflows/documentation.yml/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/documentation.yml)
+[![pages-build-deployment](https://github.com/AIDAVA-DEV/sulo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/pages/pages-build-deployment)
+
 # sulo
 The Simplified Upper Level Ontology
 
