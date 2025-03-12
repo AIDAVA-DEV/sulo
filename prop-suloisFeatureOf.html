@@ -650,7 +650,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                <tr>
                    <td>
                      
-                         <a>owl:Thing</a> (inferred)
+                         
+                         
+                              <a href="class-suloFeature.html" title="https://w3id.org/sulo/Feature">sulo:Feature</a>
+                           
+                           , 
+                         
+                         
+                              <a>Blank node</a> (see implementation)
+                           
+                           
+                         
                      
                    </td>
 
@@ -680,11 +690,15 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 
 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">isFeatureOf</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;is feature of&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;is feature of&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Feature</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">unionOf</span> <span class="p">(</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Object</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="p">)</span> <span class="p">]</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -723,7 +737,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Thu, 16 Jan 2025 15:13:11 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 12 Mar 2025 16:11:40 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>

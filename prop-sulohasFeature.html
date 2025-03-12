@@ -664,11 +664,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                      
                          
                          
-                              <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
-                           
-                           , 
-                         
-                         
                               <a>Blank node</a> (see implementation)
                            
                            
@@ -682,7 +677,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
                     <td>
                       
-                          <a>owl:Thing</a> (inferred)
+                          
+                          
+                               <a href="class-suloFeature.html" title="https://w3id.org/sulo/Feature">sulo:Feature</a>
+                            
+                            
+                          
                       
                     </td>
             </table>
@@ -709,13 +709,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasFeature</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;has feature&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Thing</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">unionOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Feature</span> <span class="p">;</span>
-                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">InformationObject</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">()</span> <span class="p">]</span> <span class="p">]</span> <span class="p">]</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">unionOf</span> <span class="p">(</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Object</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="p">)</span> <span class="p">]</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Feature</span> <span class="p">;</span>
     <span class="nn">owl</span><span class="p">:</span><span class="nt">inverseOf</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">isFeatureOf</span> <span class="p">.</span>
 </pre></div>
 
@@ -755,7 +751,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Thu, 16 Jan 2025 15:13:11 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 12 Mar 2025 16:11:40 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>

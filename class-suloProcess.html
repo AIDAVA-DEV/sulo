@@ -572,7 +572,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
             <li><a href="entities-tree-classes.html">owl:Thing</a>
               <ul>
-                <li><a style="font-weight: bold;" title="'process' - a process is a entity that unfolds in time and has temporal parts.">sulo:Process</a>
+                <li><a style="font-weight: bold;" title="'process' - a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process.">sulo:Process</a>
                   
                 </li>
               </ul>
@@ -624,7 +624,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <h3 class="panel-title">Description</h3>
             </div>
             <div class="panel-body">
-              <p>a process is a entity that unfolds in time and has temporal parts.</p>
+              <p>a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process.</p>
             </div>
           </div>
         </div>
@@ -680,7 +680,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         </td>
                         <td class="fourthtd">
                           
-                              <i>owl:Thing</i>
+                            
+                                
+                                  <a title="sulo:Object" href="class-suloObject.html" class="rdfclass">sulo:Object</a>
+                                
+                            
                           
                         </td>
                       </tr>
@@ -1029,23 +1033,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     
                       <tr>
                         <td class="firsttd">
-                          <a class="propcolor" title="sulo:isFeatureOf" href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a>
-                        </td>
-                        <td class="secondtd">
-                          <i>owl:ObjectProperty<i>
-                        </td>
-                        <td class="thirdtd">
-                          <span></span>
-                        </td>
-                        <td class="fourthtd">
-                          
-                              <i>owl:Thing</i>
-                          
-                        </td>
-                      </tr>
-                    
-                      <tr>
-                        <td class="firsttd">
                           <a class="propcolor" title="sulo:isItemIn" href="prop-suloisItemIn.html">sulo:isItemIn</a>
                         </td>
                         <td class="secondtd">
@@ -1114,23 +1101,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     
                       <tr>
                         <td class="firsttd">
-                          <a class="propcolor" title="sulo:isParticipantIn" href="prop-suloisParticipantIn.html">sulo:isParticipantIn</a>
-                        </td>
-                        <td class="secondtd">
-                          <i>owl:ObjectProperty<i>
-                        </td>
-                        <td class="thirdtd">
-                          <span></span>
-                        </td>
-                        <td class="fourthtd">
-                          
-                              <i>owl:Thing</i>
-                          
-                        </td>
-                      </tr>
-                    
-                      <tr>
-                        <td class="firsttd">
                           <a class="propcolor" title="sulo:isReferredIn" href="prop-suloisReferredIn.html">sulo:isReferredIn</a>
                         </td>
                         <td class="secondtd">
@@ -1141,7 +1111,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         </td>
                         <td class="fourthtd">
                           
-                              <i>owl:Thing</i>
+                            
+                                
+                                  <a title="sulo:InformationObject" href="class-suloInformationObject.html" class="rdfclass">sulo:InformationObject</a>
+                                
+                            
                           
                         </td>
                       </tr>
@@ -1171,14 +1145,16 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             
               <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;process&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;a process is a entity that unfolds in time and has temporal parts.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">allValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">]</span> <span class="p">.</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">]</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">example</span> <span class="s">&quot;the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1208,7 +1184,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Thu, 16 Jan 2025 15:13:11 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 12 Mar 2025 16:11:40 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>

@@ -568,23 +568,28 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       <div class="tree">
         <ul>
           
-            <li><a href="entities-tree-classes.html">owl:Thing</a>
-              <ul>
-                <li><a style="font-weight: bold;" title="'feature' - A feature any characteristic that stems from their intrisinc structure and/or contextual interactions.">sulo:Feature</a>
-                  
-                    <ul>
+            
+              <li>
+                <a href="class-suloObject.html" title="'object' - An object is an entity that maintains its identity through time, and does not have processes as its parts.">sulo:Object</a>
+                  <ul>
+                    <li><a style="font-weight: bold;" title="'feature' - A feature is any characteristic that stems from the intrisinc structure and/or context">sulo:Feature</a>
+                    
+                      <ul>
                       
                         <li><a href="class-suloCapability.html" title="'capability' - A capability is a feature that describes what an entity is able to do, under some set of circumstances.">sulo:Capability</a></li>
                       
-                        <li><a href="class-suloQuality.html" title="'quality' - A quality is a feature that is intrinsically associated with its bearer (or its parts). - the color of an..">sulo:Quality</a></li>
+                        <li><a href="class-suloInformationObject.html" title="'information object' - an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to..">sulo:InformationObject</a></li>
+                      
+                        <li><a href="class-suloQuality.html" title="'quality' - the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event -..">sulo:Quality</a></li>
                       
                         <li><a href="class-suloRole.html" title="'role' - A role is a feature that describes a context-dependent behaviour.">sulo:Role</a></li>
                       
-                    </ul>
-                  
-                </li>
-              </ul>
-            </li>
+                      </ul>
+                    
+                  </li>
+                </ul>
+              </li>
+            
           
         </ul>
       </div>
@@ -632,7 +637,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <h3 class="panel-title">Description</h3>
             </div>
             <div class="panel-body">
-              <p>A feature any characteristic that stems from their intrisinc structure and/or contextual interactions.</p>
+              <p>A feature is any characteristic that stems from the intrisinc structure and/or context</p>
             </div>
           </div>
         </div>
@@ -641,6 +646,23 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 
     
+    
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Superclasses (1)</h3>
+            </div>
+            <div class="panel-body">
+              
+                
+                  <li><a href="class-suloObject.html" title="https://w3id.org/sulo/Object">sulo:Object</a></li>
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
     
 
 
@@ -669,6 +691,62 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               </tr>
               
                 
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="sulo:Feature" href="class-suloFeature.html" class="fromclass_link">sulo:Feature</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="sulo:isFeatureOf" href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>owl:ObjectProperty<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span></span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                              <i>owl:Thing</i>
+                          
+                        </td>
+                      </tr>
+                    
+                  
+                
+              
+                
+                  
+                      <tr class="table-inheritanceinfo">
+                        <th colspan="4" class="treeinfo">
+                          <span class="label label-default">From class <a title="sulo:Object" href="class-suloObject.html" class="fromclass_link">sulo:Object</a></span>
+                        </th>
+                      </tr>
+                    
+                      <tr>
+                        <td class="firsttd">
+                          <a class="propcolor" title="sulo:isParticipantIn" href="prop-suloisParticipantIn.html">sulo:isParticipantIn</a>
+                        </td>
+                        <td class="secondtd">
+                          <i>owl:ObjectProperty<i>
+                        </td>
+                        <td class="thirdtd">
+                          <span></span>
+                        </td>
+                        <td class="fourthtd">
+                          
+                            
+                                
+                                  <a title="sulo:Process" href="class-suloProcess.html" class="rdfclass">sulo:Process</a>
+                                
+                            
+                          
+                        </td>
+                      </tr>
+                    
                   
                 
               
@@ -971,23 +1049,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     
                       <tr>
                         <td class="firsttd">
-                          <a class="propcolor" title="sulo:isFeatureOf" href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a>
-                        </td>
-                        <td class="secondtd">
-                          <i>owl:ObjectProperty<i>
-                        </td>
-                        <td class="thirdtd">
-                          <span></span>
-                        </td>
-                        <td class="fourthtd">
-                          
-                              <i>owl:Thing</i>
-                          
-                        </td>
-                      </tr>
-                    
-                      <tr>
-                        <td class="firsttd">
                           <a class="propcolor" title="sulo:isItemIn" href="prop-suloisItemIn.html">sulo:isItemIn</a>
                         </td>
                         <td class="secondtd">
@@ -1056,23 +1117,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                     
                       <tr>
                         <td class="firsttd">
-                          <a class="propcolor" title="sulo:isParticipantIn" href="prop-suloisParticipantIn.html">sulo:isParticipantIn</a>
-                        </td>
-                        <td class="secondtd">
-                          <i>owl:ObjectProperty<i>
-                        </td>
-                        <td class="thirdtd">
-                          <span></span>
-                        </td>
-                        <td class="fourthtd">
-                          
-                              <i>owl:Thing</i>
-                          
-                        </td>
-                      </tr>
-                    
-                      <tr>
-                        <td class="firsttd">
                           <a class="propcolor" title="sulo:isReferredIn" href="prop-suloisReferredIn.html">sulo:isReferredIn</a>
                         </td>
                         <td class="secondtd">
@@ -1083,7 +1127,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         </td>
                         <td class="fourthtd">
                           
-                              <i>owl:Thing</i>
+                            
+                                
+                                  <a title="sulo:InformationObject" href="class-suloInformationObject.html" class="rdfclass">sulo:InformationObject</a>
+                                
+                            
                           
                         </td>
                       </tr>
@@ -1114,26 +1162,22 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">Feature</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;feature&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A feature any characteristic that stems from their intrisinc structure and/or contextual interactions.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A feature is any characteristic that stems from the intrisinc structure and/or context&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="p">[</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">inverseOf</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasFeature</span> <span class="p">]</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">isFeatureOf</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
-                    <span class="nn">owl</span><span class="p">:</span><span class="nt">unionOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Object</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="p">;</span>
-                                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">()</span> <span class="p">]</span> <span class="p">]</span> <span class="p">]</span> <span class="p">]</span> <span class="p">;</span>
-    <span class="nn">owl</span><span class="p">:</span><span class="nt">disjointUnionOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-            <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Capability</span> <span class="p">;</span>
-            <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Quality</span> <span class="p">;</span>
-                    <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">List</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">first</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Role</span> <span class="p">;</span>
-                            <span class="nn">rdf</span><span class="p">:</span><span class="nt">rest</span> <span class="p">()</span> <span class="p">]</span> <span class="p">]</span> <span class="p">]</span> <span class="p">.</span>
+                    <span class="nn">owl</span><span class="p">:</span><span class="nt">unionOf</span> <span class="p">(</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Object</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Process</span> <span class="p">)</span> <span class="p">]</span> <span class="p">],</span>
+        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">allValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Feature</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">],</span>
+        <span class="nn">sulo</span><span class="p">:</span><span class="nt">Object</span> <span class="p">;</span>
+    <span class="nn">owl</span><span class="p">:</span><span class="nt">disjointWith</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">SpatialObject</span> <span class="p">;</span>
+    <span class="nn">skos</span><span class="p">:</span><span class="nt">example</span> <span class="s">&quot;the capability to fly, a collection of cards, a measured height of 170cm.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
 </pre></div>
 
             
@@ -1163,7 +1207,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Thu, 16 Jan 2025 15:13:11 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 12 Mar 2025 16:11:40 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>
