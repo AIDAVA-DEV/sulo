@@ -19,7 +19,7 @@
                                   dcterms:created "2024-11-11" ;
                                   dcterms:language <http://lexvo.org/id/iso639-1/en> ;
                                   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0> ;
-                                  dcterms:modified "2025-01-07" ;
+                                  dcterms:modified "2025-03-13" ;
                                   rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
                                   rdfs:label "Simplified Upper Level Ontology"@en ;
                                   owl:versionInfo "0.1.2" ;
@@ -337,7 +337,7 @@ sulo:InformationObject rdf:type owl:Class ;
                                          owl:onProperty sulo:hasPart ;
                                          owl:allValuesFrom sulo:InformationObject
                                        ] ;
-                       rdfs:comment "an information object is an object that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
+                       rdfs:comment "an information object is a feature that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
                        rdfs:label "information object"@en .
 
 
