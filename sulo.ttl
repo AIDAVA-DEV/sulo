@@ -99,6 +99,17 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/sulo/atTime
+sulo:atTime rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf sulo:isTimeOf ;
+            rdfs:domain owl:Thing ;
+            rdfs:range sulo:Time ;
+            dcterms:alternative "existsAt"@en ;
+            rdfs:comment "a relation between any thing and the time in which it occurs at."@en ;
+            rdfs:label "at time"@en .
+
+
 ###  https://w3id.org/sulo/encodes
 sulo:encodes rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
@@ -141,7 +152,7 @@ sulo:hasMember rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/sulo/hasPart
 sulo:hasPart rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf sulo:isLocationOf ;
+             rdfs:subPropertyOf sulo:isLocatedIn ;
              owl:inverseOf sulo:isPartOf ;
              rdf:type owl:TransitiveProperty ,
                       owl:ReflexiveProperty ;
@@ -203,8 +214,7 @@ sulo:isItemIn rdf:type owl:ObjectProperty ;
 sulo:isLocatedIn rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf sulo:isLocationOf ;
-                 rdf:type owl:TransitiveProperty ,
-                          owl:ReflexiveProperty ;
+                 rdf:type owl:TransitiveProperty ;
                  dcterms:alternative "has location"@en ;
                  rdfs:comment "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A."@en ;
                  rdfs:label "is located in"@en .
@@ -212,15 +222,14 @@ sulo:isLocatedIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/sulo/isLocationOf
 sulo:isLocationOf rdf:type owl:ObjectProperty ,
-                           owl:TransitiveProperty ,
-                           owl:ReflexiveProperty ;
+                           owl:TransitiveProperty ;
                   rdfs:comment "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B."@en ;
                   rdfs:label "is location of"@en .
 
 
 ###  https://w3id.org/sulo/isPartOf
 sulo:isPartOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf sulo:isLocatedIn ;
+              rdfs:subPropertyOf sulo:isLocationOf ;
               rdf:type owl:TransitiveProperty ,
                        owl:ReflexiveProperty ;
               rdfs:comment "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."@en ;
@@ -255,20 +264,10 @@ sulo:isReferredIn rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/sulo/isTimeOf
 sulo:isTimeOf rdf:type owl:ObjectProperty ;
-              owl:inverseOf sulo:occursIn ;
               rdfs:domain sulo:Time ;
               rdfs:range owl:Thing ;
               rdfs:comment "a relation between a time and an object that occurs within it."@en ;
               rdfs:label "is time of" .
-
-
-###  https://w3id.org/sulo/occursIn
-sulo:occursIn rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf owl:topObjectProperty ;
-              rdfs:domain owl:Thing ;
-              rdfs:range sulo:Time ;
-              rdfs:comment "a relation between any thing and the time in which it occurs in."@en ;
-              rdfs:label "occurs in"@en .
 
 
 ###  https://w3id.org/sulo/precedes
@@ -292,7 +291,8 @@ sulo:refersTo rdf:type owl:ObjectProperty ;
 #################################################################
 
 ###  https://w3id.org/sulo/hasValue
-sulo:hasValue rdf:type owl:DatatypeProperty ;
+sulo:hasValue rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
               rdfs:domain sulo:InformationObject ;
               rdfs:comment "has value is the (only) data type attribute to store the values of information objects."@en ;
               rdfs:label "has value"@en .
@@ -370,7 +370,7 @@ sulo:InformationObject rdf:type owl:Class ;
                                          owl:onProperty sulo:hasValue ;
                                          owl:allValuesFrom rdfs:Literal
                                        ] ;
-                       rdfs:comment "an information object is a feature that represents or encodes information. Information objects can be stored, transmitted, or processed to enable communication, reasoning, or decision-making."@en ;
+                       rdfs:comment "an information object is a feature that represents, is about, or encodes some information."@en ;
                        rdfs:label "information object"@en .
 
 
@@ -432,10 +432,14 @@ sulo:Role rdf:type owl:Class ;
 
 ###  https://w3id.org/sulo/Set
 sulo:Set rdf:type owl:Class ;
-         rdfs:subClassOf sulo:InformationObject ;
-         rdfs:comment "A collection is an information object for which there may be zero or more items."@en ;
-         rdfs:label "collection"@en ;
-         <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the set of patients in an arm of a clinical trial"@en .
+         rdfs:subClassOf sulo:InformationObject ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty sulo:hasMember ;
+                           owl:allValuesFrom owl:Thing
+                         ] ;
+         rdfs:comment "A set is an information object for which there may be zero or more items."@en ;
+         rdfs:label "set"@en ;
+         <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en .
 
 
 ###  https://w3id.org/sulo/SpatialObject
@@ -460,6 +464,10 @@ sulo:StartTime rdf:type owl:Class ;
 ###  https://w3id.org/sulo/Time
 sulo:Time rdf:type owl:Class ;
           rdfs:subClassOf sulo:Quantity ;
+          owl:disjointUnionOf ( sulo:Duration
+                                sulo:TimeInstant
+                                sulo:TimeInterval
+                              ) ;
           rdfs:comment "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en ;
           rdfs:label "time"@en .
 
@@ -492,7 +500,7 @@ sulo:TimeInterval rdf:type owl:Class ;
                                     owl:someValuesFrom sulo:StartTime
                                   ] ,
                                   [ rdf:type owl:Restriction ;
-                                    owl:onProperty sulo:hasFeature ;
+                                    owl:onProperty sulo:hasPart ;
                                     owl:someValuesFrom sulo:Duration
                                   ] ,
                                   [ rdf:type owl:Restriction ;
