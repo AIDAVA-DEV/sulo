@@ -110,16 +110,6 @@ sulo:atTime rdf:type owl:ObjectProperty ;
             rdfs:label "at time"@en .
 
 
-###  https://w3id.org/sulo/encodes
-sulo:encodes rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf owl:topObjectProperty ;
-             owl:inverseOf sulo:isEncodedIn ;
-             rdfs:domain sulo:SpatialObject ;
-             rdfs:range sulo:InformationObject ;
-             rdfs:comment "A relation between a spatial object and the information object it encodes."@en ;
-             rdfs:label "encodes"@en .
-
-
 ###  https://w3id.org/sulo/hasDirectPart
 sulo:hasDirectPart rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf sulo:hasPart ;
@@ -178,15 +168,6 @@ sulo:isDirectPartOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf sulo:isPartOf ;
                     rdfs:comment "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."@en ;
                     rdfs:label "is direct part of"@en .
-
-
-###  https://w3id.org/sulo/isEncodedIn
-sulo:isEncodedIn rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf owl:topObjectProperty ;
-                 rdfs:domain sulo:InformationObject ;
-                 rdfs:range sulo:SpatialObject ;
-                 rdfs:comment "A relation between an information containing object and the spatial object that encodes it."@en ;
-                 rdfs:label "is encoded in"@en .
 
 
 ###  https://w3id.org/sulo/isFeatureOf
