@@ -101,7 +101,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/sulo/atTime
 sulo:atTime rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
             owl:inverseOf sulo:isTimeOf ;
             rdfs:domain owl:Thing ;
             rdfs:range sulo:Time ;
@@ -142,7 +141,7 @@ sulo:hasMember rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/sulo/hasPart
 sulo:hasPart rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf sulo:isLocatedIn ;
+             rdfs:subPropertyOf sulo:isLocationOf ;
              owl:inverseOf sulo:isPartOf ;
              rdf:type owl:TransitiveProperty ,
                       owl:ReflexiveProperty ;
@@ -210,7 +209,7 @@ sulo:isLocationOf rdf:type owl:ObjectProperty ,
 
 ###  https://w3id.org/sulo/isPartOf
 sulo:isPartOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf sulo:isLocationOf ;
+              rdfs:subPropertyOf sulo:isLocatedIn ;
               rdf:type owl:TransitiveProperty ,
                        owl:ReflexiveProperty ;
               rdfs:comment "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."@en ;
