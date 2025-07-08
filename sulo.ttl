@@ -25,6 +25,7 @@
                                   dcterms:modified "2025-07-08" ;
                                   dcterms:title "Simplified Upper Level Ontology"@en ;
                                   pav:authoredBy <https://orcid.org/0000-0003-4727-9435> ;
+                                  dcterms:creator <https://orcid.org/0000-0003-4727-9435> ;
                                   vann:preferredNamespacePrefix "sulo" ;
                                   vann:preferredNamespaceUri sulo: ;
                                   rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
