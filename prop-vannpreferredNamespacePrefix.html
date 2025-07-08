@@ -415,7 +415,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_45"><a class="active"  href="prop-suloisItemIn.html">sulo:isItemIn</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-suloisItemIn.html">sulo:isItemIn</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-suloisLocatedIn.html">sulo:isLocatedIn</a></li>
           
@@ -435,7 +435,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-sulorefersTo.html">sulo:refersTo</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_26"><a   href="prop-vannpreferredNamespacePrefix.html">vann:preferredNamespacePrefix</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a class="active"  href="prop-vannpreferredNamespacePrefix.html">vann:preferredNamespacePrefix</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_27"><a   href="prop-vannpreferredNamespaceUri.html">vann:preferredNamespaceUri</a></li>
           
@@ -542,7 +542,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            sulo:isItemIn
+            vann:preferredNamespacePrefix
         </li>
   </ol>
 
@@ -566,7 +566,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                sulo:isItemIn
+                vann:preferredNamespacePrefix
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -585,7 +585,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'is item in' - has item is a relation between an item and the collection in which it contained.">sulo:isItemIn</a>
+                            <li><a style="font-weight: bold;" title="'preferredNamespacePrefix'">vann:preferredNamespacePrefix</a>
 
                             
                               </li>
@@ -609,7 +609,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>https://w3id.org/sulo/isItemIn</code>
+                 <code>http://purl.org/vocab/vann/preferredNamespacePrefix</code>
              </div>
            </div>
             </div></div>
@@ -624,7 +624,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 is item in
+                 preferredNamespacePrefix
              </div>
            </div>
             </div></div>
@@ -632,18 +632,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 
             
-            <div class="row"><div class="col-md-12">
-              <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Description</h3>
-            </div>
-            <div class="panel-body">
-
-                <p>has item is a relation between an item and the collection in which it contained.</p>
-            </div>
-          </div>
-           </div></div>
-           
 
 
 
@@ -668,27 +656,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                <tr>
                    <td>
                      
-                         
-                         
-                              <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
-                           
-                           
-                         
+                         <a>owl:Thing</a> (inferred)
                      
                    </td>
 
                     <td>
-                      sulo:isItemIn
+                      vann:preferredNamespacePrefix
                     </td>
 
                     <td>
                       
-                          
-                          
-                               <a href="class-suloSet.html" title="https://w3id.org/sulo/Set">sulo:Set</a>
-                            
-                            
-                          
+                          <a>owl:Thing</a> (inferred)
                       
                     </td>
             </table>
@@ -708,15 +686,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 
 
                     <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">vann:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/vocab/vann/&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">sulo</span><span class="p">:</span><span class="nt">isItemIn</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;is item in&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;has item is a relation between an item and the collection in which it contained.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">domain</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Thing</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">range</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Set</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">topObjectProperty</span> <span class="p">.</span>
+<span class="nn">vann</span><span class="p">:</span><span class="nt">preferredNamespacePrefix</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -816,7 +788,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_45").offset().top - 100
+          scrollTop: $("#sd_26").offset().top - 100
       }, 100);
     });
 
