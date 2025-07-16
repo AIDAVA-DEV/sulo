@@ -1,5 +1,6 @@
 @prefix : <https://w3id.org/sulo/sulo.ttl#> .
 @prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -13,23 +14,22 @@
 @prefix sulo: <https://w3id.org/sulo/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://w3id.org/sulo/> .
+@base <https://w3id.org/sulo/sulo.ttl#> .
 
 <https://w3id.org/sulo/sulo.ttl> rdf:type owl:Ontology ;
-                                  owl:versionIRI <https://w3id.org/sulo/sulo-0.2.0.ttl> ;
+                                  owl:versionIRI sulo:sulo-0.2.0.ttl ;
+                                  dc:creator <https://orcid.org/0000-0003-4727-9435> ;
                                   dcterms:alternative "SULO"@en ;
+                                  dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ;
                                   dcterms:created "2024-11-11" ;
+                                  dcterms:issued "2025-07-11" ;
                                   dcterms:language <http://lexvo.org/id/iso639-1/en> ;
                                   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0> ;
                                   dcterms:modified "2025-07-08" ;
-                                  dcterms:issued "2025-07-11";
                                   dcterms:publisher <https://orcid.org/0000-0003-4727-9435> ;
-                                  dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ;
                                   dcterms:title "Simplified Upper Level Ontology"@en ;
                                   pav:authoredBy <https://orcid.org/0000-0003-4727-9435> ;
-                                  dc:creator <https://orcid.org/0000-0003-4727-9435> ;
                                   vann:preferredNamespacePrefix "sulo" ;
                                   vann:preferredNamespaceUri sulo: ;
                                   rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
@@ -47,12 +47,24 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/alternative
 dcterms:alternative rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/created
 dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/language
@@ -65,6 +77,10 @@ dcterms:license rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/modified
 dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -161,7 +177,7 @@ sulo:hasFeature rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/sulo/hasMember
 sulo:hasMember rdf:type owl:ObjectProperty ;
                owl:inverseOf sulo:isItemIn ;
-               rdfs:domain sulo:Set ;
+               rdfs:domain sulo:Collection ;
                rdfs:range owl:Thing ;
                rdfs:comment "has item is a relation between a collection and an item contained therein."@en ;
                rdfs:label "has item"@en .
@@ -213,7 +229,7 @@ sulo:isFeatureOf rdf:type owl:ObjectProperty ;
 sulo:isItemIn rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain owl:Thing ;
-              rdfs:range sulo:Set ;
+              rdfs:range sulo:Collection ;
               rdfs:comment "has item is a relation between an item and the collection in which it contained."@en ;
               rdfs:label "is item in"@en .
 
@@ -316,6 +332,18 @@ sulo:Capability rdf:type owl:Class ;
                 rdfs:comment "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en ;
                 rdfs:label "capability" ;
                 <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en .
+
+
+###  https://w3id.org/sulo/Collection
+sulo:Collection rdf:type owl:Class ;
+                rdfs:subClassOf sulo:InformationObject ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty sulo:hasMember ;
+                                  owl:allValuesFrom owl:Thing
+                                ] ;
+                rdfs:comment "A collection is an information object for which there may be zero or more items."@en ;
+                rdfs:label "collection"@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en .
 
 
 ###  https://w3id.org/sulo/Duration
@@ -436,18 +464,6 @@ sulo:Role rdf:type owl:Class ;
           rdfs:comment "A role is a feature that describes a context-dependent behaviour."@en ;
           rdfs:label "role"@en ;
           <http://www.w3.org/2004/02/skos/core#example> "a teacher, a student, a catalyst, a substrate, a product, a patient"@en .
-
-
-###  https://w3id.org/sulo/Set
-sulo:Set rdf:type owl:Class ;
-         rdfs:subClassOf sulo:InformationObject ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty sulo:hasMember ;
-                           owl:allValuesFrom owl:Thing
-                         ] ;
-         rdfs:comment "A set is an information object for which there may be zero or more items."@en ;
-         rdfs:label "set"@en ;
-         <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en .
 
 
 ###  https://w3id.org/sulo/SpatialObject
