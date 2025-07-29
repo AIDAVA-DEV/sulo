@@ -462,6 +462,79 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="collection">
+          <h3>collection
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/Collection</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A collection is an information object for which there may be zero or more items.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>a stamp collection, a murder of crows, the arm of a clinical trial</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#InformationObject">sulo:InformationObject</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasMember">sulo:hasMember</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isItemIn">sulo:isItemIn</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#hasMember">sulo:hasMember</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>only<br>
+                  </span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="duration">
           <h3>duration
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -754,13 +827,13 @@
                 <ul>
                   <li>
                     <span>
-                      <a href="#Quantity">sulo:Quantity</a>
+                      <a href="#collection">sulo:Collection</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#Set">sulo:Set</a>
+                      <a href="#Quantity">sulo:Quantity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1084,79 +1157,6 @@
                 <span>
                   <a href="#Feature">sulo:Feature</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Set">
-          <h3>set
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Set</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A set is an information object for which there may be zero or more items.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
-              </th>
-              <td><p>a stamp collection, a murder of crows, the arm of a clinical trial</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#InformationObject">sulo:InformationObject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasMember">sulo:hasMember</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isItemIn">sulo:isItemIn</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
-              </th>
-              <td>
-                <span>
-                  <span>
-                    <span>
-                      <a href="#hasMember">sulo:hasMember</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>only<br>
-                  </span>
                 </span>
               </td>
             </tr>
@@ -1600,10 +1600,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td><span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -1643,7 +1643,7 @@
               </th>
               <td>
                 <span>
-                  <a href="#Set">sulo:Set</a>
+                  <a href="#collection">sulo:Collection</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1803,10 +1803,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td><span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -1851,7 +1851,7 @@
               </th>
               <td>
                 <span>
-                  <a href="#Set">sulo:Set</a>
+                  <a href="#collection">sulo:Collection</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2256,6 +2256,19 @@
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
+        <div class="property entity" id="creator">
+          <h3>creator
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/elements/1.1/creator</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="alternative">
           <h3>alternative
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -2269,6 +2282,19 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="contributor">
+          <h3>contributor
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/contributor</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="created">
           <h3>created
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -2278,6 +2304,19 @@
               <th>IRI</th>
               <td>
                 <code>http://purl.org/dc/terms/created</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="issued">
+          <h3>issued
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/issued</code>
               </td>
             </tr>
           </table>
@@ -2317,6 +2356,19 @@
               <th>IRI</th>
               <td>
                 <code>http://purl.org/dc/terms/modified</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="publisher">
+          <h3>publisher
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/publisher</code>
               </td>
             </tr>
           </table>
@@ -2514,6 +2566,10 @@
       <div id="namespaces">
         <h2>Namespaces</h2>
         <dl>
+          <dt id="dc">dc</dt>
+          <dd>
+            <code>http://purl.org/dc/elements/1.1/</code>
+          </dd>
           <dt id="dcat">dcat</dt>
           <dd>
             <code>http://www.w3.org/ns/dcat#</code>
@@ -2647,6 +2703,9 @@
               <a href="#capability">capability</a>
             </li>
             <li>
+              <a href="#collection">collection</a>
+            </li>
+            <li>
               <a href="#duration">duration</a>
             </li>
             <li>
@@ -2672,9 +2731,6 @@
             </li>
             <li>
               <a href="#Role">role</a>
-            </li>
-            <li>
-              <a href="#Set">set</a>
             </li>
             <li>
               <a href="#SpatialObject">spatial object</a>
@@ -2773,10 +2829,19 @@
           </h4>
           <ul class="second">
             <li>
+              <a href="#creator">creator</a>
+            </li>
+            <li>
               <a href="#alternative">alternative</a>
             </li>
             <li>
+              <a href="#contributor">contributor</a>
+            </li>
+            <li>
               <a href="#created">created</a>
+            </li>
+            <li>
+              <a href="#issued">issued</a>
             </li>
             <li>
               <a href="#language">language</a>
@@ -2786,6 +2851,9 @@
             </li>
             <li>
               <a href="#modified">modified</a>
+            </li>
+            <li>
+              <a href="#publisher">publisher</a>
             </li>
             <li>
               <a href="#title">title</a>
@@ -2840,6 +2908,9 @@
             <a href="#namespaces">Namespaces</a>
           </h4>
           <ul class="second">
+            <li>
+              <a href="#dc">dc</a>
+            </li>
             <li>
               <a href="#dcat">dcat</a>
             </li>

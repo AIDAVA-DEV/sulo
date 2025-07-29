@@ -385,7 +385,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_26"><a   href="prop-dctermsmodified.html">dcterms:modified</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_27"><a   href="prop-dctermspublisher.html">dcterms:publisher</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_27"><a class="active"  href="prop-dctermspublisher.html">dcterms:publisher</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_28"><a   href="prop-dctermstitle.html">dcterms:title</a></li>
           
@@ -395,7 +395,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_37"><a   href="prop-modhasRepresentationLanguage.html">mod:hasRepresentationLanguage</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_38"><a class="active"  href="prop-modhasSyntax.html">mod:hasSyntax</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a   href="prop-modhasSyntax.html">mod:hasSyntax</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_39"><a   href="prop-modprefLabelProperty.html">mod:prefLabelProperty</a></li>
           
@@ -550,7 +550,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            mod:hasSyntax
+            dcterms:publisher
         </li>
   </ol>
 
@@ -574,7 +574,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                mod:hasSyntax
+                dcterms:publisher
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -593,7 +593,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'hasSyntax'">mod:hasSyntax</a>
+                            <li><a style="font-weight: bold;" title="'publisher'">dcterms:publisher</a>
 
                             
                               </li>
@@ -617,7 +617,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>https://w3id.org/mod#hasSyntax</code>
+                 <code>http://purl.org/dc/terms/publisher</code>
              </div>
            </div>
             </div></div>
@@ -632,7 +632,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 hasSyntax
+                 publisher
              </div>
            </div>
             </div></div>
@@ -669,7 +669,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      mod:hasSyntax
+                      dcterms:publisher
                     </td>
 
                     <td>
@@ -693,10 +693,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
                 
 
-                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">mod:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/mod#&gt;</span><span class="w"> </span><span class="p">.</span>
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">mod</span><span class="p">:</span><span class="nt">hasSyntax</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
+<span class="nn">dcterms</span><span class="p">:</span><span class="nt">publisher</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -796,7 +796,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_38").offset().top - 100
+          scrollTop: $("#sd_27").offset().top - 100
       }, 100);
     });
 
