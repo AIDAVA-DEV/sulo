@@ -341,6 +341,7 @@ sulo:Collection rdf:type owl:Class ;
                                   owl:onProperty sulo:hasMember ;
                                   owl:allValuesFrom owl:Thing
                                 ] ;
+                owl:disjointWith sulo:Quantity ;
                 rdfs:comment "A collection is an information object for which there may be zero or more items."@en ;
                 rdfs:label "collection"@en ;
                 <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en .
@@ -365,6 +366,7 @@ sulo:Duration rdf:type owl:Class ;
 ###  https://w3id.org/sulo/EndTime
 sulo:EndTime rdf:type owl:Class ;
              rdfs:subClassOf sulo:TimeInstant ;
+             owl:disjointWith sulo:StartTime ;
              rdfs:comment "an end time is a time instant at the end of a process/time interval."@en ;
              rdfs:label "end time"@en .
 
@@ -488,6 +490,7 @@ sulo:StartTime rdf:type owl:Class ;
 ###  https://w3id.org/sulo/Time
 sulo:Time rdf:type owl:Class ;
           rdfs:subClassOf sulo:Quantity ;
+          owl:disjointWith sulo:Unit ;
           owl:disjointUnionOf ( sulo:Duration
                                 sulo:TimeInstant
                                 sulo:TimeInterval
@@ -555,6 +558,14 @@ sulo:Unit rdf:type owl:Class ;
                 sulo:InformationObject
                 sulo:Quality
                 sulo:Role
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( sulo:Duration
+                sulo:TimeInstant
+                sulo:TimeInterval
               )
 ] .
 
