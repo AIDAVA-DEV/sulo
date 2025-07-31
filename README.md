@@ -13,6 +13,9 @@ Documentation for SULO is available using:
 * [OntoSpy](https://aidava-dev.github.io/sulo/)
 * [Pylode](https://aidava-dev.github.io/sulo/pylode/sulo.html)
 
+FAIRness assessment performed with [FOOPS!](https://foops.linkeddata.es/FAIR_validator.html)
 
 Here's the SULO Postcard showing all the classes and valid relations between them<br>
 <img src="sulo-overview.png" alt="SULO Postcard" width="800">
+
+
