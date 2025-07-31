@@ -152,7 +152,7 @@ sulo:refersTo a owl:ObjectProperty ;
     rdfs:domain sulo:InformationObject ;
     rdfs:range owl:Thing .
 
-sulo:sulo.ttl a owl:Ontology ;
+sulo:sulo-0.2.1.ttl a owl:Ontology ;
     rdfs:label "Simplified Upper Level Ontology"@en ;
     dc:creator <https://orcid.org/0000-0003-4727-9435> ;
     dcterms:alternative "SULO"@en ;
