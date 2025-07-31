@@ -1600,10 +1600,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td><span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -1803,10 +1803,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
               </th>
               <td><span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -1858,8 +1858,8 @@
             </tr>
           </table>
         </div>
-        <div class="property entity" id="islocatedin">
-          <h3>is located in
+        <div class="property entity" id="isin">
+          <h3>is in
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -1873,7 +1873,7 @@
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.</p></td>
+              <td><p>A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent.</p></td>
             </tr>
             <tr>
               <th>
@@ -1897,7 +1897,7 @@
           </table>
         </div>
         <div class="property entity" id="isLocationOf">
-          <h3>is location of
+          <h3>contains
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -1911,7 +1911,7 @@
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B.</p></td>
+              <td><p>A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.</p></td>
             </tr>
             <tr>
               <th>
@@ -1949,7 +1949,7 @@
               </th>
               <td>
                 <span>
-                  <a href="#islocatedin">sulo:isLocatedIn</a>
+                  <a href="#isin">sulo:isLocatedIn</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -2785,10 +2785,10 @@
               <a href="#isItemIn">is item in</a>
             </li>
             <li>
-              <a href="#islocatedin">is located in</a>
+              <a href="#isin">is in</a>
             </li>
             <li>
-              <a href="#isLocationOf">is location of</a>
+              <a href="#isLocationOf">contains</a>
             </li>
             <li>
               <a href="#isPartOf">is part of</a>

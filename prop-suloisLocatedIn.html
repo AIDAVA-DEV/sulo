@@ -591,7 +591,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'is located in' - A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.">sulo:isLocatedIn</a>
+                            <li><a style="font-weight: bold;" title="'is in' - A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent.">sulo:isLocatedIn</a>
 
                             
                                 <ul>
@@ -634,7 +634,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 is located in
+                 is in
              </div>
            </div>
             </div></div>
@@ -649,7 +649,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
             </div>
             <div class="panel-body">
 
-                <p>A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.</p>
+                <p>A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent.</p>
             </div>
           </div>
            </div></div>
@@ -723,16 +723,14 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
                 
 
-                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">isLocatedIn</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span>
         <span class="nn">owl</span><span class="p">:</span><span class="nt">TransitiveProperty</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;is located in&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">dcterms</span><span class="p">:</span><span class="nt">alternative</span> <span class="s">&quot;has location&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;is in&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subPropertyOf</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">topObjectProperty</span> <span class="p">;</span>
     <span class="nn">owl</span><span class="p">:</span><span class="nt">inverseOf</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">isLocationOf</span> <span class="p">.</span>
 </pre></div>
@@ -773,7 +771,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Wed, 30 Jul 2025 09:46:14 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Thu, 31 Jul 2025 14:57:55 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>
