@@ -239,16 +239,15 @@ sulo:isLocatedIn rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf owl:topObjectProperty ;
                  owl:inverseOf sulo:isLocationOf ;
                  rdf:type owl:TransitiveProperty ;
-                 dcterms:alternative "has location"@en ;
-                 rdfs:comment "A is located in B iff the spatialtemporal region occupied by B is the spatialtemporal region occupied by A."@en ;
-                 rdfs:label "is located in"@en .
+                 rdfs:comment "A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent."@en ;
+                 rdfs:label "is in"@en .
 
 
 ###  https://w3id.org/sulo/isLocationOf
 sulo:isLocationOf rdf:type owl:ObjectProperty ,
                            owl:TransitiveProperty ;
-                  rdfs:comment "A is location of B iff the spatialtemporal region occupied by A is the spatialtemporal region occupied by B."@en ;
-                  rdfs:label "is location of"@en .
+                  rdfs:comment "A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent."@en ;
+                  rdfs:label "contains"@en .
 
 
 ###  https://w3id.org/sulo/isPartOf
