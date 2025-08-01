@@ -15,10 +15,12 @@ Here's the SULO Postcard showing all the classes and valid relations between the
 <img src="sulo-overview.png" alt="SULO Postcard" width="800">
 
 The ontology is available in a number of formats:
-* [Turtle](https://w3id.org/sulo/versions/latest/sulo.ttl)
-* [RDF/XML](https://w3id.org/sulo/versions/latest/sulo.owl)
-* [JSON-LD](https://w3id.org/sulo/versions/latest/sulo.jsonld)
-* [NTriples](https://w3id.org/sulo/versions/latest/sulo.nt)
+* [Turtle](https://w3id.org/sulo/sulo.ttl)
+* [RDF/XML](https://w3id.org/sulo/sulo.owl)
+* [JSON-LD](https://w3id.org/sulo/sulo.jsonld)
+* [NTriples](https://w3id.org/sulo/sulo.nt)
+
+* https://raw.githubusercontent.com/AIDAVA-DEV/sulo/refs/heads/main/versions/latest/sulo.jsonld
 
 All versions of the ontology are available from [github](versions/)
 
