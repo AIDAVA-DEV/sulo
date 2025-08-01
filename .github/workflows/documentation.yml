@@ -57,8 +57,6 @@ jobs:
           python -m ontospy.cli gendocs --type 2 -o "$output_dir" "$file"
           echo "Ontospy documentation generated for: $file"
 
-          done
-
       - name: Install Pylode
         run: |
           pip install pylode
