@@ -45,17 +45,18 @@ jobs:
       # Step 4: Generate Ontospy Documentation
       - name: Generate Ontology Documentation
         run: |
-          for file in *.ttl *.owl *.rdf; do
-              if [[ -f "$file" ]]; then
-                  echo "Processing file: $file"
+          file=sulo.ttl
+          if [ ! -f "$file" ]; then
+            echo "File $file does not exist."
+            exit 1
+          fi
           
-                  base="${file%.*}"
-                  output_dir="docs/ontospy/"
-                  mkdir -p "$output_dir"
-                  python -m ontospy.cli gendocs --type 2 -o "$output_dir" "$file"
-          
-                  echo "Ontospy documentation generated for: $file"
-              fi
+          echo "Processing $file"   
+          output_dir="docs/ontospy/"
+          mkdir -p "$output_dir"
+          python -m ontospy.cli gendocs --type 2 -o "$output_dir" "$file"
+          echo "Ontospy documentation generated for: $file"
+
           done
 
       - name: Install Pylode
