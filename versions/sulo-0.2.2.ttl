@@ -80,32 +80,6 @@ sulo:isReferredIn a owl:ObjectProperty ;
 
 xsd:date a rdfs:Datatype .
 
-sulo: a owl:Ontology ;
-    rdfs:label "Simplified Upper Level Ontology"@en ;
-    dc:creator <https://orcid.org/0000-0003-4727-9435> ;
-    dcterms:alternative "SULO"@en ;
-    dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ;
-    dcterms:created "2024-11-11" ;
-    dcterms:issued "2025-07-11" ;
-    dcterms:language <http://lexvo.org/id/iso639-1/en> ;
-    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0> ;
-    dcterms:modified "2025-08-01"^^xsd:date ;
-    dcterms:publisher <https://orcid.org/0000-0003-4727-9435> ;
-    dcterms:title "Simplified Upper Level Ontology"@en ;
-    pav:authoredBy <https://orcid.org/0000-0003-4727-9435> ;
-    vann:preferredNamespacePrefix "sulo" ;
-    vann:preferredNamespaceUri sulo: ;
-    rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
-    owl:versionIRI sulo:sulo-0.2.1.ttl ;
-    owl:versionInfo "0.2.1" ;
-    dcat:accessURL sulo:sulo.ttl ;
-    foaf:homepage <https://github.com/AIDAVA-DEV/sulo> ;
-    schema:funding "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en ;
-    mod:definitionProperty rdfs:comment ;
-    mod:hasRepresentationLanguage omv:OWL ;
-    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
-    mod:prefLabelProperty rdfs:label .
-
 sulo:EndTime a owl:Class ;
     rdfs:label "end time"@en ;
     rdfs:comment "an end time is a time instant at the end of a process/time interval."@en ;
@@ -178,6 +152,32 @@ sulo:refersTo a owl:ObjectProperty ;
     rdfs:domain sulo:InformationObject ;
     rdfs:range owl:Thing .
 
+sulo:sulo-0.2.2.ttl a owl:Ontology ;
+    rdfs:label "Simplified Upper Level Ontology"@en ;
+    dc:creator <https://orcid.org/0000-0003-4727-9435> ;
+    dcterms:alternative "SULO"@en ;
+    dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ;
+    dcterms:created "2024-11-11" ;
+    dcterms:issued "2025-07-11" ;
+    dcterms:language <http://lexvo.org/id/iso639-1/en> ;
+    dcterms:license <https://creativecommons.org/publicdomain/zero/1.0> ;
+    dcterms:modified "2025-08-01"^^xsd:date ;
+    dcterms:publisher <https://orcid.org/0000-0003-4727-9435> ;
+    dcterms:title "Simplified Upper Level Ontology"@en ;
+    pav:authoredBy <https://orcid.org/0000-0003-4727-9435> ;
+    vann:preferredNamespacePrefix "sulo" ;
+    vann:preferredNamespaceUri sulo: ;
+    rdfs:comment "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en ;
+    owl:versionIRI sulo:sulo-0.2.2.ttl ;
+    owl:versionInfo "0.2.2" ;
+    dcat:accessURL sulo:sulo.ttl ;
+    foaf:homepage <https://github.com/AIDAVA-DEV/sulo> ;
+    schema:funding "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en ;
+    mod:definitionProperty rdfs:comment ;
+    mod:hasRepresentationLanguage omv:OWL ;
+    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+    mod:prefLabelProperty rdfs:label .
+
 sulo:Capability a owl:Class ;
     rdfs:label "capability" ;
     rdfs:comment "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en ;
@@ -225,6 +225,9 @@ sulo:TimeInterval a owl:Class ;
     rdfs:comment "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty sulo:hasDirectPart ;
+            owl:someValuesFrom sulo:EndTime ],
+        [ a owl:Restriction ;
+            owl:onProperty sulo:hasDirectPart ;
             owl:someValuesFrom sulo:StartTime ],
         [ a owl:Restriction ;
             owl:onProperty sulo:hasPart ;
@@ -235,9 +238,6 @@ sulo:TimeInterval a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:float ;
             owl:onProperty sulo:hasValue ],
-        [ a owl:Restriction ;
-            owl:onProperty sulo:hasDirectPart ;
-            owl:someValuesFrom sulo:EndTime ],
         sulo:Time .
 
 sulo:hasDirectPart a owl:ObjectProperty ;

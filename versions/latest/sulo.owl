@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcat="http://www.w3.org/ns/dcat#"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:mod="https://w3id.org/mod#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:pav="http://purl.org/pav/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="https://schema.org/"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+>
+  <rdf:Description rdf:about="https://w3id.org/sulo/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="en">Simplified Upper Level Ontology</rdfs:label>
+    <dc:creator rdf:resource="https://orcid.org/0000-0003-4727-9435"/>
+    <dcterms:alternative xml:lang="en">SULO</dcterms:alternative>
+    <dcterms:contributor rdf:resource="https://orcid.org/0000-0001-7222-3287"/>
+    <dcterms:created>2024-11-11</dcterms:created>
+    <dcterms:issued>2025-07-11</dcterms:issued>
+    <dcterms:language rdf:resource="http://lexvo.org/id/iso639-1/en"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-08-01</dcterms:modified>
+    <dcterms:publisher rdf:resource="https://orcid.org/0000-0003-4727-9435"/>
+    <dcterms:title xml:lang="en">Simplified Upper Level Ontology</dcterms:title>
+    <pav:authoredBy rdf:resource="https://orcid.org/0000-0003-4727-9435"/>
+    <vann:preferredNamespacePrefix>sulo</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri rdf:resource="https://w3id.org/sulo/"/>
+    <rdfs:comment xml:lang="en">The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph.</rdfs:comment>
+    <owl:versionIRI rdf:resource="https://w3id.org/sulo/sulo-0.2.3.ttl"/>
+    <owl:versionInfo>0.2.3</owl:versionInfo>
+    <dcat:accessURL rdf:resource="https://w3id.org/sulo/sulo.ttl"/>
+    <foaf:homepage rdf:resource="https://github.com/AIDAVA-DEV/sulo"/>
+    <schema:funding xml:lang="en">This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme.</schema:funding>
+    <mod:definitionProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <mod:hasRepresentationLanguage rdf:resource="http://omv.ontoware.org/2005/05/ontology#OWL"/>
+    <mod:hasSyntax rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <mod:prefLabelProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b2">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Object"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/sulo/SpatialObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/InformationObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">information object</rdfs:label>
+    <rdfs:comment xml:lang="en">an information object is a feature that represents, is about, or encodes some information.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b39"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b40"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Feature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Process">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">process</rdfs:label>
+    <rdfs:comment xml:lang="en">a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b44"/>
+    <skos:example xml:lang="en">the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Time">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">time</rdfs:label>
+    <rdfs:comment xml:lang="en">time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Quantity"/>
+    <owl:disjointUnionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b27"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/sulo/Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Feature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">feature</rdfs:label>
+    <rdfs:comment xml:lang="en">A feature is any characteristic that stems from the intrisinc structure and/or context</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b30"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b34"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Object"/>
+    <owl:disjointUnionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b35"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/sulo/SpatialObject"/>
+    <skos:example xml:lang="en">the capability to fly, a collection of cards, a measured height of 170cm.</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/Duration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">is part of</rdfs:label>
+    <rdfs:comment xml:lang="en">is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/sulo/isLocatedIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b16">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label xml:lang="en">has value</rdfs:label>
+    <rdfs:comment xml:lang="en">has value is the (only) data type attribute to store the values of information objects.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/InformationObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/StartTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">start time</rdfs:label>
+    <rdfs:comment xml:lang="en">a start time is a time instant at the beginning of a process/time interval.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/TimeInstant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Duration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">duration</rdfs:label>
+    <rdfs:comment xml:lang="en">Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b17"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Time"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/precedes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>precedes</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation in which one process occurs prior to another process.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Process"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Object">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">object</rdfs:label>
+    <rdfs:comment>An object is an entity that maintains its identity through time, and does not have processes as its parts.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b41"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b43"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/sulo/Process"/>
+    <skos:example xml:lang="en">a heart, the function to pump blood, the role of a doctor</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Quality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">quality</rdfs:label>
+    <rdfs:comment xml:lang="en">A quality is a feature that is intrinsically associated with its bearer (or its parts).</rdfs:comment>
+    <rdfs:comment xml:lang="en">the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Feature"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/sulo/Object"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasFeature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has feature</rdfs:label>
+    <rdfs:comment xml:lang="en">has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="n403319c1067b405b9f2450937ab85499b1"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Feature"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isFeatureOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isPrecededBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is preceded by</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation in which one process occurs after to another process.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Process"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/precedes"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b19">
+    <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">role</rdfs:label>
+    <rdfs:comment xml:lang="en">A role is a feature that describes a context-dependent behaviour.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Feature"/>
+    <skos:example xml:lang="en">a teacher, a student, a catalyst, a substrate, a product, a patient</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasMember"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/SpatialObject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">spatial object</rdfs:label>
+    <rdfs:comment xml:lang="en">A spatial object is an object that occupies space</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b8"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Object"/>
+    <skos:example xml:lang="en">a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasDirectPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>has direct part</rdfs:label>
+    <rdfs:comment xml:lang="en">has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/sulo/hasPart"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isDirectPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b18">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:withRestrictions rdf:nodeID="n403319c1067b405b9f2450937ab85499b20"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/Process"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isItemIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is item in</rdfs:label>
+    <rdfs:comment xml:lang="en">has item is a relation between an item and the collection in which it contained.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Collection"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasParticipant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has participant</rdfs:label>
+    <rdfs:comment xml:lang="en">has participant is a relation that describes the participation of a (non-process) thing in a process.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Object"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isParticipantIn"/>
+    <owl:propertyChainAxiom rdf:nodeID="n403319c1067b405b9f2450937ab85499b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isFeatureOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is feature of</rdfs:label>
+    <rdfs:comment xml:lang="en">is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Feature"/>
+    <rdfs:range rdf:nodeID="n403319c1067b405b9f2450937ab85499b14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/TimeInstant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">time instant</rdfs:label>
+    <rdfs:comment xml:lang="en">time instant is a quantity of time a particular moment in time.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b22"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Time"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/EndTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">end time</rdfs:label>
+    <rdfs:comment xml:lang="en">an end time is a time instant at the end of a process/time interval.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/TimeInstant"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/sulo/StartTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b37">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Quality"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b32">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Object"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b33"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b35">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Capability"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mod#hasRepresentationLanguage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has item</rdfs:label>
+    <rdfs:comment xml:lang="en">has item is a relation between a collection and an item contained therein.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Collection"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isItemIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/atTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">at time</rdfs:label>
+    <dcterms:alternative xml:lang="en">existsAt</dcterms:alternative>
+    <rdfs:comment xml:lang="en">a relation between any thing and the time in which it occurs at.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Time"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isTimeOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:nodeID="n403319c1067b405b9f2450937ab85499b23"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isLocationOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">contains</rdfs:label>
+    <rdfs:comment xml:lang="en">A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b38">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Role"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b3">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b26">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b53">
+    <rdf:first rdf:resource="https://w3id.org/sulo/TimeInterval"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Quantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">quantity</rdfs:label>
+    <rdfs:comment xml:lang="en">A quantity is an informational object that contains the magnitude (and unit) of an attribute.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b21"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/InformationObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">has part</rdfs:label>
+    <rdfs:comment>has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/sulo/isLocationOf"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b5">
+    <rdf:first rdf:resource="https://w3id.org/sulo/hasParticipant"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b47">
+    <rdf:first rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b48"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/TimeInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>time interval</rdfs:label>
+    <rdfs:comment xml:lang="en">A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b9"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b10"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b11"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b12"/>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b13"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Time"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b51">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Duration"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b52"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b23">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:unionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isDirectPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is direct part of</rdfs:label>
+    <rdfs:comment xml:lang="en">is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/sulo/isPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/sulo/Process"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b33">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Process"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/language">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/Unit"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b49">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Role"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b17">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasValue"/>
+    <owl:someValuesFrom rdf:nodeID="n403319c1067b405b9f2450937ab85499b18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isLocatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:label xml:lang="en">is in</rdfs:label>
+    <rdfs:comment xml:lang="en">A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/isLocationOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Capability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>capability</rdfs:label>
+    <rdfs:comment xml:lang="en">A capability is a feature that describes what an entity is able to do, under some set of circumstances.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Feature"/>
+    <skos:example xml:lang="en">the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isTimeOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>is time of</rdfs:label>
+    <rdfs:comment xml:lang="en">a relation between a time and an object that occurs within it.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Time"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b45">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n403319c1067b405b9f2450937ab85499b46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b30">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/isFeatureOf"/>
+    <owl:someValuesFrom rdf:nodeID="n403319c1067b405b9f2450937ab85499b31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Collection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">collection</rdfs:label>
+    <rdfs:comment xml:lang="en">A collection is an information object for which there may be zero or more items.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b7"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/sulo/Quantity"/>
+    <skos:example xml:lang="en">a stamp collection, a murder of crows, the arm of a clinical trial</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b36">
+    <rdf:first rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b48">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Quality"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b49"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b34">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:allValuesFrom rdf:resource="https://w3id.org/sulo/Feature"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b28">
+    <rdf:first rdf:resource="https://w3id.org/sulo/TimeInstant"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b29"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b4">
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/hasFeature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isReferredIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is referred to in</rdfs:label>
+    <rdfs:comment xml:lang="en">is referred to in is relation between an object that is the subject of an information object.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/sulo/refersTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/Unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>unit</rdfs:label>
+    <rdfs:comment xml:lang="en">a unit is a standardized quantity that is used as a reference for a particular quantity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/sulo/Quantity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasDirectPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/StartTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b6">
+    <rdf:first rdf:nodeID="n403319c1067b405b9f2450937ab85499b4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b50">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="n403319c1067b405b9f2450937ab85499b51"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/refersTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">refers to</rdfs:label>
+    <rdfs:comment xml:lang="en">refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/InformationObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b29">
+    <rdf:first rdf:resource="https://w3id.org/sulo/TimeInterval"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b46">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Capability"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b47"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b20">
+    <rdf:first rdf:nodeID="n403319c1067b405b9f2450937ab85499b19"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b14">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b27">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Duration"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b28"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b52">
+    <rdf:first rdf:resource="https://w3id.org/sulo/TimeInstant"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b53"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#example">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/funding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mod#hasSyntax">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b25">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/sulo/isParticipantIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">is participant in</rdfs:label>
+    <rdfs:comment xml:lang="en">is participant in is a relation to relate an object and the process in which it participates.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/sulo/Object"/>
+    <rdfs:range rdf:resource="https://w3id.org/sulo/Process"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mod#definitionProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b24">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b25"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b15">
+    <rdf:first rdf:resource="https://w3id.org/sulo/Object"/>
+    <rdf:rest rdf:nodeID="n403319c1067b405b9f2450937ab85499b16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b41">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:complementOf rdf:nodeID="n403319c1067b405b9f2450937ab85499b42"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="n403319c1067b405b9f2450937ab85499b9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://w3id.org/sulo/hasDirectPart"/>
+    <owl:someValuesFrom rdf:resource="https://w3id.org/sulo/EndTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/pav/authoredBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/alternative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/mod#prefLabelProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
