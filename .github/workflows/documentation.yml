@@ -71,7 +71,7 @@ jobs:
           fi
           mkdir -p docs/pylode/
           echo "Processing $file with pylode"   
-          pylode -o docs/pylode/index" "$file"
+          pylode -o docs/pylode/index "$file"
           echo "Pylode documentation generated for: $file"
           
       # Step 5: Deploy Documentation to GitHub Pages
