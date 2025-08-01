@@ -20,9 +20,15 @@ The ontology is available in a number of formats:
 * [JSON-LD](https://w3id.org/sulo/sulo.jsonld)
 * [NTriples](https://w3id.org/sulo/sulo.nt)
 
-* https://raw.githubusercontent.com/AIDAVA-DEV/sulo/refs/heads/main/versions/latest/sulo.jsonld
+You can retrieve any of these through content type negotiation
+```
+curl -L -H "Accept: text/turtle https://w3id.org/sulo
+curl -L -H "Accept: application/ld+json" https://w3id.org/sulo
+curl -L -H "Accept: application/rdf+xml" https://w3id.org/sulo
+curl -L -H "Accept: application/n-triples" https://w3id.org/sulo
+```
 
-All versions of the ontology are available from [github](versions/)
+In addition, individual versions of SULO are available through the ontology IRI pattern ```https://w3id.org/sulo/sulo-X.X.X.ttl```  All versions of the ontology are available from [github](versions/)
 
 Documentation for SULO is available using:
 * [OntoSpy](https://aidava-dev.github.io/sulo/ontospy/index.html)
