@@ -32,4 +32,3 @@ jobs:
             ./robot reason --reasoner hermit --input sulo.ttl -D "$output" || exit 1
             echo "Reasoning completed for: sulo.ttl"
           fi
-          done
