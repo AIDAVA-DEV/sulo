@@ -263,7 +263,7 @@
     <script id="schema.org" type="application/ld+json">
 [
   {
-    "@id": "https://w3id.org/sulo/sulo.ttl",
+    "@id": "https://w3id.org/sulo/",
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
@@ -290,7 +290,7 @@
     "https://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-07-31"
+        "@value": "2025-08-01"
       }
     ],
     "https://schema.org/description": [
@@ -330,7 +330,7 @@
               <strong>IRI</strong>
             </dt>
             <dd>
-              <code>https://w3id.org/sulo/sulo.ttl</code>
+              <code>https://w3id.org/sulo/</code>
             </dd>
           </div>
           <div>
@@ -373,7 +373,7 @@
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/modified" title="None. Defined in None">Modified</a>
             </dt>
-            <dd><p>2025-07-31</p></dd>
+            <dd><p>2025-08-01</p></dd>
           </div>
           <div>
             <dt>
@@ -766,16 +766,6 @@
                     <span>
                       <span>
                         <span>
-                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
                           <a href="#hasPart">sulo:hasPart</a>
                           <sup class="sup-op" title="OWL Object Property">op</sup>
                         </span>some<br>
@@ -799,6 +789,16 @@
                           <a href="#hasValue">sulo:hasValue</a>
                           <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                         </span>only<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
                       </span>
                     </span>
                   </li>
@@ -1591,7 +1591,7 @@
           </table>
         </div>
         <div class="property entity" id="isReferredIn">
-          <h3>is referred in
+          <h3>is referred to in
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
@@ -1605,7 +1605,7 @@
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>is referred in is relation between an object that is the subject of an information object.</p></td>
+              <td><p>is referred to in is relation between an object that is the subject of an information object.</p></td>
             </tr>
             <tr>
               <th>
@@ -1650,10 +1650,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td><span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -2765,7 +2765,7 @@
               <a href="#isPrecededBy">is preceded by</a>
             </li>
             <li>
-              <a href="#isReferredIn">is referred in</a>
+              <a href="#isReferredIn">is referred to in</a>
             </li>
             <li>
               <a href="#hasFeature">has feature</a>
