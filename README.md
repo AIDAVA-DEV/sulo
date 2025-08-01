@@ -11,7 +11,8 @@ The Ontology IRI is : [https://w3id.org/sulo/](https://w3id.org/sulo/)
 
 ![Ontology Version](version.svg)
 
-
+Here's the SULO Postcard showing all the classes and valid relations between them<br>
+<img src="sulo-overview.png" alt="SULO Postcard" width="800">
 
 The ontology is available in a number of formats:
 * [Turtle](https://w3id.org/sulo/sulo.ttl)
