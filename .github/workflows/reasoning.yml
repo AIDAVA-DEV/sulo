@@ -4,9 +4,8 @@ name: Ontology Reasoning
 on:
   push:
     paths:
-      - '*.ttl'
-      - '*.rdf'
-      - '*.owl'
+      - 'sulo.ttl'
+
   # Allow manual triggering
   workflow_dispatch:
 
@@ -28,10 +27,9 @@ jobs:
       # Step 3: Run ROBOT reasoning
       - name: Run Reasoner
         run: |
-          for file in *.ttl; do
-            if [[ -f "$file" ]]; then
-              output="${file%.ttl}-inconsistent.owl"
-              ./robot reason --reasoner hermit --input "$file" -D "$output" || exit 1
-              echo "Reasoning completed for: $file"
-            fi
+          if [[ -f "sulo.ttl" ]]; then
+            output="sulo-inconsistent.owl"
+            ./robot reason --reasoner hermit --input sulo.ttl -D "$output" || exit 1
+            echo "Reasoning completed for: sulo.ttl"
+          fi
           done
