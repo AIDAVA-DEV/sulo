@@ -51,7 +51,7 @@ jobs:
             exit 1
           fi
           
-          echo "Processing $file"   
+          echo "Processing $file with Ontospy"   
           output_dir="docs/ontospy/"
           mkdir -p "$output_dir"
           python -m ontospy.cli gendocs --type 2 -o "$output_dir" "$file"
@@ -64,14 +64,16 @@ jobs:
       # Step 5: generate pylode documentation
       - name: Generate Pylode Documentation
         run: |
+          file=sulo.ttl
+          if [ ! -f "$file" ]; then
+            echo "File $file does not exist."
+            exit 1
+          fi
           mkdir -p docs/pylode/
-          for file in *.ttl *.owl *.rdf; do
-            if [[ -f "$file" ]]; then
-              pylode -o docs/pylode/"${file%.*}" "$file"
-              echo "Pylode documentation generated for: $file"
-            fi
-          done
-
+          echo "Processing $file with pylode"   
+          pylode -o docs/pylode/index" "$file"
+          echo "Pylode documentation generated for: $file"
+          
       # Step 5: Deploy Documentation to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
