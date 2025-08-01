@@ -6,6 +6,8 @@ on:
       - 'sulo.ttl'
       - '.github/workflows/version-badge.yml'
       - 'scripts/extract_version.py'
+    
+  workflow_dispatch:
 
 jobs:
   build:
