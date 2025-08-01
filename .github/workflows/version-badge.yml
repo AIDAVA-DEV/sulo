@@ -1,0 +1,34 @@
+name: Generate Ontology Version Badge
+
+on:
+  push:
+    paths:
+      - 'sulo.ttl'
+      - '.github/workflows/version-badge.yml'
+      - 'scripts/extract_version.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install rdflib
+
+      - name: Extract version and create badge
+        run: python scripts/extract_version.py
+
+      - name: Commit badge
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add version.svg
+          git commit -m "Update ontology version badge"
+          git push
