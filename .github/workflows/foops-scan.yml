@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  fetch_foops:
+  run_foops:
     runs-on: ubuntu-latest
 
     steps:
