@@ -20,7 +20,7 @@ jobs:
 
       - name: Run Python Script to Process Test Results
         run: |
-          python3 process_foops_result.py foops_result.json
+          python3 scripts/process_foops_result.py foops_result.json
 
       - name: Commit Badge
         run: |
