@@ -16,7 +16,7 @@ jobs:
 
       - name: Call FOOPS! API
         run: |
-          curl -s https://w3id.org/foops/api?url=https://w3id.org/sulo -o foops_result.json
+          curl -X POST "https://foops.linkeddata.es/assessOntology" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{  \"ontologyUri\": \"https://w3id.org/sulo/\"}" -o foops_result.json
 
       - name: Run Python Script to Process Test Results
         run: |
