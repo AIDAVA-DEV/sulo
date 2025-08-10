@@ -26,10 +26,10 @@ print(f"Pass percentage: {pass_percentage:.2f}%")
 badge_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="100" height="20">
   <rect width="100" height="20" fill="#555"/>
   <text x="50" y="15" font-size="12" fill="white" text-anchor="middle">
-    {passed_tests}/{total_tests}
+    {pass_percentage:.2f} ({passed_tests}/{total_tests})
   </text>
 </svg>"""
 
 # Save the badge as an SVG file
-with open('badge.svg', 'w') as badge_file:
+with open('foops-badge.svg', 'w') as badge_file:
     badge_file.write(badge_content)
