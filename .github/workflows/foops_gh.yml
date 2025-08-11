@@ -24,8 +24,8 @@ jobs:
           d=json.load(open("foops-results.json"))
           tot=sum(c["total_tests_run"] for c in d["checks"])
           pas=sum(c["total_passed_tests"] for c in d["checks"])
-          ratio=(pas/tot*100).2f
-          label=f"({ratio}% ({pas}/{tot} tests))"
+          pct = (pas / tot * 100) if tot else 0
+          label = f"{pct:.0f}% ({pas}/{tot} tests)"
           svg=f'''<svg xmlns="http://www.w3.org/2000/svg" height="20" width="110" role="img" aria-label="FOOPS {label}">
             <rect width="110" height="20" fill="#555"/>
             <rect x="55" width="55" height="20" fill="#4c1"/>
