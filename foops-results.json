@@ -3,7 +3,7 @@
   "ontology_title": "Simplified Upper Level Ontology",
   "ontology_license": "https://creativecommons.org/publicdomain/zero/1.0",
   "resource_found": "ontology",
-  "overall_score": 0.8368056,
+  "overall_score": 0.7743056,
   "checks": [
     {
       "id": "https://w3id.org/foops/test/PURL1",
@@ -35,22 +35,22 @@
       "category_id": "Accessible",
       "status": "ok",
       "title": "Ontology has content negotiation for RDF in RDF/XML, TTL, NTriples or JSON-LD serializations",
-      "explanation": "Ontology available in: HTML, RDF",
+      "explanation": "Ontology available in: RDF",
       "abbreviation": "CN1",
       "description": "<p>This test verifies whether HTML and an RDF representation is available for the target vocabulary by doing content negotiation on the ontology URI. The test will pass if the vocabulary is available in HTML and in any of the following RDF serializations: </p>\n<ul>\n<li>RDF/XML (application/rdf+xml), </li>\n<li>TTL (text/turtle), </li>\n<li>N-Triples (text/n3), </li>\n<li>JSON-LD (application/ld+json)</li>\n</ul>\n<p>The test will fail if no HTML is returned, if no known RDF serialization is returned, or the serialization returned is not among one of the aforementioned.</p>",
-      "total_passed_tests": 2,
+      "total_passed_tests": 1,
       "total_tests_run": 2
     },
     {
       "id": "https://w3id.org/foops/test/DOC1",
       "principle_id": "R1",
       "category_id": "Reusable",
-      "status": "ok",
+      "status": "error",
       "title": "Ontology has HTML documentation",
-      "explanation": "Ontology available in HTML",
+      "explanation": "Ontology not available in HTML",
       "abbreviation": "DOC1",
       "description": "<p>This test verifies if the ontology has an HTML documentation. The test will attempt to download an HTML representation using the ontology URI, with content negotiation </p>",
-      "total_passed_tests": 1,
+      "total_passed_tests": 0,
       "total_tests_run": 1
     },
     {
