@@ -27,11 +27,11 @@ jobs:
           pct = (pas / tot * 100) if tot else 0
           label = f"{pct:.0f}% ({pas}/{tot} tests)"
           svg=f'''<svg xmlns="http://www.w3.org/2000/svg" height="20" width="110" role="img" aria-label="FOOPS {label}">
-            <rect width="110" height="20" fill="#555"/>
-            <rect x="55" width="55" height="20" fill="#4c1"/>
+            <rect width="200" height="20" fill="#555"/>
+            <rect x="100" width="100" height="20" fill="#4c1"/>
             <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva" font-size="11">
-              <text x="6" y="14">FOOPS</text>
-              <text x="82" y="14" text-anchor="middle">{label}</text>
+              <text x="25" y="14">FOOPS</text>
+              <text x="120" y="14" text-anchor="middle">{label}</text>
             </g>
           </svg>'''
           out=pathlib.Path("foops"); out.mkdir(parents=True, exist_ok=True)
