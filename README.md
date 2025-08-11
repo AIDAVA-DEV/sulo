@@ -2,7 +2,7 @@
 [![Ontology Reasoning](https://github.com/AIDAVA-DEV/sulo/actions/workflows/reasoning.yml/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/reasoning.yml)
 [![Ontology Documentation](https://github.com/AIDAVA-DEV/sulo/actions/workflows/documentation.yml/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/documentation.yml)
 [![pages-build-deployment](https://github.com/AIDAVA-DEV/sulo/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AIDAVA-DEV/sulo/actions/workflows/pages/pages-build-deployment)
-[![FOOPS! score](https://aidava-dev.github.io/sulo/foops-badge.svg)](https://aidava-dev.github.io/sulo/foops_result.json)
+[![FOOPS! score](https://aidava-dev.github.io/sulo/foops/foops-badge.svg)](https://aidava-dev.github.io/sulo/foops/foops_result.json)
 
 
 
