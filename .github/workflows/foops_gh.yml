@@ -28,10 +28,10 @@ jobs:
           label = f"{pct:.0f}% ({pas}/{tot} tests)"
           svg=f'''<svg xmlns="http://www.w3.org/2000/svg" height="20" width="200" role="img" aria-label="FOOPS {label}">
             <rect width="200" height="20" fill="#555"/>
-            <rect x="100" width="100" height="20" fill="#4c1"/>
+            <rect x="60" width="140" height="20" fill="#4c1"/>
             <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva" font-size="11">
               <text x="5" y="14">FOOPS</text>
-              <text x="105" y="14" text-anchor="middle">{label}</text>
+              <text x="130" y="14" text-anchor="middle">{label}</text>
             </g>
           </svg>'''
           out=pathlib.Path("foops"); out.mkdir(parents=True, exist_ok=True)
@@ -44,4 +44,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./foops
+          destination_dir: foops
           keep_files: true 
