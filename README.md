@@ -17,6 +17,7 @@ The Ontology IRI is : [https://w3id.org/sulo/](https://w3id.org/sulo/)
 Here's the SULO Postcard showing all the classes and relations (solid line indicates connection between domain/range; dotted line indicates restriction on use in class axiom)<br>
 <img src="sulo-overview.png" alt="SULO Postcard" width="800">
 
+### Availability
 The ontology is available in a number of formats:
 * [Turtle](https://w3id.org/sulo/sulo.ttl)
 * [RDF/XML](https://w3id.org/sulo/sulo.owl)
@@ -33,12 +34,14 @@ curl -L -H "Accept: application/n-triples" https://w3id.org/sulo
 
 In addition, individual versions of SULO are available through the ontology IRI pattern ```https://w3id.org/sulo/sulo-X.X.X.ttl```  All versions of the ontology are available from [github](versions/)
 
-Documentation for SULO is available using:
+### Documentation
+We automatically generate documentation for SULO using OntoSpy and Pylode:
 * [OntoSpy](https://aidava-dev.github.io/sulo/ontospy/index.html)
 * [Pylode](https://aidava-dev.github.io/sulo/pylode/index.html)
 
 FAIRness assessment performed with [FOOPS!](https://foops.linkeddata.es/FAIR_validator.html)
 
-
+### Cite SULO
+Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy.
 
 
