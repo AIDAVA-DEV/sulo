@@ -42,6 +42,6 @@ We automatically generate documentation for SULO using OntoSpy and Pylode:
 [FAIRness assessment](docs/FOOPS!/2025-08-19-foops-evaluation.pdf) performed with [FOOPS!](https://foops.linkeddata.es/FAIR_validator.html) 
 
 ### Cite SULO
-Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy. [Workshop Paper](docs/papers/FOUST2025/SULO_FOUST2025.pdf)
+Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy. [[Paper](docs/papers/FOUST2025/SULO_FOUST2025.pdf)] [[Presentation](docs/papers/FOUST2025/2025-09-09-SULO@FOUST2025.pdf)]
 
 
