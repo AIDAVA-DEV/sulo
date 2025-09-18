@@ -156,9 +156,7 @@ sulo:sulo-0.2.4.ttl a owl:Ontology ;
     rdfs:label "Simplified Upper Level Ontology"@en ;
     dc:creator <https://orcid.org/0000-0003-4727-9435> ;
     dcterms:alternative "SULO"@en ;
-    dcterms:bibliographicCitation """Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. 
-    SULO – a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th
-International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8–9, 2025, Catania, Italy"""@en ;
+    dcterms:bibliographicCitation """Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz.     SULO – a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8–9, 2025, Catania, Italy"""@en ;
     dcterms:contributor <https://orcid.org/0000-0001-7222-3287> ;
     dcterms:created "2024-11-11" ;
     dcterms:issued "2025-07-11" ;
