@@ -394,14 +394,14 @@
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="None. Defined in None">Version Iri</a>
             </dt>
             <dd>
-              <a href="#sulo-0.2.5.ttl">sulo:sulo-0.2.5.ttl</a>
+              <a href="#sulo-0.2.6.ttl">sulo:sulo-0.2.6.ttl</a>
             </dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="None. Defined in None">Version Info</a>
             </dt>
-            <dd><p>0.2.5</p></dd>
+            <dd><p>0.2.6</p></dd>
           </div>
           <div>
             <dt>
@@ -764,16 +764,6 @@
                     <span>
                       <span>
                         <span>
-                          <a href="#hasPart">sulo:hasPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
                           <a href="#hasValue">sulo:hasValue</a>
                           <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
                         </span>only<br>
@@ -795,6 +785,16 @@
                       <span>
                         <span>
                           <a href="#hasDirectPart">sulo:hasDirectPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasPart">sulo:hasPart</a>
                           <sup class="sup-op" title="OWL Object Property">op</sup>
                         </span>some<br>
                       </span>
@@ -1658,10 +1658,10 @@
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td><span>
-  <a href="#Object">sulo:Object</a>
+  <a href="#process">sulo:Process</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span> <span class="cardinality">or</span> <span>
-  <a href="#process">sulo:Process</a>
+  <a href="#Object">sulo:Object</a>
   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
 </span></td>
             </tr>
@@ -2291,6 +2291,19 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="bibliographicCitation">
+          <h3>bibliographic citation
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/dc/terms/bibliographicCitation</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="contributor">
           <h3>contributor
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -2486,6 +2499,19 @@
             </tr>
           </table>
         </div>
+        <div class="property entity" id="includedInDataCatalog">
+          <h3>included in data catalog
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://schema.org/includedInDataCatalog</code>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="definitionProperty">
           <h3>definition property
             <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
@@ -2534,6 +2560,19 @@
               <th>IRI</th>
               <td>
                 <code>https://w3id.org/mod#prefLabelProperty</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="status">
+          <h3>status
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/mod#status</code>
               </td>
             </tr>
           </table>
@@ -2844,6 +2883,9 @@
               <a href="#alternative">alternative</a>
             </li>
             <li>
+              <a href="#bibliographicCitation">bibliographic citation</a>
+            </li>
+            <li>
               <a href="#contributor">contributor</a>
             </li>
             <li>
@@ -2889,6 +2931,9 @@
               <a href="#funding">funding</a>
             </li>
             <li>
+              <a href="#includedInDataCatalog">included in data catalog</a>
+            </li>
+            <li>
               <a href="#definitionProperty">definition property</a>
             </li>
             <li>
@@ -2899,6 +2944,9 @@
             </li>
             <li>
               <a href="#prefLabelProperty">pref label property</a>
+            </li>
+            <li>
+              <a href="#status">status</a>
             </li>
           </ul>
         </li>

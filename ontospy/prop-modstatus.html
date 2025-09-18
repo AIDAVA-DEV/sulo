@@ -371,7 +371,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_34"><a   href="prop-dcataccessURL.html">dcat:accessURL</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_20"><a class="active"  href="prop-dctermsalternative.html">dcterms:alternative</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_20"><a   href="prop-dctermsalternative.html">dcterms:alternative</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_21"><a   href="prop-dctermsbibliographicCitation.html">dcterms:bibliographicCitation</a></li>
           
@@ -401,7 +401,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_41"><a   href="prop-modprefLabelProperty.html">mod:prefLabelProperty</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_42"><a   href="prop-modstatus.html">mod:status</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_42"><a class="active"  href="prop-modstatus.html">mod:status</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_30"><a   href="prop-pavauthoredBy.html">pav:authoredBy</a></li>
           
@@ -556,7 +556,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            dcterms:alternative
+            mod:status
         </li>
   </ol>
 
@@ -580,7 +580,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                dcterms:alternative
+                mod:status
                 
                     <small class="label label-info label-xs ">leaf node</small>
                   
@@ -599,7 +599,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'alternative'">dcterms:alternative</a>
+                            <li><a style="font-weight: bold;" title="'status'">mod:status</a>
 
                             
                               </li>
@@ -623,7 +623,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>http://purl.org/dc/terms/alternative</code>
+                 <code>https://w3id.org/mod#status</code>
              </div>
            </div>
             </div></div>
@@ -638,7 +638,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 alternative
+                 status
              </div>
            </div>
             </div></div>
@@ -675,7 +675,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      dcterms:alternative
+                      mod:status
                     </td>
 
                     <td>
@@ -699,10 +699,10 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
                 
 
-                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span>
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">mod:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/mod#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">dcterms</span><span class="p">:</span><span class="nt">alternative</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
+<span class="nn">mod</span><span class="p">:</span><span class="nt">status</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">AnnotationProperty</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -802,7 +802,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_20").offset().top - 100
+          scrollTop: $("#sd_42").offset().top - 100
       }, 100);
     });
 
