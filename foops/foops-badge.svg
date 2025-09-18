@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="20" width="200" role="img" aria-label="FOOPS 2% (1/42 tests)">
+  <rect width="200" height="20" fill="#555"/>
+  <rect x="60" width="140" height="20" fill="#4c1"/>
+  <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva" font-size="11">
+    <text x="5" y="14">FOOPS!</text>
+    <text x="130" y="14" text-anchor="middle">2% (1/42 tests)</text>
+  </g>
+</svg>
