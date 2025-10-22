@@ -413,27 +413,27 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           
               <li class="second-level" style="line-height: 20px;" id="sd_44"><a   href="prop-suloatTime.html">sulo:atTime</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_45"><a   href="prop-sulohasDirectPart.html">sulo:hasDirectPart</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a class="active"  href="prop-sulocontains.html">sulo:contains</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-sulohasFeature.html">sulo:hasFeature</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_46"><a   href="prop-sulohasDirectPart.html">sulo:hasDirectPart</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-sulohasItem.html">sulo:hasItem</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_47"><a   href="prop-sulohasFeature.html">sulo:hasFeature</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-sulohasPart.html">sulo:hasPart</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_48"><a   href="prop-sulohasItem.html">sulo:hasItem</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-sulohasParticipant.html">sulo:hasParticipant</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_49"><a   href="prop-sulohasPart.html">sulo:hasPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-sulohasParticipant.html">sulo:hasParticipant</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_43"><a   href="prop-sulohasValue.html">sulo:hasValue</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_50"><a   href="prop-suloisDirectPartOf.html">sulo:isDirectPartOf</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-suloisDirectPartOf.html">sulo:isDirectPartOf</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_51"><a   href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-suloisFeatureOf.html">sulo:isFeatureOf</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_52"><a   href="prop-suloisItemIn.html">sulo:isItemIn</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-suloisIn.html">sulo:isIn</a></li>
           
-              <li class="second-level" style="line-height: 20px;" id="sd_53"><a   href="prop-suloisLocatedIn.html">sulo:isLocatedIn</a></li>
-          
-              <li class="second-level" style="line-height: 20px;" id="sd_54"><a class="active"  href="prop-suloisLocationOf.html">sulo:isLocationOf</a></li>
+              <li class="second-level" style="line-height: 20px;" id="sd_54"><a   href="prop-suloisItemIn.html">sulo:isItemIn</a></li>
           
               <li class="second-level" style="line-height: 20px;" id="sd_55"><a   href="prop-suloisPartOf.html">sulo:isPartOf</a></li>
           
@@ -556,7 +556,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
           <a href="entities-tree-properties.html">Properties</a>
     </li>
       <li class="active">
-            sulo:isLocationOf
+            sulo:contains
         </li>
   </ol>
 
@@ -580,7 +580,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
             <h1>
 
-                sulo:isLocationOf
+                sulo:contains
                 
 
             </h1>
@@ -597,7 +597,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                         <li><a href="entities-tree-properties.html">rdf:Property</a>
 
                           <ul>
-                            <li><a style="font-weight: bold;" title="'contains' - A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.">sulo:isLocationOf</a>
+                            <li><a style="font-weight: bold;" title="'contains' - A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.">sulo:contains</a>
 
                             
                                 <ul>
@@ -625,7 +625,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
              </div>
              <div class="panel-body">
 
-                 <code>https://w3id.org/sulo/isLocationOf</code>
+                 <code>https://w3id.org/sulo/contains</code>
              </div>
            </div>
             </div></div>
@@ -705,7 +705,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                    </td>
 
                     <td>
-                      sulo:isLocationOf
+                      sulo:contains
                     </td>
 
                     <td>
@@ -733,10 +733,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
 
-<span class="nn">sulo</span><span class="p">:</span><span class="nt">isLocationOf</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span>
+<span class="nn">sulo</span><span class="p">:</span><span class="nt">contains</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">ObjectProperty</span><span class="p">,</span>
         <span class="nn">owl</span><span class="p">:</span><span class="nt">TransitiveProperty</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;contains&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
-    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">.</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
+    <span class="nn">owl</span><span class="p">:</span><span class="nt">inverseOf</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">isIn</span> <span class="p">.</span>
 </pre></div>
 
 
@@ -775,7 +776,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Wed, 22 Oct 2025 08:36:04 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Wed, 22 Oct 2025 13:34:08 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>
@@ -836,7 +837,7 @@ $('#search-input-sidebar').keyup(function() {
 
     $(document).ready(function (){
       $('#sidebar-wrapper').animate({
-          scrollTop: $("#sd_54").offset().top - 100
+          scrollTop: $("#sd_45").offset().top - 100
       }, 100);
     });
 
