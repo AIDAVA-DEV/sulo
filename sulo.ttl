@@ -191,13 +191,13 @@ sulo:hasFeature rdf:type owl:ObjectProperty ;
                 rdfs:label "has feature"@en .
 
 
-###  https://w3id.org/sulo/hasMember
-sulo:hasMember rdf:type owl:ObjectProperty ;
-               owl:inverseOf sulo:isItemIn ;
-               rdfs:domain sulo:Collection ;
-               rdfs:range owl:Thing ;
-               rdfs:comment "has item is a relation between a collection and an item contained therein."@en ;
-               rdfs:label "has item"@en .
+###  https://w3id.org/sulo/hasItem
+sulo:hasItem rdf:type owl:ObjectProperty ;
+             owl:inverseOf sulo:isItemIn ;
+             rdfs:domain sulo:Collection ;
+             rdfs:range owl:Thing ;
+             rdfs:comment "has item is a relation between a collection and an item contained therein."@en ;
+             rdfs:label "has item"@en .
 
 
 ###  https://w3id.org/sulo/hasPart
@@ -354,7 +354,7 @@ sulo:Capability rdf:type owl:Class ;
 sulo:Collection rdf:type owl:Class ;
                 rdfs:subClassOf sulo:InformationObject ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty sulo:hasMember ;
+                                  owl:onProperty sulo:hasItem ;
                                   owl:allValuesFrom owl:Thing
                                 ] ;
                 owl:disjointWith sulo:Quantity ;
