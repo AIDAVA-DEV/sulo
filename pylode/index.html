@@ -290,7 +290,7 @@
     "https://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-09-18"
+        "@value": "2025-10-22"
       }
     ],
     "https://schema.org/description": [
@@ -373,7 +373,7 @@
             <dt>
               <a class="hover_property" href="http://purl.org/dc/terms/modified" title="None. Defined in None">Modified</a>
             </dt>
-            <dd><p>2025-09-18</p></dd>
+            <dd><p>2025-10-22</p></dd>
           </div>
           <div>
             <dt>
@@ -394,14 +394,14 @@
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="None. Defined in None">Version Iri</a>
             </dt>
             <dd>
-              <a href="#sulo-0.2.6.ttl">sulo:sulo-0.2.6.ttl</a>
+              <a href="#sulo-0.2.7.ttl">sulo:sulo-0.2.7.ttl</a>
             </dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="None. Defined in None">Version Info</a>
             </dt>
-            <dd><p>0.2.6</p></dd>
+            <dd><p>0.2.7</p></dd>
           </div>
           <div>
             <dt>
@@ -435,6 +435,36 @@
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="endtime">
+          <h3>end time
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/EndTime</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>an end time is a time instant at the end of a process/time interval.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#TimeInstant">sulo:TimeInstant</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="capability">
           <h3>capability
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -511,7 +541,7 @@
               </th>
               <td>
                 <span>
-                  <a href="#hasMember">sulo:hasMember</a>
+                  <a href="#hasItem">sulo:hasItem</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -535,11 +565,252 @@
                 <span>
                   <span>
                     <span>
-                      <a href="#hasMember">sulo:hasMember</a>
+                      <a href="#hasItem">sulo:hasItem</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>only<br>
                   </span>
                 </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="quality">
+          <h3>quality
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/Quality</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td>
+                <ul>
+                  <li><p>A quality is a feature that is intrinsically associated with its bearer (or its parts).</p></li>
+                  <li><p>the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event</p></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Feature">sulo:Feature</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="role">
+          <h3>role
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/Role</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A role is a feature that describes a context-dependent behaviour.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>a teacher, a student, a catalyst, a substrate, a product, a patient</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Feature">sulo:Feature</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="spatialobject">
+          <h3>spatial object
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/SpatialObject</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A spatial object is an object that occupies space</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
+              </th>
+              <td><p>a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Object">sulo:Object</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#hasPart">sulo:hasPart</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>only<br>
+                  </span>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="starttime">
+          <h3>start time
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/StartTime</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>a start time is a time instant at the beginning of a process/time interval.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#TimeInstant">sulo:TimeInstant</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="timeinterval">
+          <h3>time interval
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/TimeInterval</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Time">sulo:Time</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasPart">sulo:hasPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasPart">sulo:hasPart</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>some<br>
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="#hasValue">sulo:hasValue</a>
+                          <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                        </span>only<br>
+                      </span>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -589,22 +860,22 @@
             </tr>
           </table>
         </div>
-        <div class="property entity" id="endtime">
-          <h3>end time
+        <div class="property entity" id="quantity">
+          <h3>quantity
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/sulo/EndTime</code>
+                <code>https://w3id.org/sulo/Quantity</code>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>an end time is a time instant at the end of a process/time interval.</p></td>
+              <td><p>A quantity is an information object that represents the magnitude (and unit) of an object or process.</p></td>
             </tr>
             <tr>
               <th>
@@ -612,9 +883,220 @@
               </th>
               <td>
                 <span>
-                  <a href="#TimeInstant">sulo:TimeInstant</a>
+                  <a href="#InformationObject">sulo:InformationObject</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#hasPart">sulo:hasPart</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>some<br>
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#Unit">sulo:Unit</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#Time">sulo:Time</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Unit">
+          <h3>unit
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/Unit</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>a unit is a standardized quantity that is used as a reference for a particular quantity.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#quantity">sulo:Quantity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TimeInstant">
+          <h3>time instant
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/TimeInstant</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>time instant is a quantity of time a particular moment in time.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Time">sulo:Time</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="#hasValue">sulo:hasValue</a>
+                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
+                    </span>only<br>
+                  </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#endtime">sulo:EndTime</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#starttime">sulo:StartTime</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Time">
+          <h3>time
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/Time</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#quantity">sulo:Quantity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isTimeOf">sulo:isTimeOf</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#atTime">sulo:atTime</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="#timeinterval">sulo:TimeInterval</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#duration">sulo:Duration</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#TimeInstant">sulo:TimeInstant</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -718,19 +1200,19 @@
                   </li>
                   <li>
                     <span>
+                      <a href="#quality">sulo:Quality</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#role">sulo:Role</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="#InformationObject">sulo:InformationObject</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#Quality">sulo:Quality</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#Role">sulo:Role</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -842,7 +1324,7 @@
                   </li>
                   <li>
                     <span>
-                      <a href="#Quantity">sulo:Quantity</a>
+                      <a href="#quantity">sulo:Quantity</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -925,13 +1407,13 @@
                 <ul>
                   <li>
                     <span>
-                      <a href="#Feature">sulo:Feature</a>
+                      <a href="#spatialobject">sulo:SpatialObject</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#SpatialObject">sulo:SpatialObject</a>
+                      <a href="#Feature">sulo:Feature</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -971,13 +1453,13 @@
                 <ul>
                   <li>
                     <span>
-                      <a href="#hasParticipant">sulo:hasParticipant</a>
+                      <a href="#isPrecededBy">sulo:isPrecededBy</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="#isPrecededBy">sulo:isPrecededBy</a>
+                      <a href="#hasParticipant">sulo:hasParticipant</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
                   </li>
@@ -996,6 +1478,12 @@
               </th>
               <td>
                 <ul>
+                  <li>
+                    <span>
+                      <a href="#isPrecededBy">sulo:isPrecededBy</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
                   <li>
                     <span>
                       <a href="#isParticipantIn">sulo:isParticipantIn</a>
@@ -1004,12 +1492,6 @@
                   </li>
                   <li>
                     <span>
-                      <a href="#isPrecededBy">sulo:isPrecededBy</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
                       <a href="#precedes">sulo:precedes</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>
@@ -1029,488 +1511,6 @@
                       <sup class="sup-op" title="OWL Object Property">op</sup>
                     </span>only<br>
                   </span>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Quality">
-          <h3>quality
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Quality</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td>
-                <ul>
-                  <li><p>A quality is a feature that is intrinsically associated with its bearer (or its parts).</p></li>
-                  <li><p>the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event</p></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Feature">sulo:Feature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Quantity">
-          <h3>quantity
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Quantity</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A quantity is an information object that represents the magnitude (and unit) of an object or process.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#InformationObject">sulo:InformationObject</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
-              </th>
-              <td>
-                <span>
-                  <span>
-                    <span>
-                      <a href="#hasPart">sulo:hasPart</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>some<br>
-                  </span>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#Time">sulo:Time</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#Unit">sulo:Unit</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Role">
-          <h3>role
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Role</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A role is a feature that describes a context-dependent behaviour.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
-              </th>
-              <td><p>a teacher, a student, a catalyst, a substrate, a product, a patient</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Feature">sulo:Feature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="SpatialObject">
-          <h3>spatial object
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/SpatialObject</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A spatial object is an object that occupies space</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2004/02/skos/core#example" title="None. Defined in None">Example</a>
-              </th>
-              <td><p>a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Object">sulo:Object</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
-              </th>
-              <td>
-                <span>
-                  <span>
-                    <span>
-                      <a href="#hasPart">sulo:hasPart</a>
-                      <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>only<br>
-                  </span>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="starttime">
-          <h3>start time
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/StartTime</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>a start time is a time instant at the beginning of a process/time interval.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#TimeInstant">sulo:TimeInstant</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Time">
-          <h3>time
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Time</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference).</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Quantity">sulo:Quantity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inDomainOf" title="None. Defined in None">In Domain Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isTimeOf">sulo:isTimeOf</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="None. Defined in None">In Range Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#atTime">sulo:atTime</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#duration">sulo:Duration</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#TimeInstant">sulo:TimeInstant</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#TimeInterval">sulo:TimeInterval</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="TimeInstant">
-          <h3>time instant
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/TimeInstant</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>time instant is a quantity of time a particular moment in time.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Time">sulo:Time</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
-              </th>
-              <td>
-                <span>
-                  <span>
-                    <span>
-                      <a href="#hasValue">sulo:hasValue</a>
-                      <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                    </span>only<br>
-                  </span>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="None. Defined in None">Super Class Of</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <a href="#endtime">sulo:EndTime</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="#starttime">sulo:StartTime</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="TimeInterval">
-          <h3>time interval
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/TimeInterval</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Time">sulo:Time</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="None. Defined in None">Restriction</a>
-              </th>
-              <td>
-                <ul>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
-                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
-                          <a href="#hasDirectPart">sulo:hasDirectPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
-                          <a href="#hasPart">sulo:hasPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
-                          <a href="#hasPart">sulo:hasPart</a>
-                          <sup class="sup-op" title="OWL Object Property">op</sup>
-                        </span>some<br>
-                      </span>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <span>
-                        <span>
-                          <a href="#hasValue">sulo:hasValue</a>
-                          <sup class="sup-dp" title="OWL Datatype Property">dp</sup>
-                        </span>only<br>
-                      </span>
-                    </span>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="Unit">
-          <h3>unit
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/Unit</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>a unit is a standardized quantity that is used as a reference for a particular quantity.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="None. Defined in None">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Quantity">sulo:Quantity</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -1557,31 +1557,80 @@
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasDirectPart">
-          <h3>has direct part
+        <div class="property entity" id="isPrecededBy">
+          <h3>is preceded by
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
           <table>
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/sulo/hasDirectPart</code>
+                <code>https://w3id.org/sulo/isPrecededBy</code>
               </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
               </th>
-              <td><p>has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.</p></td>
+              <td><p>A relation in which one process occurs after to another process.</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
               </th>
               <td>
                 <span>
-                  <a href="#hasPart">sulo:hasPart</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                  <a href="#process">sulo:Process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#process">sulo:Process</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="isReferredIn">
+          <h3>is referred to in
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/isReferredIn</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>is referred to in is relation between an object that is the subject of an information object.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
+              </th>
+              <td>
+                <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#InformationObject">sulo:InformationObject</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
             </tr>
@@ -1629,7 +1678,7 @@
             </tr>
           </table>
         </div>
-        <div class="property entity" id="hasMember">
+        <div class="property entity" id="hasItem">
           <h3>has item
             <sup class="sup-op" title="OWL Object Property">op</sup>
           </h3>
@@ -1637,7 +1686,7 @@
             <tr>
               <th>IRI</th>
               <td>
-                <code>https://w3id.org/sulo/hasMember</code>
+                <code>https://w3id.org/sulo/hasItem</code>
               </td>
             </tr>
             <tr>
@@ -1663,47 +1712,6 @@
               </th>
               <td>
                 <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="hasPart">
-          <h3>has part
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/hasPart</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isLocationOf">sulo:isLocationOf</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasDirectPart">sulo:hasDirectPart</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
               </td>
             </tr>
           </table>
@@ -1776,48 +1784,6 @@
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="isFeatureOf">
-          <h3>is feature of
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/isFeatureOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#Feature">sulo:Feature</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td><span>
-  <a href="#Object">sulo:Object</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#process">sulo:Process</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
             </tr>
           </table>
         </div>
@@ -1905,77 +1871,6 @@
             </tr>
           </table>
         </div>
-        <div class="property entity" id="isLocationOf">
-          <h3>contains
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/isLocationOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#hasPart">sulo:hasPart</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="isPartOf">
-          <h3>is part of
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/isPartOf</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isin">sulo:isLocatedIn</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#isdirectpartof">sulo:isDirectPartOf</a>
-                  <sup class="sup-op" title="OWL Object Property">op</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
         <div class="property entity" id="isParticipantIn">
           <h3>is participant in
             <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -2011,85 +1906,6 @@
               <td>
                 <span>
                   <a href="#process">sulo:Process</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="isPrecededBy">
-          <h3>is preceded by
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/isPrecededBy</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>A relation in which one process occurs after to another process.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#process">sulo:Process</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#process">sulo:Process</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="isReferredIn">
-          <h3>is referred to in
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>https://w3id.org/sulo/isReferredIn</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
-              </th>
-              <td><p>is referred to in is relation between an object that is the subject of an information object.</p></td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
-              </th>
-              <td>
-                <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
-              </th>
-              <td>
-                <span>
-                  <a href="#InformationObject">sulo:InformationObject</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2209,6 +2025,190 @@
               </th>
               <td>
                 <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasDirectPart">
+          <h3>has direct part
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/hasDirectPart</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasPart">sulo:hasPart</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="isFeatureOf">
+          <h3>is feature of
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/isFeatureOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="None. Defined in None">Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#Feature">sulo:Feature</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="None. Defined in None">Range</a>
+              </th>
+              <td><span>
+  <a href="#Object">sulo:Object</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span> <span class="cardinality">or</span> <span>
+  <a href="#process">sulo:Process</a>
+  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="contains">
+          <h3>contains
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/isLocationOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasPart">sulo:hasPart</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="isPartOf">
+          <h3>is part of
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/isPartOf</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isin">sulo:isLocatedIn</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#isdirectpartof">sulo:isDirectPartOf</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="hasPart">
+          <h3>has part
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>https://w3id.org/sulo/hasPart</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="None. Defined in None">Description</a>
+              </th>
+              <td><p>has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf" title="None. Defined in None">Sub Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#contains">sulo:isLocationOf</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superPropertyOf" title="None. Defined in None">Super Property Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#hasDirectPart">sulo:hasDirectPart</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -2748,16 +2748,43 @@
           </h4>
           <ul class="second">
             <li>
+              <a href="#endtime">end time</a>
+            </li>
+            <li>
               <a href="#capability">capability</a>
             </li>
             <li>
               <a href="#collection">collection</a>
             </li>
             <li>
+              <a href="#quality">quality</a>
+            </li>
+            <li>
+              <a href="#role">role</a>
+            </li>
+            <li>
+              <a href="#spatialobject">spatial object</a>
+            </li>
+            <li>
+              <a href="#starttime">start time</a>
+            </li>
+            <li>
+              <a href="#timeinterval">time interval</a>
+            </li>
+            <li>
               <a href="#duration">duration</a>
             </li>
             <li>
-              <a href="#endtime">end time</a>
+              <a href="#quantity">quantity</a>
+            </li>
+            <li>
+              <a href="#Unit">unit</a>
+            </li>
+            <li>
+              <a href="#TimeInstant">time instant</a>
+            </li>
+            <li>
+              <a href="#Time">time</a>
             </li>
             <li>
               <a href="#Feature">feature</a>
@@ -2771,33 +2798,6 @@
             <li>
               <a href="#process">process</a>
             </li>
-            <li>
-              <a href="#Quality">quality</a>
-            </li>
-            <li>
-              <a href="#Quantity">quantity</a>
-            </li>
-            <li>
-              <a href="#Role">role</a>
-            </li>
-            <li>
-              <a href="#SpatialObject">spatial object</a>
-            </li>
-            <li>
-              <a href="#starttime">start time</a>
-            </li>
-            <li>
-              <a href="#Time">time</a>
-            </li>
-            <li>
-              <a href="#TimeInstant">time instant</a>
-            </li>
-            <li>
-              <a href="#TimeInterval">time interval</a>
-            </li>
-            <li>
-              <a href="#Unit">unit</a>
-            </li>
           </ul>
         </li>
         <li>
@@ -2809,16 +2809,16 @@
               <a href="#atTime">at time</a>
             </li>
             <li>
-              <a href="#hasDirectPart">has direct part</a>
+              <a href="#isPrecededBy">is preceded by</a>
+            </li>
+            <li>
+              <a href="#isReferredIn">is referred to in</a>
             </li>
             <li>
               <a href="#hasFeature">has feature</a>
             </li>
             <li>
-              <a href="#hasMember">has item</a>
-            </li>
-            <li>
-              <a href="#hasPart">has part</a>
+              <a href="#hasItem">has item</a>
             </li>
             <li>
               <a href="#hasParticipant">has participant</a>
@@ -2827,28 +2827,13 @@
               <a href="#isdirectpartof">is direct part of</a>
             </li>
             <li>
-              <a href="#isFeatureOf">is feature of</a>
-            </li>
-            <li>
               <a href="#isItemIn">is item in</a>
             </li>
             <li>
               <a href="#isin">is in</a>
             </li>
             <li>
-              <a href="#isLocationOf">contains</a>
-            </li>
-            <li>
-              <a href="#isPartOf">is part of</a>
-            </li>
-            <li>
               <a href="#isParticipantIn">is participant in</a>
-            </li>
-            <li>
-              <a href="#isPrecededBy">is preceded by</a>
-            </li>
-            <li>
-              <a href="#isReferredIn">is referred to in</a>
             </li>
             <li>
               <a href="#isTimeOf">is time of</a>
@@ -2858,6 +2843,21 @@
             </li>
             <li>
               <a href="#refersTo">refers to</a>
+            </li>
+            <li>
+              <a href="#hasDirectPart">has direct part</a>
+            </li>
+            <li>
+              <a href="#isFeatureOf">is feature of</a>
+            </li>
+            <li>
+              <a href="#contains">contains</a>
+            </li>
+            <li>
+              <a href="#isPartOf">is part of</a>
+            </li>
+            <li>
+              <a href="#hasPart">has part</a>
             </li>
           </ul>
         </li>
