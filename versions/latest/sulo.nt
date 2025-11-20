@@ -1,381 +1,381 @@
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."@en .
-<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#label> "time"@en .
-<https://w3id.org/sulo/> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/sulo> .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#comment> "An object is an entity that maintains its identity through time, and does not have processes as its parts." .
-<https://w3id.org/sulo/> <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> .
-<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#comment> "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."@en .
-<https://w3id.org/sulo/> <https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
-_:n3962943643e9452c82924bc5bd1d7a41b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b19 .
-<https://w3id.org/sulo/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is time of" .
-_:n3962943643e9452c82924bc5bd1d7a41b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Object> .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "a relation between any thing and the time in which it occurs at."@en .
-<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#comment> "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b26 .
-<https://w3id.org/sulo/contains> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isIn> .
-_:n3962943643e9452c82924bc5bd1d7a41b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isItemIn> .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Object> .
-_:n3962943643e9452c82924bc5bd1d7a41b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Duration> .
-_:n3962943643e9452c82924bc5bd1d7a41b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b39 .
-<https://w3id.org/sulo/> <https://w3id.org/mod#definitionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0> .
-_:n3962943643e9452c82924bc5bd1d7a41b30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "collection"@en .
-<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b41 .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2004/02/skos/core#example> "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en .
-<https://w3id.org/sulo/> <https://schema.org/funding> "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasItem> .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b28 .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "time interval" .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/SpatialObject> .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature is any characteristic that stems from the intrisinc structure and/or context"@en .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-_:n3962943643e9452c82924bc5bd1d7a41b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
-_:n3962943643e9452c82924bc5bd1d7a41b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Role> .
-<https://w3id.org/sulo/Role> <http://www.w3.org/2004/02/skos/core#example> "a teacher, a student, a catalyst, a substrate, a product, a patient"@en .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."@en .
-<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/sulo/sulo-0.2.3.ttl> .
-_:n3962943643e9452c82924bc5bd1d7a41b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3962943643e9452c82924bc5bd1d7a41b29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-_:n3962943643e9452c82924bc5bd1d7a41b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b49 .
-_:n3962943643e9452c82924bc5bd1d7a41b24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/InformationObject> .
-_:n3962943643e9452c82924bc5bd1d7a41b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:nc60da1aa7e87491c9242f6527458e29bb28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/sulo/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b44 .
-_:n3962943643e9452c82924bc5bd1d7a41b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
-<https://w3id.org/sulo/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sulo" .
-_:n3962943643e9452c82924bc5bd1d7a41b29 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Quantity> .
-_:n3962943643e9452c82924bc5bd1d7a41b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Duration> .
-_:n3962943643e9452c82924bc5bd1d7a41b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b53 .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Time> .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is preceded by"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b22 .
-<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#label> "time instant"@en .
-<https://w3id.org/sulo/Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Process> .
-_:n3962943643e9452c82924bc5bd1d7a41b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/InformationObject> .
-<https://w3id.org/sulo/> <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Feature> .
-_:n3962943643e9452c82924bc5bd1d7a41b28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Object> .
-_:n3962943643e9452c82924bc5bd1d7a41b36 <http://www.w3.org/2002/07/owl#unionOf> _:n3962943643e9452c82924bc5bd1d7a41b37 .
-<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#range> _:n3962943643e9452c82924bc5bd1d7a41b7 .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
-<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "an end time is a time instant at the end of a process/time interval."@en .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b42 .
-<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
-_:n3962943643e9452c82924bc5bd1d7a41b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInstant> .
-_:n3962943643e9452c82924bc5bd1d7a41b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-7222-3287> .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Collection> .
-_:n3962943643e9452c82924bc5bd1d7a41b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b52 .
-<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of"@en .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-_:n3962943643e9452c82924bc5bd1d7a41b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b48 .
-_:n3962943643e9452c82924bc5bd1d7a41b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#label> "has item"@en .
-<https://w3id.org/sulo/Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b43 .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation in which one process occurs after to another process."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b12 <http://www.w3.org/2002/07/owl#withRestrictions> _:n3962943643e9452c82924bc5bd1d7a41b14 .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b24 .
-_:n3962943643e9452c82924bc5bd1d7a41b11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:n3962943643e9452c82924bc5bd1d7a41b12 .
-<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isDirectPartOf> .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b40 .
-<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#comment> "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."@en .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#comment> "has item is a relation between an item and the collection in which it contained."@en .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is referred to in is relation between an object that is the subject of an information object."@en .
-<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#label> "has direct part" .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2004/02/skos/core#example> "a heart, the function to pump blood, the role of a doctor"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n3962943643e9452c82924bc5bd1d7a41b43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Unit> .
-<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/refersTo> .
-_:n3962943643e9452c82924bc5bd1d7a41b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b12 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
-_:n3962943643e9452c82924bc5bd1d7a41b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInterval> .
-<https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b47 .
-<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "an information object is a feature that represents, is about, or encodes some information."@en .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "information object"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
-<https://w3id.org/sulo/isIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#date> .
-_:n3962943643e9452c82924bc5bd1d7a41b4 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/hasFeature> .
-<https://w3id.org/mod#hasRepresentationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/sulo/sulo-0.2.3.ttl> .
-_:n3962943643e9452c82924bc5bd1d7a41b26 <http://www.w3.org/2002/07/owl#complementOf> _:n3962943643e9452c82924bc5bd1d7a41b27 .
-<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
-<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is participant in is a relation to relate an object and the process in which it participates."@en .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/InformationObject> .
-<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "time instant is a quantity of time a particular moment in time."@en .
-<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "a unit is a standardized quantity that is used as a reference for a particular quantity."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/isFeatureOf> .
-_:n3962943643e9452c82924bc5bd1d7a41b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://www.w3.org/ns/dcat#accessURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isParticipantIn> .
-<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality is a feature that is intrinsically associated with its bearer (or its parts)."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
-_:n3962943643e9452c82924bc5bd1d7a41b10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-_:n3962943643e9452c82924bc5bd1d7a41b30 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Unit> .
-_:n3962943643e9452c82924bc5bd1d7a41b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3962943643e9452c82924bc5bd1d7a41b4 .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has feature"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/sulo/> <http://www.w3.org/2000/01/rdf-schema#label> "Simplified Upper Level Ontology"@en .
-<https://w3id.org/sulo/Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/Capability> <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en .
-<https://w3id.org/sulo/atTime> <http://purl.org/dc/terms/alternative> "existsAt"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/EndTime> .
-<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "has value is the (only) data type attribute to store the values of information objects."@en .
-<https://w3id.org/sulo/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-_:n3962943643e9452c82924bc5bd1d7a41b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isTimeOf> .
-<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#label> "capability" .
-<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#comment> "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#label> "is item in"@en .
-<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b30 .
-_:n3962943643e9452c82924bc5bd1d7a41b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3962943643e9452c82924bc5bd1d7a41b27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-_:n3962943643e9452c82924bc5bd1d7a41b31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-_:n3962943643e9452c82924bc5bd1d7a41b45 <http://www.w3.org/2002/07/owl#members> _:n3962943643e9452c82924bc5bd1d7a41b46 .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-_:n3962943643e9452c82924bc5bd1d7a41b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b21 .
-<https://w3id.org/sulo/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
-<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "quantity"@en .
-<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."@en .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "has participant is a relation that describes the participation of a (non-process) thing in a process."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/InformationObject> .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#label> "feature"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b15 <http://www.w3.org/2002/07/owl#someValuesFrom> _:n3962943643e9452c82924bc5bd1d7a41b16 .
-<http://purl.org/pav/authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/title> "Simplified Upper Level Ontology"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial object is an object that occupies space"@en .
-<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/publisher> <https://orcid.org/0000-0003-4727-9435> .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isFeatureOf> .
-_:n3962943643e9452c82924bc5bd1d7a41b35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
-<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#label> "refers to"@en .
-<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> .
-_:n3962943643e9452c82924bc5bd1d7a41b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3962943643e9452c82924bc5bd1d7a41b13 .
-<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes" .
-<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b31 .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
-<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b11 .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/bibliographicCitation> "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/refersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/TimeInstant> .
-<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
-_:n3962943643e9452c82924bc5bd1d7a41b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/hasParticipant> .
-<https://w3id.org/sulo/isIn> <http://www.w3.org/2000/01/rdf-schema#label> "is in"@en .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b25 .
-_:n3962943643e9452c82924bc5bd1d7a41b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection is an information object for which there may be zero or more items."@en .
-<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:n3962943643e9452c82924bc5bd1d7a41b5 .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, a collection of cards, a measured height of 170cm."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mod#definitionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is referred to in"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3962943643e9452c82924bc5bd1d7a41b28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
-<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b1 <http://www.w3.org/2002/07/owl#unionOf> _:n3962943643e9452c82924bc5bd1d7a41b2 .
-<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Quantity> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/alternative> "SULO"@en .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b15 .
-<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/isPartOf> .
-_:n3962943643e9452c82924bc5bd1d7a41b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3962943643e9452c82924bc5bd1d7a41b24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-<http://purl.org/dc/terms/alternative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#label> "is participant in"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Role> .
-<https://w3id.org/mod#hasSyntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
-_:n3962943643e9452c82924bc5bd1d7a41b44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
-<https://w3id.org/sulo/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:n3962943643e9452c82924bc5bd1d7a41b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n3962943643e9452c82924bc5bd1d7a41b35 <http://www.w3.org/2002/07/owl#allValuesFrom> _:n3962943643e9452c82924bc5bd1d7a41b36 .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/created> "2024-11-11" .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Quantity> .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/isIn> .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b33 .
-_:n3962943643e9452c82924bc5bd1d7a41b41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/StartTime> .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Object> .
-<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b34 .
-_:n3962943643e9452c82924bc5bd1d7a41b7 <http://www.w3.org/2002/07/owl#unionOf> _:n3962943643e9452c82924bc5bd1d7a41b8 .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Duration> .
-_:n3962943643e9452c82924bc5bd1d7a41b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b38 .
-<https://w3id.org/sulo/atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation in which one process occurs prior to another process."@en .
-<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantity is an information object that represents the magnitude (and unit) of an object or process."@en .
-<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#label> "object"@en .
-<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en .
-<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
-_:n3962943643e9452c82924bc5bd1d7a41b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Capability> .
-_:n3962943643e9452c82924bc5bd1d7a41b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b6 .
+_:nc60da1aa7e87491c9242f6527458e29bb29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/sulo/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Quality> .
-_:n3962943643e9452c82924bc5bd1d7a41b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInstant> .
-_:n3962943643e9452c82924bc5bd1d7a41b25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
-<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/InformationObject> .
-_:n3962943643e9452c82924bc5bd1d7a41b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/InformationObject> .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:n3962943643e9452c82924bc5bd1d7a41b20 .
-<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
-<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#label> "start time"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b16 <http://www.w3.org/2002/07/owl#unionOf> _:n3962943643e9452c82924bc5bd1d7a41b17 .
-_:n3962943643e9452c82924bc5bd1d7a41b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Quality> .
-<https://w3id.org/sulo/EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/> <https://w3id.org/mod#status> "active" .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isPartOf> .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Collection> .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/Time> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:n3962943643e9452c82924bc5bd1d7a41b32 .
-_:n3962943643e9452c82924bc5bd1d7a41b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part." .
-_:n3962943643e9452c82924bc5bd1d7a41b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:n3962943643e9452c82924bc5bd1d7a41b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b18 .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/issued> "2025-07-11" .
-<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
-_:n3962943643e9452c82924bc5bd1d7a41b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b9 .
-<https://w3id.org/sulo/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b13 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/InformationObject> .
-_:n3962943643e9452c82924bc5bd1d7a41b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#comment> "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en .
-<https://w3id.org/sulo/> <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> .
-<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Feature> .
-<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Capability> .
-<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.8" .
-<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/InformationObject> .
-<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/TimeInstant> .
-<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A role is a feature that describes a context-dependent behaviour."@en .
-<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/hasPart> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-1/en> .
-<https://w3id.org/sulo/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent."@en .
-<https://w3id.org/sulo/> <http://www.w3.org/2000/01/rdf-schema#comment> "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en .
-<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is direct part of"@en .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/precedes> .
-<https://w3id.org/sulo/Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
-<https://w3id.org/sulo/EndTime> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/StartTime> .
-<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "a start time is a time instant at the beginning of a process/time interval."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#comment> "has item is a relation between a collection and an item contained therein."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration"@en .
-<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "a relation between a time and an object that occurs within it."@en .
-_:n3962943643e9452c82924bc5bd1d7a41b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:n3962943643e9452c82924bc5bd1d7a41b50 <http://www.w3.org/2002/07/owl#members> _:n3962943643e9452c82924bc5bd1d7a41b51 .
-<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/sulo/sulo-0.2.8.ttl> .
-<https://w3id.org/sulo/> <http://purl.org/pav/authoredBy> <https://orcid.org/0000-0003-4727-9435> .
-<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b35 .
-<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mod#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasDirectPart> .
-<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."@en .
-<https://w3id.org/sulo/isReferredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Feature> .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
-<https://w3id.org/sulo/> <http://purl.org/dc/terms/modified> "2025-10-22"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#label> "quality"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/SpatialObject> .
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<https://w3id.org/sulo/Process> <http://www.w3.org/2004/02/skos/core#example> "the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class"@en .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+_:nc60da1aa7e87491c9242f6527458e29bb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nc60da1aa7e87491c9242f6527458e29bb13 .
+<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb11 .
 <https://w3id.org/sulo/isIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A binary relation where the object entity includes the subject entity within its spatial, temporal, structural, or conceptual extent."@en .
-<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Object> .
-<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
-_:n3962943643e9452c82924bc5bd1d7a41b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:n3962943643e9452c82924bc5bd1d7a41b42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
-_:n3962943643e9452c82924bc5bd1d7a41b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#domain> _:n3962943643e9452c82924bc5bd1d7a41b1 .
-<https://w3id.org/sulo/InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/sulo/> <http://xmlns.com/foaf/0.1/homepage> <https://github.com/AIDAVA-DEV/sulo> .
-<https://w3id.org/sulo/isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b29 .
-<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/sulo/> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/sulo/> .
-<https://w3id.org/sulo/Time> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Unit> .
-<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Time> .
-<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/contains> .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "spatial object"@en .
-<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant"@en .
-_:n3962943643e9452c82924bc5bd1d7a41b41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasDirectPart> .
-<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInterval> .
-<https://w3id.org/sulo/isItemIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:n3962943643e9452c82924bc5bd1d7a41b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b3 .
-_:n3962943643e9452c82924bc5bd1d7a41b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n3962943643e9452c82924bc5bd1d7a41b23 .
-<https://w3id.org/sulo/Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n3962943643e9452c82924bc5bd1d7a41b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
+<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "an end time is a time instant at the end of a process/time interval."@en .
+<https://w3id.org/sulo/atTime> <http://purl.org/dc/terms/alternative> "existsAt"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb33 .
+<http://www.w3.org/ns/dcat#accessURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "has value is the (only) data type attribute to store the values of information objects."@en .
+<https://w3id.org/sulo/precedes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb48 .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/publisher> <https://orcid.org/0000-0003-4727-9435> .
+_:nc60da1aa7e87491c9242f6527458e29bb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nc60da1aa7e87491c9242f6527458e29bb15 <http://www.w3.org/2002/07/owl#someValuesFrom> _:nc60da1aa7e87491c9242f6527458e29bb16 .
+<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb19 .
+_:nc60da1aa7e87491c9242f6527458e29bb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb18 .
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb1 <http://www.w3.org/2002/07/owl#unionOf> _:nc60da1aa7e87491c9242f6527458e29bb2 .
+<https://w3id.org/sulo/> <https://w3id.org/mod#status> "active" .
+<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."@en .
+<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#label> "has item"@en .
+<https://w3id.org/mod#definitionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/isFeatureOf> .
+<https://w3id.org/sulo/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "a relation between any thing and the time in which it occurs at."@en .
+<https://w3id.org/sulo/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sulo" .
+_:nc60da1aa7e87491c9242f6527458e29bb27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isFeatureOf> .
 <https://w3id.org/sulo/Collection> <http://www.w3.org/2004/02/skos/core#example> "a stamp collection, a murder of crows, the arm of a clinical trial"@en .
-<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n3962943643e9452c82924bc5bd1d7a41b10 .
+<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/> <http://purl.org/pav/authoredBy> <https://orcid.org/0000-0003-4727-9435> .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Quantity> .
+<https://w3id.org/sulo/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "A binary relation where the subject entity includes the object entity within its spatial, temporal, structural, or conceptual extent."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/hasParticipant> .
+<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#label> "quality"@en .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection is an information object for which there may be zero or more items."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mod#hasSyntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is direct part of"@en .
+<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#comment> "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nc60da1aa7e87491c9242f6527458e29bb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#domain> _:nc60da1aa7e87491c9242f6527458e29bb1 .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/hasPart> .
+<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Quantity> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2004/02/skos/core#example> "a heart, the function to pump blood, the role of a doctor"@en .
+<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/sulo/sulo-0.2.3.ttl> .
+_:nc60da1aa7e87491c9242f6527458e29bb35 <http://www.w3.org/2002/07/owl#allValuesFrom> _:nc60da1aa7e87491c9242f6527458e29bb36 .
+_:nc60da1aa7e87491c9242f6527458e29bb30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/created> "2024-11-11" .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
+<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb35 .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/> <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> .
+<https://w3id.org/sulo/EndTime> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/StartTime> .
+<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
+<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is participant in is a relation to relate an object and the process in which it participates."@en .
+<https://w3id.org/sulo/Time> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Unit> .
+<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#label> "time instant"@en .
+<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality is a feature that is intrinsically associated with its bearer (or its parts)."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb4 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/hasFeature> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "collection"@en .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "an information object is a feature that represents, is about, or encodes some information."@en .
+<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nc60da1aa7e87491c9242f6527458e29bb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb6 .
+_:nc60da1aa7e87491c9242f6527458e29bb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb38 .
+_:nc60da1aa7e87491c9242f6527458e29bb7 <http://www.w3.org/2002/07/owl#unionOf> _:nc60da1aa7e87491c9242f6527458e29bb8 .
+_:nc60da1aa7e87491c9242f6527458e29bb43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Role> .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation in which one process occurs after to another process."@en .
+<https://w3id.org/sulo/Role> <http://www.w3.org/2004/02/skos/core#example> "a teacher, a student, a catalyst, a substrate, a product, a patient"@en .
+<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Feature> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb13 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature is any characteristic that stems from the intrisinc structure and/or context"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nc60da1aa7e87491c9242f6527458e29bb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#label> "object"@en .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2004/02/skos/core#example> "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."@en .
+<https://w3id.org/sulo/> <http://www.w3.org/2000/01/rdf-schema#comment> "The Simplified Upper Level Ontology (SULO) is ontology with a minimal set of classes and relations to guide the development of a personal health knowledge graph."@en .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/issued> "2025-07-11" .
+_:nc60da1aa7e87491c9242f6527458e29bb48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb49 .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isParticipantIn> .
+_:nc60da1aa7e87491c9242f6527458e29bb50 <http://www.w3.org/2002/07/owl#members> _:nc60da1aa7e87491c9242f6527458e29bb51 .
+<https://w3id.org/sulo/StartTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "a relation between a time and an object that occurs within it."@en .
+<https://w3id.org/sulo/> <https://schema.org/funding> "This work is partially supported by the AIDAVA project (GA 101057062), as part of the European Union's Horizon Europe research and innovation programme."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb30 .
+<https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/> <http://www.w3.org/2000/01/rdf-schema#label> "Simplified Upper Level Ontology"@en .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/bibliographicCitation> "Michel Dumontier, Remzi Çelebi, Komal Gilani, Isabelle de Zegher, Katerina Serafimova, Catalina Martínez Costa and Stefan Schulz. SULO - a simplified upper-level ontology. Proceedings of the Joint Ontology Workshops (JOWO) - Episode XI: The Sicilian Summer under the Etna, co-located with the 15th International Conference on Formal Ontology in Information Systems (FOIS 2025), September 8-9, 2025, Catania, Italy"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasDirectPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
+<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "a unit is a standardized quantity that is used as a reference for a particular quantity."@en .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+_:nc60da1aa7e87491c9242f6527458e29bb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/alternative> "SULO"@en .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
+<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#label> "quantity"@en .
+<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb10 .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."@en .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb40 .
+<https://w3id.org/sulo/Process> <http://www.w3.org/2004/02/skos/core#example> "the process of diagnosing a problem condition, the process of walking down the street, the process of teaching a class"@en .
+<https://w3id.org/sulo/Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:nc60da1aa7e87491c9242f6527458e29bb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#label> "refers to"@en .
+<https://w3id.org/sulo/hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, a collection of cards, a measured height of 170cm."@en .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/isIn> .
+<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#label> "has direct part" .
+<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/2000/01/rdf-schema#comment> "time instant is a quantity of time a particular moment in time."@en .
+<https://w3id.org/sulo/Capability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb43 .
+<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#comment> "a start time is a time instant at the beginning of a process/time interval."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb12 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#comment> "A capability is a feature that describes what an entity is able to do, under some set of circumstances."@en .
+<https://w3id.org/sulo/contains> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isIn> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#comment> "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."@en .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Process> .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Capability> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-1/en> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0> .
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has feature"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb45 <http://www.w3.org/2002/07/owl#members> _:nc60da1aa7e87491c9242f6527458e29bb46 .
+<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:nc60da1aa7e87491c9242f6527458e29bb20 .
+<https://w3id.org/mod#hasRepresentationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
+<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
+<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is time of" .
+<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en .
+<https://w3id.org/sulo/> <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb41 .
+_:nc60da1aa7e87491c9242f6527458e29bb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nc60da1aa7e87491c9242f6527458e29bb46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb47 .
+<https://w3id.org/sulo/> <http://xmlns.com/foaf/0.1/homepage> <https://github.com/AIDAVA-DEV/sulo> .
+_:nc60da1aa7e87491c9242f6527458e29bb29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb28 .
+<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/sulo/sulo-0.2.3.ttl> .
+<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb29 .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "has participant is a relation that describes the participation of a (non-process) thing in a process."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/EndTime> .
+<https://w3id.org/sulo/EndTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/TimeInstant> .
+_:nc60da1aa7e87491c9242f6527458e29bb31 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/SpatialObject> .
+<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."@en .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/2000/01/rdf-schema#label> "is referred to in"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasItem> .
+<https://w3id.org/sulo/Quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantity is an information object that represents the magnitude (and unit) of an object or process."@en .
+<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/Quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Collection> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#comment> "has item is a relation between a collection and an item contained therein."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/SpatialObject> .
+<https://w3id.org/sulo/Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Quantity> .
+_:nc60da1aa7e87491c9242f6527458e29bb49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Role> .
+_:nc60da1aa7e87491c9242f6527458e29bb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:nc60da1aa7e87491c9242f6527458e29bb32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Duration> .
+_:nc60da1aa7e87491c9242f6527458e29bb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
+_:nc60da1aa7e87491c9242f6527458e29bb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb22 .
+_:nc60da1aa7e87491c9242f6527458e29bb39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Collection> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial object is an object that occupies space"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Capability> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb53 .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/title> "Simplified Upper Level Ontology"@en .
+<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation in which one process occurs prior to another process."@en .
+<https://w3id.org/sulo/> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov/vocabs/sulo> .
+_:nc60da1aa7e87491c9242f6527458e29bb34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInterval> .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#comment> "has item is a relation between an item and the collection in which it contained."@en .
+<https://w3id.org/sulo/isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb26 <http://www.w3.org/2002/07/owl#complementOf> _:nc60da1aa7e87491c9242f6527458e29bb27 .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb44 .
+_:nc60da1aa7e87491c9242f6527458e29bb30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2000/01/rdf-schema#label> "is preceded by"@en .
+<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#label> "start time"@en .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isTimeOf> .
+_:nc60da1aa7e87491c9242f6527458e29bb28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Unit> .
+_:nc60da1aa7e87491c9242f6527458e29bb31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb24 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb15 .
+<https://w3id.org/sulo/> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/sulo/> .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isItemIn> .
+_:nc60da1aa7e87491c9242f6527458e29bb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb23 .
+<https://w3id.org/sulo/Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "time interval" .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb26 .
+_:nc60da1aa7e87491c9242f6527458e29bb42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Duration> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part." .
+_:nc60da1aa7e87491c9242f6527458e29bb23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:nc60da1aa7e87491c9242f6527458e29bb5 .
+<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/sulo/sulo-0.2.9.ttl> .
+_:nc60da1aa7e87491c9242f6527458e29bb41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/StartTime> .
+<https://w3id.org/sulo/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en .
+<https://w3id.org/sulo/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+<https://w3id.org/sulo/refersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:nc60da1aa7e87491c9242f6527458e29bb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb9 .
+_:nc60da1aa7e87491c9242f6527458e29bb29 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb52 .
+_:nc60da1aa7e87491c9242f6527458e29bb51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Duration> .
+_:nc60da1aa7e87491c9242f6527458e29bb42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nc60da1aa7e87491c9242f6527458e29bb27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/precedes> .
+_:nc60da1aa7e87491c9242f6527458e29bb12 <http://www.w3.org/2002/07/owl#withRestrictions> _:nc60da1aa7e87491c9242f6527458e29bb14 .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Process> .
+<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en .
+<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Time> .
+<https://w3id.org/sulo/isFeatureOf> <http://www.w3.org/2000/01/rdf-schema#range> _:nc60da1aa7e87491c9242f6527458e29bb7 .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ReflexiveProperty> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb42 .
+_:nc60da1aa7e87491c9242f6527458e29bb48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Quality> .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is referred to in is relation between an object that is the subject of an information object."@en .
+<https://w3id.org/sulo/isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2000/01/rdf-schema#comment> "An object is an entity that maintains its identity through time, and does not have processes as its parts." .
+_:nc60da1aa7e87491c9242f6527458e29bb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb21 .
+_:nc60da1aa7e87491c9242f6527458e29bb33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb34 .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-7222-3287> .
+_:nc60da1aa7e87491c9242f6527458e29bb52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInstant> .
+<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/isDirectPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/isPartOf> .
+_:nc60da1aa7e87491c9242f6527458e29bb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb3 .
+_:nc60da1aa7e87491c9242f6527458e29bb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Quality> .
+_:nc60da1aa7e87491c9242f6527458e29bb36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:nc60da1aa7e87491c9242f6527458e29bb10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:nc60da1aa7e87491c9242f6527458e29bb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb30 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/sulo/Unit> .
+<https://w3id.org/sulo/refersTo> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."@en .
+<https://w3id.org/sulo/isIn> <http://www.w3.org/2000/01/rdf-schema#label> "is in"@en .
+<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Feature> .
+_:nc60da1aa7e87491c9242f6527458e29bb19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Feature> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb24 .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/2000/01/rdf-schema#label> "is item in"@en .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#label> "feature"@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/Duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://purl.org/dc/terms/alternative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+<https://w3id.org/sulo/Object> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/sulo/Process> .
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/Process> <http://www.w3.org/2000/01/rdf-schema#comment> "a process is a entity that unfolds in time, has temporal parts, and has objects that participate in the process."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Process> .
+_:nc60da1aa7e87491c9242f6527458e29bb28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/sulo/contains> .
+<https://w3id.org/sulo/EndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isPartOf> .
+_:nc60da1aa7e87491c9242f6527458e29bb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/hasItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2000/01/rdf-schema#comment> "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."@en .
+_:nc60da1aa7e87491c9242f6527458e29bb25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:nc60da1aa7e87491c9242f6527458e29bb45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb25 .
+<https://w3id.org/sulo/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInstant> .
+<https://w3id.org/sulo/precedes> <http://www.w3.org/2000/01/rdf-schema#label> "precedes" .
+<https://w3id.org/sulo/atTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/sulo/Time> .
+<https://w3id.org/sulo/hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant"@en .
+<https://w3id.org/mod#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/isReferredToIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/refersTo> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb16 <http://www.w3.org/2002/07/owl#unionOf> _:nc60da1aa7e87491c9242f6527458e29bb17 .
+<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
+_:nc60da1aa7e87491c9242f6527458e29bb44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasValue> .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "spatial object"@en .
+<https://w3id.org/sulo/hasDirectPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/sulo/isDirectPartOf> .
+<https://w3id.org/sulo/isTimeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/> <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0003-4727-9435> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/SpatialObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nc60da1aa7e87491c9242f6527458e29bb31 .
+<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/sulo/Object> .
+<https://w3id.org/sulo/Capability> <http://www.w3.org/2000/01/rdf-schema#label> "capability" .
+<https://w3id.org/sulo/Capability> <http://www.w3.org/2004/02/skos/core#example> "the capability to fly, the capabilty to reduce the activation energy of a chemical reaction, the capability to reason"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb36 <http://www.w3.org/2002/07/owl#unionOf> _:nc60da1aa7e87491c9242f6527458e29bb37 .
+_:nc60da1aa7e87491c9242f6527458e29bb11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:nc60da1aa7e87491c9242f6527458e29bb12 .
+<https://w3id.org/sulo/> <https://w3id.org/mod#definitionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:nc60da1aa7e87491c9242f6527458e29bb31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/sulo/> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.9" .
+<https://w3id.org/sulo/Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/sulo/TimeInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/sulo/> <http://www.w3.org/ns/dcat#accessURL> <https://w3id.org/sulo/sulo.ttl> .
+<https://w3id.org/sulo/isParticipantIn> <http://www.w3.org/2000/01/rdf-schema#label> "is participant in"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nc60da1aa7e87491c9242f6527458e29bb4 .
+<https://w3id.org/sulo/hasFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."@en .
+<https://w3id.org/sulo/isPrecededBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/sulo/InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "information object"@en .
+_:nc60da1aa7e87491c9242f6527458e29bb38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:nc60da1aa7e87491c9242f6527458e29bb39 .
+<https://w3id.org/sulo/isIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/sulo/TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Time> .
+_:nc60da1aa7e87491c9242f6527458e29bb34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/Time> <http://www.w3.org/2000/01/rdf-schema#label> "time"@en .
+<https://w3id.org/sulo/Quality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Feature> .
+<https://w3id.org/sulo/Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/Object> .
+_:nc60da1aa7e87491c9242f6527458e29bb47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/InformationObject> .
+<https://w3id.org/sulo/Time> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:nc60da1aa7e87491c9242f6527458e29bb32 .
+<https://w3id.org/sulo/isItemIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/sulo/Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A role is a feature that describes a context-dependent behaviour."@en .
+<https://w3id.org/sulo/> <https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:nc60da1aa7e87491c9242f6527458e29bb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/sulo/> <http://purl.org/dc/terms/modified> "2025-11-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:nc60da1aa7e87491c9242f6527458e29bb19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasPart> .
+_:nc60da1aa7e87491c9242f6527458e29bb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/Object> .
+_:nc60da1aa7e87491c9242f6527458e29bb41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/sulo/hasDirectPart> .
+<https://w3id.org/sulo/StartTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sulo/TimeInstant> .
+_:nc60da1aa7e87491c9242f6527458e29bb53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/sulo/TimeInterval> .
+<https://w3id.org/sulo/hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+_:nc60da1aa7e87491c9242f6527458e29bb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
