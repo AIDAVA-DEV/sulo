@@ -1,5 +1,17 @@
 [
   {
+    "@id": "http://purl.org/dc/terms/bibliographicCitation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#hasSyntax",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
     "@id": "https://w3id.org/sulo/isIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -20,6 +32,80 @@
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
         "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Quality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A quality is a feature that is intrinsically associated with its bearer (or its parts)."
+      },
+      {
+        "@language": "en",
+        "@value": "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quality"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/sulo/Feature"
+      }
+    ]
+  },
+  {
+    "@id": "https://schema.org/funding",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#status",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/hasPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#ReflexiveProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has part"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/sulo/contains"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/sulo/isPartOf"
       }
     ]
   },
@@ -52,20 +138,93 @@
     ]
   },
   {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@id": "https://w3id.org/sulo/Object",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An object is an entity that maintains its identity through time, and does not have processes as its parts."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb41"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb43"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/sulo/Process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "a heart, the function to pump blood, the role of a doctor"
+      }
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/precedes",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb41",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#complementOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb42"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb42",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/Process"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb43",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/Object"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/isPrecededBy",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A relation in which one process occurs prior to another process."
+        "@value": "A relation in which one process occurs after to another process."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -75,23 +234,173 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "precedes"
+        "@language": "en",
+        "@value": "is preceded by"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://w3id.org/sulo/Process"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/sulo/precedes"
+      }
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/contributor",
+    "@id": "https://w3id.org/sulo/TimeInterval",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "time interval"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb9"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb10"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb11"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb12"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb13"
+      },
+      {
+        "@id": "https://w3id.org/sulo/Time"
+      }
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#example",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasDirectPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/StartTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb10",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/Duration"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/Unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb12",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasValue"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb13",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasDirectPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/EndTime"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/hasItem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "has item is a relation between a collection and an item contained therein."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/sulo/Collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has item"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/sulo/isItemIn"
+      }
+    ]
+  },
+  {
+    "@id": "https://schema.org/includedInDataCatalog",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -103,45 +412,25 @@
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/Time",
+    "@id": "https://w3id.org/sulo/isDirectPartOf",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."
+        "@value": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "time"
+        "@value": "is direct part of"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "https://w3id.org/sulo/Quantity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointUnionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Duration"
-          },
-          {
-            "@id": "https://w3id.org/sulo/TimeInstant"
-          },
-          {
-            "@id": "https://w3id.org/sulo/TimeInterval"
-          }
-        ]
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://w3id.org/sulo/Unit"
+        "@id": "https://w3id.org/sulo/isPartOf"
       }
     ]
   },
@@ -170,294 +459,33 @@
     ]
   },
   {
-    "@id": "https://w3id.org/mod#hasSyntax",
+    "@id": "http://purl.org/dc/terms/contributor",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/isPartOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty",
-      "http://www.w3.org/2002/07/owl#ReflexiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is part of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/sulo/isIn"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@id": "http://purl.org/dc/terms/language",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/mod#definitionProperty",
+    "@id": "http://www.w3.org/2004/02/skos/core#example",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb50",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Duration"
-          },
-          {
-            "@id": "https://w3id.org/sulo/TimeInstant"
-          },
-          {
-            "@id": "https://w3id.org/sulo/TimeInterval"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#accessURL",
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/Duration",
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "duration"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Time"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb11"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb11",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasValue"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb12"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb12",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
-    ],
-    "http://www.w3.org/2002/07/owl#onDatatype": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#float"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#withRestrictions": [
-      {
-        "@list": [
-          {
-            "@id": "_:nc60da1aa7e87491c9242f6527458e29bb13"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb13",
-    "http://www.w3.org/2001/XMLSchema#minInclusive": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#float",
-        "@value": "0.0"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isParticipantIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "is participant in is a relation to relate an object and the process in which it participates."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/sulo/Object"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is participant in"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/sulo/Process"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/Quantity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A quantity is an information object that represents the magnitude (and unit) of an object or process."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "quantity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/InformationObject"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb30"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb30",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/Unit"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/hasFeature",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb1"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "has feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/sulo/Feature"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/sulo/isFeatureOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Object"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Process"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/Role",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A role is a feature that describes a context-dependent behaviour."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "role"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Feature"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "a teacher, a student, a catalyst, a substrate, a product, a patient"
-      }
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -479,21 +507,21 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/sulo/Time"
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb22"
       },
       {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb35"
+        "@id": "https://w3id.org/sulo/Time"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb35",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb22",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb36"
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb23"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -503,7 +531,7 @@
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb36",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb23",
     "@type": [
       "http://www.w3.org/2000/01/rdf-schema#Datatype"
     ],
@@ -524,361 +552,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/Quality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A quality is a feature that is intrinsically associated with its bearer (or its parts)."
-      },
-      {
-        "@language": "en",
-        "@value": "the color of an apple, the smoothness of skin, the brightness of a star, the speed of an event"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "quality"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Feature"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/refersTo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/sulo/InformationObject"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "refers to"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/TimeInterval",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "time interval"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Time"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb40"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb41"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb42"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb43"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb44"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb40",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasDirectPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/EndTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb41",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasDirectPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/StartTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb42",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/Duration"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb43",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/Unit"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb44",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#float"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasValue"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/alternative",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isReferredToIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "is referred to in is relation between an object that is the subject of an information object."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is referred to in"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/sulo/InformationObject"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/sulo/refersTo"
-      }
-    ]
-  },
-  {
-    "@id": "https://schema.org/includedInDataCatalog",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/modified",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/Unit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "a unit is a standardized quantity that is used as a reference for a particular quantity."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "unit"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Quantity"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isFeatureOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/sulo/Feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is feature of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb7"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Object"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Process"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#status",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/homepage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/atTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://purl.org/dc/terms/alternative": [
-      {
-        "@language": "en",
-        "@value": "existsAt"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "a relation between any thing and the time in which it occurs at."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "at time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/sulo/Time"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/sulo/isTimeOf"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/pav/authoredBy",
+    "@id": "https://w3id.org/mod#hasRepresentationLanguage",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -933,7 +607,7 @@
     "http://purl.org/dc/terms/modified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2025-11-20"
+        "@value": "2026-04-12"
       }
     ],
     "http://purl.org/dc/terms/publisher": [
@@ -986,12 +660,12 @@
     ],
     "http://www.w3.org/2002/07/owl#versionIRI": [
       {
-        "@id": "https://w3id.org/sulo/sulo-0.2.9.ttl"
+        "@id": "https://w3id.org/sulo/sulo-0.2.11.ttl"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionInfo": [
       {
-        "@value": "0.2.9"
+        "@value": "0.2.11"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -1042,60 +716,62 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/Object",
+    "@id": "https://w3id.org/sulo/StartTime",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "An object is an entity that maintains its identity through time, and does not have processes as its parts."
+        "@language": "en",
+        "@value": "a start time is a time instant at the beginning of a process/time interval."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "object"
+        "@value": "start time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb26"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb28"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://w3id.org/sulo/Process"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "a heart, the function to pump blood, the role of a doctor"
+        "@id": "https://w3id.org/sulo/TimeInstant"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb26",
+    "@id": "http://xmlns.com/foaf/0.1/homepage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Quantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#complementOf": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb27"
+        "@language": "en",
+        "@value": "A quantity is an information object that represents the magnitude (and unit) of an object or process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb21"
+      },
+      {
+        "@id": "https://w3id.org/sulo/InformationObject"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb27",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb21",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1106,18 +782,103 @@
     ],
     "http://www.w3.org/2002/07/owl#someValuesFrom": [
       {
-        "@id": "https://w3id.org/sulo/Process"
+        "@id": "https://w3id.org/sulo/Unit"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb28",
+    "@id": "https://w3id.org/sulo/hasDirectPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "has direct part"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/sulo/isDirectPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Role",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A role is a feature that describes a context-dependent behaviour."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "role"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/sulo/Feature"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "a teacher, a student, a catalyst, a substrate, a product, a patient"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/InformationObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "an information object is a feature that represents, is about, or encodes some information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "information object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb39"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb40"
+      },
+      {
+        "@id": "https://w3id.org/sulo/Feature"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb39",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "https://w3id.org/sulo/Object"
+        "@id": "https://w3id.org/sulo/InformationObject"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -1127,74 +888,79 @@
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/Collection",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A collection is an information object for which there may be zero or more items."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "collection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/InformationObject"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb10"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://w3id.org/sulo/Quantity"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "a stamp collection, a murder of crows, the arm of a clinical trial"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb10",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb40",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "https://w3id.org/sulo/hasItem"
+        "@id": "https://w3id.org/sulo/hasValue"
       }
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/language",
+    "@id": "https://w3id.org/sulo/isReferredToIn",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "is referred to in is relation between an object that is the subject of an information object."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is referred to in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/sulo/InformationObject"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/sulo/refersTo"
+      }
     ]
   },
   {
-    "@id": "http://www.w3.org/2001/XMLSchema#date",
+    "@id": "https://w3id.org/sulo/precedes",
     "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/issued",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A relation in which one process occurs prior to another process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/sulo/Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "precedes"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/sulo/Process"
+      }
     ]
   },
   {
@@ -1225,41 +991,148 @@
     ]
   },
   {
-    "@id": "https://schema.org/funding",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/hasItem",
+    "@id": "https://w3id.org/sulo/hasFeature",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "has item is a relation between a collection and an item contained therein."
+        "@value": "has feature is a relation between a thing and an internal, contextual, or externally attributed characteristic."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/sulo/Collection"
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb1"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has item"
+        "@value": "has feature"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
+        "@id": "https://w3id.org/sulo/Feature"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/sulo/isItemIn"
+        "@id": "https://w3id.org/sulo/isFeatureOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Object"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Process"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Duration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Duration is a temporal quantity that represents the extent or (non-negative) amount of time that elapses between two temporal points, typically the start and end of a time interval."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "duration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb17"
+      },
+      {
+        "@id": "https://w3id.org/sulo/Time"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb17",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb18"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb18",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ],
+    "http://www.w3.org/2002/07/owl#onDatatype": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#withRestrictions": [
+      {
+        "@list": [
+          {
+            "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb19"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb19",
+    "http://www.w3.org/2001/XMLSchema#minInclusive": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "0.0"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb45",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Capability"
+          },
+          {
+            "@id": "https://w3id.org/sulo/InformationObject"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Quality"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Role"
+          }
+        ]
       }
     ]
   },
@@ -1288,165 +1161,82 @@
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/Feature",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A feature is any characteristic that stems from the intrisinc structure and/or context"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/Object"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb15"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb19"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointUnionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Capability"
-          },
-          {
-            "@id": "https://w3id.org/sulo/InformationObject"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Quality"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Role"
-          }
-        ]
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://w3id.org/sulo/SpatialObject"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#example": [
-      {
-        "@language": "en",
-        "@value": "the capability to fly, a collection of cards, a measured height of 170cm."
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb15",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/isFeatureOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb16"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb16",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Object"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Process"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://w3id.org/sulo/Feature"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://w3id.org/sulo/hasPart"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#prefLabelProperty",
+    "@id": "http://purl.org/dc/terms/issued",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/SpatialObject",
+    "@id": "https://w3id.org/sulo/EndTime",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "A spatial object is an object that occupies space"
+        "@value": "an end time is a time instant at the end of a process/time interval."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "spatial object"
+        "@value": "end time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/sulo/Object"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb31"
+        "@id": "https://w3id.org/sulo/TimeInstant"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#example": [
+    "http://www.w3.org/2002/07/owl#disjointWith": [
       {
-        "@language": "en",
-        "@value": "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"
+        "@id": "https://w3id.org/sulo/StartTime"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb31",
+    "@id": "http://purl.org/pav/authoredBy",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/isItemIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "https://w3id.org/sulo/SpatialObject"
+        "@language": "en",
+        "@value": "has item is a relation between an item and the collection in which it contained."
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/sulo/hasPart"
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
       }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is item in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/sulo/Collection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/alternative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -1488,14 +1278,14 @@
             "@id": "https://w3id.org/sulo/hasParticipant"
           },
           {
-            "@id": "_:nc60da1aa7e87491c9242f6527458e29bb4"
+            "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb4"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb4",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb4",
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "https://w3id.org/sulo/hasFeature"
@@ -1503,117 +1293,69 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/publisher",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isDirectPartOf",
+    "@id": "https://w3id.org/sulo/atTime",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/alternative": [
+      {
+        "@language": "en",
+        "@value": "existsAt"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "is direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a part and its whole."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is direct part of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/sulo/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isPrecededBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A relation in which one process occurs after to another process."
+        "@value": "a relation between any thing and the time in which it occurs at."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://w3id.org/sulo/Process"
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "is preceded by"
+        "@value": "at time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/sulo/Process"
+        "@id": "https://w3id.org/sulo/Time"
       }
     ],
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
-        "@id": "https://w3id.org/sulo/precedes"
+        "@id": "https://w3id.org/sulo/isTimeOf"
       }
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb45",
+    "@id": "https://w3id.org/sulo/refersTo",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
-    ],
-    "http://www.w3.org/2002/07/owl#members": [
-      {
-        "@list": [
-          {
-            "@id": "https://w3id.org/sulo/Capability"
-          },
-          {
-            "@id": "https://w3id.org/sulo/InformationObject"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Quality"
-          },
-          {
-            "@id": "https://w3id.org/sulo/Role"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/hasPart",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty",
-      "http://www.w3.org/2002/07/owl#ReflexiveProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "has part is a transitive, reflexive and antisymmetric relation between a whole and itself or a whole and its part."
+        "@language": "en",
+        "@value": "refers to is a binary relation between an information object and any other object that it mentions, describes, represents, encodes, or otherwise provides information about."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/sulo/InformationObject"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "has part"
+        "@value": "refers to"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://w3id.org/sulo/contains"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/sulo/isPartOf"
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
       }
     ]
   },
@@ -1636,7 +1378,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb29"
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb44"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#example": [
@@ -1647,7 +1389,7 @@
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb29",
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb44",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1663,167 +1405,219 @@
     ]
   },
   {
-    "@id": "https://w3id.org/sulo/EndTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "an end time is a time instant at the end of a process/time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "end time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/TimeInstant"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#disjointWith": [
-      {
-        "@id": "https://w3id.org/sulo/StartTime"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/hasDirectPart",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "has direct part is a non-transitive parthood relation that can be used to specify cardinality constraints between a whole and its parts."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "has direct part"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/sulo/hasPart"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/sulo/isDirectPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/StartTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "a start time is a time instant at the beginning of a process/time interval."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "start time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/sulo/TimeInstant"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/isItemIn",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "has item is a relation between an item and the collection in which it contained."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "is item in"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/sulo/Collection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#hasRepresentationLanguage",
+    "@id": "http://purl.org/dc/terms/modified",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/bibliographicCitation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/sulo/InformationObject",
+    "@id": "https://w3id.org/sulo/Collection",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "en",
-        "@value": "an information object is a feature that represents, is about, or encodes some information."
+        "@value": "A collection is an information object for which there may be zero or more items."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "information object"
+        "@value": "collection"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/sulo/Feature"
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb7"
       },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb24"
-      },
-      {
-        "@id": "_:nc60da1aa7e87491c9242f6527458e29bb25"
-      }
-    ]
-  },
-  {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb24",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
         "@id": "https://w3id.org/sulo/InformationObject"
       }
     ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/sulo/Quantity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "a stamp collection, a murder of crows, the arm of a clinical trial"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/hasItem"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#accessURL",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/isFeatureOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "is feature of is a relation between an internal, contextual, or externally attributed characteristic and some Thing."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/sulo/Feature"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is feature of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb14"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Object"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Process"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2001/XMLSchema#date",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#prefLabelProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Time",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "time is a quantity pertaining to the duration of some interval of time or a particular instant of time (against some frame of reference)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/sulo/Quantity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointUnionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Duration"
+          },
+          {
+            "@id": "https://w3id.org/sulo/TimeInstant"
+          },
+          {
+            "@id": "https://w3id.org/sulo/TimeInterval"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/sulo/Unit"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/elements/1.1/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/SpatialObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A spatial object is an object that occupies space"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "spatial object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb8"
+      },
+      {
+        "@id": "https://w3id.org/sulo/Object"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "a mountain, a planet, a photon, the lining of the stomach, the cavity of the stomach, the space between mars and earth"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/sulo/SpatialObject"
+      }
+    ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "https://w3id.org/sulo/hasPart"
@@ -1831,18 +1625,224 @@
     ]
   },
   {
-    "@id": "_:nc60da1aa7e87491c9242f6527458e29bb25",
+    "@id": "https://w3id.org/mod#definitionProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Feature",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A feature is any characteristic that stems from the intrisinc structure and/or context"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "feature"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb30"
+      },
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb34"
+      },
+      {
+        "@id": "https://w3id.org/sulo/Object"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointUnionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Capability"
+          },
+          {
+            "@id": "https://w3id.org/sulo/InformationObject"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Quality"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Role"
+          }
+        ]
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/sulo/SpatialObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "the capability to fly, a collection of cards, a measured height of 170cm."
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb30",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/sulo/isFeatureOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb31"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb31",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Object"
+          },
+          {
+            "@id": "https://w3id.org/sulo/Process"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb34",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        "@id": "https://w3id.org/sulo/Feature"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "https://w3id.org/sulo/hasValue"
+        "@id": "https://w3id.org/sulo/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/isPartOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#ReflexiveProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "is part of is a transitive, reflexive and antisymmetric relation between a part and itself or a part and a whole."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is part of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/sulo/isIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:n142d5b053abf44519cd9d4d11d6c07feb50",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/sulo/Duration"
+          },
+          {
+            "@id": "https://w3id.org/sulo/TimeInstant"
+          },
+          {
+            "@id": "https://w3id.org/sulo/TimeInterval"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/publisher",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/isParticipantIn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "is participant in is a relation to relate an object and the process in which it participates."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/sulo/Object"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is participant in"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/sulo/Process"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/sulo/Unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "a unit is a standardized quantity that is used as a reference for a particular quantity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "unit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/sulo/Quantity"
       }
     ]
   }
