@@ -1397,26 +1397,22 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
               <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
 <span class="k">@prefix</span><span class="w"> </span><span class="nn">sulo:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/sulo/&gt;</span><span class="w"> </span><span class="p">.</span>
-<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
 
 <span class="nn">sulo</span><span class="p">:</span><span class="nt">TimeInterval</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;time interval&quot;</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">comment</span> <span class="s">&quot;A time interval is a quantity for a continuous and bounded extent of time, characterized by a start time and an end time.&quot;</span><span class="o">@</span><span class="ge">en</span> <span class="p">;</span>
     <span class="nn">rdfs</span><span class="p">:</span><span class="nt">subClassOf</span> <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Unit</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">allValuesFrom</span> <span class="nn">xsd</span><span class="p">:</span><span class="nt">float</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasValue</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasDirectPart</span> <span class="p">;</span>
-            <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">EndTime</span> <span class="p">],</span>
-        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasDirectPart</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">StartTime</span> <span class="p">],</span>
         <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">;</span>
             <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Duration</span> <span class="p">],</span>
+        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasPart</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">Unit</span> <span class="p">],</span>
+        <span class="p">[</span> <span class="kt">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Restriction</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">onProperty</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">hasDirectPart</span> <span class="p">;</span>
+            <span class="nn">owl</span><span class="p">:</span><span class="nt">someValuesFrom</span> <span class="nn">sulo</span><span class="p">:</span><span class="nt">EndTime</span> <span class="p">],</span>
         <span class="nn">sulo</span><span class="p">:</span><span class="nt">Time</span> <span class="p">.</span>
 </pre></div>
 
@@ -1447,7 +1443,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
   <footer class="footer">
     <div class="container">
     
-      <p class="text-muted">Documentation automatically generated on Sun, 12 Apr 2026 19:53:52 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
+      <p class="text-muted">Documentation automatically generated on Tue, 19 May 2026 14:43:59 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (&lt;module &#39;ontospy.VERSION&#39; from &#39;/home/runner/work/sulo/sulo/ontospy/ontospy/VERSION.py&#39;&gt;)</p>
 
     
     </div>
