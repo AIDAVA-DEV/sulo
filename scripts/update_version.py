@@ -53,7 +53,7 @@ g.remove((ontology_iri, OWL.versionIRI, None))
 
 # === Add updated version info ===
 g.add((ontology_iri, OWL.versionInfo, Literal(new_version)))
-g.add((ontology_iri, DCTERMS.modified, Literal(MODIFIED_DATE, datatype=XSD.date)))
+g.add((ontology_iri, DCTERMS.modified, Literal(MODIFIED_DATE)))
 g.add((ontology_iri, OWL.versionIRI, new_iri))
 
 # === Write updated ontology ===
