@@ -352,6 +352,7 @@ sulo:Object a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom sulo:Object ;
             owl:onProperty sulo:hasPart ] ;
+    owl:disjointWith sulo:Process ;
     skos:example "a heart, the function to pump blood, the role of a doctor"@en .
 
 sulo:hasPart a owl:ObjectProperty,
