@@ -32,5 +32,13 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add version.svg
-          git commit -m "Update ontology version badge"
-          git push
+          # `git commit` exits 1 when nothing is staged, which is the normal
+          # case: the badge only changes when the ontology version does, so
+          # every push that touches sulo.ttl without a version bump failed
+          # this job. Commit and push only when there is actually a change.
+          if git diff --staged --quiet; then
+            echo "version badge unchanged; nothing to commit"
+          else
+            git commit -m "Update ontology version badge"
+            git push
+          fi
