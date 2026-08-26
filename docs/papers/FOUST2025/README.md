@@ -29,6 +29,10 @@ rather than only a parser: it entails
 `:encounter sulo:hasParticipant :alice, :drsmith`, which is exactly the
 inference the figure claims.
 
+The corrected version also names the object property `hasItem` throughout, as
+SULO defines it (`sulo:hasItem`, inverse `sulo:isItemIn`); the published version
+called it `hasMember` in two places.
+
 No claim, result, or axiom of SULO is changed by any of this. The corrected
 version keeps the published pagination, so page-level citations remain valid.
 
