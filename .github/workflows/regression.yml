@@ -1,0 +1,42 @@
+# Regression and competency-question suite for sulo.ttl.
+#
+# Complements the existing checks rather than replacing them. `syntax_check`
+# asks whether the ontology parses; `reasoning` asks whether it is consistent
+# as a whole. Neither notices when a specific subsumption stops holding, a
+# disjointness axiom stops excluding anything, or the PRO role chain stops
+# firing: the ontology still parses and is still consistent, so the regression
+# ships silently. This job asserts those properties individually.
+#
+# It downloads a prebuilt, pinned binary and the suite that was tested with it,
+# so no Rust toolchain is installed here.
+name: Regression suite
+
+on:
+  push:
+    paths:
+      - 'sulo.ttl'
+      - '.github/workflows/regression.yml'
+  # Also on pull requests, deliberately. The existing reasoning job runs only
+  # on push, so today a regression is caught after it has already landed on the
+  # branch. Running here means a change to sulo.ttl is checked before merge.
+  pull_request:
+    paths:
+      - 'sulo.ttl'
+      - '.github/workflows/regression.yml'
+  workflow_dispatch:
+
+jobs:
+  regression:
+    name: Assert SULO's logical properties
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Pinned to a tag on purpose: a moving version is a moving oracle, and a
+      # suite that changed under you is indistinguishable from an ontology that
+      # changed under you.
+      - name: Run the SULO test harness
+        uses: MaastrichtU-IDS/sulo-testharness@v0.1.0
+        with:
+          ontology: sulo.ttl
