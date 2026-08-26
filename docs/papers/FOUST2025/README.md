@@ -10,7 +10,7 @@ Paper introducing SULO, published in the CEUR-WS proceedings of FOUST 2025.
 | `2025-09-09-SULO@FOUST2025.pdf` | Presentation slides. |
 
 The LaTeX source is at
-[MaastrichtU-IDS/sulo-foust2026-manuscript](https://github.com/MaastrichtU-IDS/sulo-foust2026-manuscript),
+[MaastrichtU-IDS/sulo-foust2025-manuscript](https://github.com/MaastrichtU-IDS/sulo-foust2025-manuscript),
 whose README lists every correction in full.
 
 ## Why there are two PDFs
